@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9CCEEB461BFBEF1400E63A55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB451BFBEF1400E63A55 /* main.m */; };
+		9CCEEB491BFBEF1400E63A55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB481BFBEF1400E63A55 /* AppDelegate.m */; };
+		9CCEEB4C1BFBEF1400E63A55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB4B1BFBEF1400E63A55 /* ViewController.m */; };
+		9CCEEB4F1BFBEF1400E63A55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CCEEB4D1BFBEF1400E63A55 /* Main.storyboard */; };
+		9CCEEB511BFBEF1400E63A55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CCEEB501BFBEF1400E63A55 /* Assets.xcassets */; };
+		9CCEEB541BFBEF1400E63A55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CCEEB521BFBEF1400E63A55 /* LaunchScreen.storyboard */; };
+		9CCEEB5F1BFBEF1400E63A55 /* DuaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB5E1BFBEF1400E63A55 /* DuaTests.m */; };
+		9CCEEB6A1BFBEF1400E63A55 /* DuaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB691BFBEF1400E63A55 /* DuaUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9CCEEB5B1BFBEF1400E63A55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CCEEB391BFBEF1400E63A55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CCEEB401BFBEF1400E63A55;
+			remoteInfo = Dua;
+		};
+		9CCEEB661BFBEF1400E63A55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CCEEB391BFBEF1400E63A55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CCEEB401BFBEF1400E63A55;
+			remoteInfo = Dua;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9CCEEB411BFBEF1400E63A55 /* Dua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dua.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CCEEB451BFBEF1400E63A55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9CCEEB471BFBEF1400E63A55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9CCEEB481BFBEF1400E63A55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9CCEEB4A1BFBEF1400E63A55 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9CCEEB4B1BFBEF1400E63A55 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9CCEEB4E1BFBEF1400E63A55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CCEEB501BFBEF1400E63A55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CCEEB531BFBEF1400E63A55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CCEEB551BFBEF1400E63A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CCEEB5A1BFBEF1400E63A55 /* DuaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CCEEB5E1BFBEF1400E63A55 /* DuaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuaTests.m; sourceTree = "<group>"; };
+		9CCEEB601BFBEF1400E63A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CCEEB651BFBEF1400E63A55 /* DuaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DuaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CCEEB691BFBEF1400E63A55 /* DuaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuaUITests.m; sourceTree = "<group>"; };
+		9CCEEB6B1BFBEF1400E63A55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CCEEB3E1BFBEF1400E63A55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CCEEB571BFBEF1400E63A55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CCEEB621BFBEF1400E63A55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9CCEEB381BFBEF1400E63A55 = {
+			isa = PBXGroup;
+			children = (
+				9CCEEB431BFBEF1400E63A55 /* Dua */,
+				9CCEEB5D1BFBEF1400E63A55 /* DuaTests */,
+				9CCEEB681BFBEF1400E63A55 /* DuaUITests */,
+				9CCEEB421BFBEF1400E63A55 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9CCEEB421BFBEF1400E63A55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEEB411BFBEF1400E63A55 /* Dua.app */,
+				9CCEEB5A1BFBEF1400E63A55 /* DuaTests.xctest */,
+				9CCEEB651BFBEF1400E63A55 /* DuaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CCEEB431BFBEF1400E63A55 /* Dua */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEEB471BFBEF1400E63A55 /* AppDelegate.h */,
+				9CCEEB481BFBEF1400E63A55 /* AppDelegate.m */,
+				9CCEEB4A1BFBEF1400E63A55 /* ViewController.h */,
+				9CCEEB4B1BFBEF1400E63A55 /* ViewController.m */,
+				9CCEEB4D1BFBEF1400E63A55 /* Main.storyboard */,
+				9CCEEB501BFBEF1400E63A55 /* Assets.xcassets */,
+				9CCEEB521BFBEF1400E63A55 /* LaunchScreen.storyboard */,
+				9CCEEB551BFBEF1400E63A55 /* Info.plist */,
+				9CCEEB441BFBEF1400E63A55 /* Supporting Files */,
+			);
+			path = Dua;
+			sourceTree = "<group>";
+		};
+		9CCEEB441BFBEF1400E63A55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEEB451BFBEF1400E63A55 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9CCEEB5D1BFBEF1400E63A55 /* DuaTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEEB5E1BFBEF1400E63A55 /* DuaTests.m */,
+				9CCEEB601BFBEF1400E63A55 /* Info.plist */,
+			);
+			path = DuaTests;
+			sourceTree = "<group>";
+		};
+		9CCEEB681BFBEF1400E63A55 /* DuaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEEB691BFBEF1400E63A55 /* DuaUITests.m */,
+				9CCEEB6B1BFBEF1400E63A55 /* Info.plist */,
+			);
+			path = DuaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CCEEB401BFBEF1400E63A55 /* Dua */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CCEEB6E1BFBEF1400E63A55 /* Build configuration list for PBXNativeTarget "Dua" */;
+			buildPhases = (
+				9CCEEB3D1BFBEF1400E63A55 /* Sources */,
+				9CCEEB3E1BFBEF1400E63A55 /* Frameworks */,
+				9CCEEB3F1BFBEF1400E63A55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dua;
+			productName = Dua;
+			productReference = 9CCEEB411BFBEF1400E63A55 /* Dua.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CCEEB591BFBEF1400E63A55 /* DuaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CCEEB711BFBEF1400E63A55 /* Build configuration list for PBXNativeTarget "DuaTests" */;
+			buildPhases = (
+				9CCEEB561BFBEF1400E63A55 /* Sources */,
+				9CCEEB571BFBEF1400E63A55 /* Frameworks */,
+				9CCEEB581BFBEF1400E63A55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CCEEB5C1BFBEF1400E63A55 /* PBXTargetDependency */,
+			);
+			name = DuaTests;
+			productName = DuaTests;
+			productReference = 9CCEEB5A1BFBEF1400E63A55 /* DuaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9CCEEB641BFBEF1400E63A55 /* DuaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CCEEB741BFBEF1400E63A55 /* Build configuration list for PBXNativeTarget "DuaUITests" */;
+			buildPhases = (
+				9CCEEB611BFBEF1400E63A55 /* Sources */,
+				9CCEEB621BFBEF1400E63A55 /* Frameworks */,
+				9CCEEB631BFBEF1400E63A55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CCEEB671BFBEF1400E63A55 /* PBXTargetDependency */,
+			);
+			name = DuaUITests;
+			productName = DuaUITests;
+			productReference = 9CCEEB651BFBEF1400E63A55 /* DuaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CCEEB391BFBEF1400E63A55 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Sameer Siddiqui";
+				TargetAttributes = {
+					9CCEEB401BFBEF1400E63A55 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					9CCEEB591BFBEF1400E63A55 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 9CCEEB401BFBEF1400E63A55;
+					};
+					9CCEEB641BFBEF1400E63A55 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 9CCEEB401BFBEF1400E63A55;
+					};
+				};
+			};
+			buildConfigurationList = 9CCEEB3C1BFBEF1400E63A55 /* Build configuration list for PBXProject "Dua" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9CCEEB381BFBEF1400E63A55;
+			productRefGroup = 9CCEEB421BFBEF1400E63A55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CCEEB401BFBEF1400E63A55 /* Dua */,
+				9CCEEB591BFBEF1400E63A55 /* DuaTests */,
+				9CCEEB641BFBEF1400E63A55 /* DuaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CCEEB3F1BFBEF1400E63A55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CCEEB541BFBEF1400E63A55 /* LaunchScreen.storyboard in Resources */,
+				9CCEEB511BFBEF1400E63A55 /* Assets.xcassets in Resources */,
+				9CCEEB4F1BFBEF1400E63A55 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CCEEB581BFBEF1400E63A55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CCEEB631BFBEF1400E63A55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CCEEB3D1BFBEF1400E63A55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CCEEB4C1BFBEF1400E63A55 /* ViewController.m in Sources */,
+				9CCEEB491BFBEF1400E63A55 /* AppDelegate.m in Sources */,
+				9CCEEB461BFBEF1400E63A55 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CCEEB561BFBEF1400E63A55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CCEEB5F1BFBEF1400E63A55 /* DuaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CCEEB611BFBEF1400E63A55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CCEEB6A1BFBEF1400E63A55 /* DuaUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9CCEEB5C1BFBEF1400E63A55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CCEEB401BFBEF1400E63A55 /* Dua */;
+			targetProxy = 9CCEEB5B1BFBEF1400E63A55 /* PBXContainerItemProxy */;
+		};
+		9CCEEB671BFBEF1400E63A55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CCEEB401BFBEF1400E63A55 /* Dua */;
+			targetProxy = 9CCEEB661BFBEF1400E63A55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9CCEEB4D1BFBEF1400E63A55 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CCEEB4E1BFBEF1400E63A55 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9CCEEB521BFBEF1400E63A55 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CCEEB531BFBEF1400E63A55 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9CCEEB6C1BFBEF1400E63A55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CCEEB6D1BFBEF1400E63A55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CCEEB6F1BFBEF1400E63A55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Dua/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.Dua;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9CCEEB701BFBEF1400E63A55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Dua/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.Dua;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9CCEEB721BFBEF1400E63A55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DuaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.DuaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dua.app/Dua";
+			};
+			name = Debug;
+		};
+		9CCEEB731BFBEF1400E63A55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DuaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.DuaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dua.app/Dua";
+			};
+			name = Release;
+		};
+		9CCEEB751BFBEF1400E63A55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DuaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.DuaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Dua;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9CCEEB761BFBEF1400E63A55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DuaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.DuaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Dua;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CCEEB3C1BFBEF1400E63A55 /* Build configuration list for PBXProject "Dua" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CCEEB6C1BFBEF1400E63A55 /* Debug */,
+				9CCEEB6D1BFBEF1400E63A55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CCEEB6E1BFBEF1400E63A55 /* Build configuration list for PBXNativeTarget "Dua" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CCEEB6F1BFBEF1400E63A55 /* Debug */,
+				9CCEEB701BFBEF1400E63A55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9CCEEB711BFBEF1400E63A55 /* Build configuration list for PBXNativeTarget "DuaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CCEEB721BFBEF1400E63A55 /* Debug */,
+				9CCEEB731BFBEF1400E63A55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9CCEEB741BFBEF1400E63A55 /* Build configuration list for PBXNativeTarget "DuaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CCEEB751BFBEF1400E63A55 /* Debug */,
+				9CCEEB761BFBEF1400E63A55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CCEEB391BFBEF1400E63A55 /* Project object */;
+}
