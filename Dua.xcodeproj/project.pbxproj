@@ -22,6 +22,7 @@
 		9CCEEB951BFC5D8E00E63A55 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB941BFC5D8E00E63A55 /* CategoryViewController.m */; };
 		9CCEEB9A1BFCF39000E63A55 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB991BFCF39000E63A55 /* SWRevealViewController.m */; };
 		9CCEEB9E1BFCF42500E63A55 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB9D1BFCF42500E63A55 /* UIViewController+Navigation.m */; };
+		9CCEEBA11BFCFB5E00E63A55 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEBA01BFCFB5E00E63A55 /* UIImage+Scale.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		9CCEEB991BFCF39000E63A55 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		9CCEEB9C1BFCF42500E63A55 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
 		9CCEEB9D1BFCF42500E63A55 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
+		9CCEEB9F1BFCFB5E00E63A55 /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
+		9CCEEBA01BFCFB5E00E63A55 /* UIImage+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 		D6A2E68FE86A8F6AF2E3CB49 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +230,8 @@
 			children = (
 				9CCEEB9C1BFCF42500E63A55 /* UIViewController+Navigation.h */,
 				9CCEEB9D1BFCF42500E63A55 /* UIViewController+Navigation.m */,
+				9CCEEB9F1BFCFB5E00E63A55 /* UIImage+Scale.h */,
+				9CCEEBA01BFCFB5E00E63A55 /* UIImage+Scale.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -426,6 +431,7 @@
 				9CCEEB9A1BFCF39000E63A55 /* SWRevealViewController.m in Sources */,
 				9CCEEB921BFC2F3A00E63A55 /* DuaModel.m in Sources */,
 				9CCEEB8F1BFC2B8300E63A55 /* DuaData.m in Sources */,
+				9CCEEBA11BFCFB5E00E63A55 /* UIImage+Scale.m in Sources */,
 				9CCEEB491BFBEF1400E63A55 /* AppDelegate.m in Sources */,
 				9CCEEB811BFBF07C00E63A55 /* DashboardViewController.m in Sources */,
 				9CCEEB951BFC5D8E00E63A55 /* CategoryViewController.m in Sources */,

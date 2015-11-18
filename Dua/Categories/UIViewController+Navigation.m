@@ -7,6 +7,7 @@
 //
 
 #import "UIViewController+Navigation.h"
+#import "UIImage+Scale.h"
 
 @implementation UIViewController (Navigation)
 #pragma mark - Dynamic Properties
@@ -22,6 +23,10 @@
 
 - (void)addBackButtonItemAsLeftButtonItem {
     [self addLeftButtonItem:@"button_back" selector:@selector(back:)];
+}
+
+- (void)addWhiteBackButtonItemAsLeftButtonItem {
+    [self addWhiteLeftButtonItem:@"button_back" selector:@selector(back:)];
 }
 
 - (void)addRightButtonImageItem:(UIImage *)image selector:(SEL)selector {
@@ -83,6 +88,11 @@
     [self addLeftButtonImageItem:barButtonImage selector:selector];
 }
 
+- (void)addWhiteLeftButtonItem:(NSString *)imageName selector:(SEL)selector {
+    UIImage *barButtonImage = [UIImage imageNamed:imageName];
+    [self addLeftButtonImageItem:[barButtonImage invertColor] selector:selector];
+}
+
 - (void)navBarWithBackButtonAndTitleImage {
     [self navBarWithTitleImage];
     [self addBackButtonItemAsLeftButtonItem];
@@ -103,6 +113,14 @@
     // Display the back button if necessary
     if (self.navigationController.viewControllers.count > 1) {
         [self addBackButtonItemAsLeftButtonItem];
+    }
+    [self setNavBarTitle:title];
+}
+
+- (void)navBarWithWhiteBackButtonAndTitle:(NSString *)title {
+    // Display the back button if necessary
+    if (self.navigationController.viewControllers.count > 1) {
+        [self addWhiteBackButtonItemAsLeftButtonItem];
     }
     [self setNavBarTitle:title];
 }

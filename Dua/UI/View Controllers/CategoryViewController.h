@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DuaModel.h"
 
 @interface CategoryViewController : UIViewController
 + (CategoryViewController *)create;
+
+@property (nonatomic) DuaModel *dua;
 @end

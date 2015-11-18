@@ -13,6 +13,7 @@
 - (void)navBarWithBackButtonAndTitleImage;
 - (void)navBarWithCloseButtonAndTitle:(NSString *)title;
 - (void)navBarWithBackButtonAndTitle:(NSString *)title;
+- (void)navBarWithWhiteBackButtonAndTitle:(NSString *)title;
 
 - (void)navBarWithBackButtonAndTitle:(NSString *)title
                 rightButtonImageName:(NSString *)imageName

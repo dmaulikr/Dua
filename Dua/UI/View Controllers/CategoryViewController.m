@@ -7,7 +7,7 @@
 //
 
 #import "CategoryViewController.h"
-
+#import "UIViewController+Navigation.h"
 @interface CategoryViewController ()
 
 @end
@@ -22,6 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blackColor];
+    [self navBarWithWhiteBackButtonAndTitle:[self.dua.name uppercaseString]];
 }
 
 - (void)didReceiveMemoryWarning {

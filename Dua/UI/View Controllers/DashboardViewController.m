@@ -84,7 +84,6 @@ static NSString *kCellId = @"cellId";
         case UIGestureRecognizerStateBegan:
         {
             NSIndexPath *selectedIndex = [self.collectionView indexPathForItemAtPoint:[gesture locationInView:self.collectionView]];
-            
             if (selectedIndex) {
                 [self.collectionView beginInteractiveMovementForItemAtIndexPath:selectedIndex];
             }
@@ -146,6 +145,7 @@ static NSString *kCellId = @"cellId";
     
     NSLog(@"%@ %zd", NSStringFromSelector(_cmd), indexPath.item);
     CategoryViewController *vc = [CategoryViewController create];
+    vc.dua = self.duasArray[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 
 }
