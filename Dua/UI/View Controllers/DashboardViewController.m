@@ -13,6 +13,7 @@
 #import "DuaModel.h"
 #import <AMWaveTransition.h>
 #import "CategoryViewController.h"
+#import "UIViewController+Navigation.h"
 
 static NSString *kCellId = @"cellId";
 
@@ -20,7 +21,6 @@ static NSString *kCellId = @"cellId";
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *duasArray;
-
 
 @end
 
@@ -32,50 +32,11 @@ static NSString *kCellId = @"cellId";
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
-    UILabel *titleLabel = [UILabel new];
-    titleLabel.attributedText = [[NSAttributedString alloc]initWithString:@"Dua"
-                                                               attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                                            NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:14.0],
-                                                                            NSKernAttributeName: @(2.0f)}];
-    [titleLabel sizeToFit];
-    self.navigationItem.titleView = titleLabel;
-    UIImage *menu = [UIImage imageNamed:@"icon_sideMenu"];
-    UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [leftButton setImage:menu forState:UIControlStateNormal];
-    leftButton.frame = CGRectMake(0, 0, 35, 35);
 
-    self.navigationItem.backBarButtonItem = nil;
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
-   
-    UIImage *fav = [UIImage imageNamed:@"icon_favorites"];
-    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [rightButton setImage:fav forState:UIControlStateNormal];
-    rightButton.frame = CGRectMake(0, 0, 35, 35);
-    // Add the target
-//    [rightButton addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
-    
-    // Add the container bar button
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
-    self.navigationItem.backBarButtonItem = nil;
+    [self navBarWithTitle:@"DUA" andLeftButtonImage:[UIImage imageNamed:@"icon_sideMenu"] leftButtonSelector:nil andRightButtonImage:[UIImage imageNamed:@"icon_favorites"] rightButtonSelector:nil];
 
+    [self setupCollectionView];
     
-    
-    MPSkewedParallaxLayout *layout = [[MPSkewedParallaxLayout alloc] init];
-    layout.lineSpacing = 2;
-    layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 150);
-    
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)  ) collectionViewLayout:layout];
-    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    self.collectionView.backgroundColor = [UIColor blackColor];
-    [self.collectionView registerClass:[MPSkewedCell class] forCellWithReuseIdentifier:kCellId];
-    [self.view addSubview:self.collectionView];
-    
-    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongGesture:)];
-    [self.collectionView addGestureRecognizer:longPressGesture];
-    
-
     NSArray *array = [DuaData getAllDuas];
     NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
     for (NSDictionary *duaDict in array) {
@@ -95,6 +56,7 @@ static NSString *kCellId = @"cellId";
     [self.navigationController setDelegate:nil];
 }
 
+//Custom transition
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                   animationControllerForOperation:(UINavigationControllerOperation)operation
                                                fromViewController:(UIViewController*)fromVC
@@ -116,6 +78,7 @@ static NSString *kCellId = @"cellId";
     // Dispose of any resources that can be recreated.
 }
 
+//handle collection view editing
 - (void)handleLongGesture:(UILongPressGestureRecognizer*)gesture {
     switch (gesture.state) {
         case UIGestureRecognizerStateBegan:
@@ -141,6 +104,24 @@ static NSString *kCellId = @"cellId";
         }
             break;
     }
+}
+
+- (void)setupCollectionView {
+    MPSkewedParallaxLayout *layout = [[MPSkewedParallaxLayout alloc] init];
+    layout.lineSpacing = 2;
+    layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 150);
+    
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)  ) collectionViewLayout:layout];
+    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    self.collectionView.backgroundColor = [UIColor blackColor];
+    [self.collectionView registerClass:[MPSkewedCell class] forCellWithReuseIdentifier:kCellId];
+    [self.view addSubview:self.collectionView];
+    
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongGesture:)];
+    [self.collectionView addGestureRecognizer:longPressGesture];
+
 }
 
 #pragma mark - UICollectionViewDataSource

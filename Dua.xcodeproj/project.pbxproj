@@ -20,6 +20,8 @@
 		9CCEEB8F1BFC2B8300E63A55 /* DuaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB8E1BFC2B8300E63A55 /* DuaData.m */; };
 		9CCEEB921BFC2F3A00E63A55 /* DuaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB911BFC2F3A00E63A55 /* DuaModel.m */; };
 		9CCEEB951BFC5D8E00E63A55 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB941BFC5D8E00E63A55 /* CategoryViewController.m */; };
+		9CCEEB9A1BFCF39000E63A55 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB991BFCF39000E63A55 /* SWRevealViewController.m */; };
+		9CCEEB9E1BFCF42500E63A55 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB9D1BFCF42500E63A55 /* UIViewController+Navigation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		9CCEEB911BFC2F3A00E63A55 /* DuaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuaModel.m; sourceTree = "<group>"; };
 		9CCEEB931BFC5D8E00E63A55 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		9CCEEB941BFC5D8E00E63A55 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		9CCEEB981BFCF39000E63A55 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		9CCEEB991BFCF39000E63A55 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		9CCEEB9C1BFCF42500E63A55 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
+		9CCEEB9D1BFCF42500E63A55 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
 		D6A2E68FE86A8F6AF2E3CB49 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +142,8 @@
 		9CCEEB431BFBEF1400E63A55 /* Dua */ = {
 			isa = PBXGroup;
 			children = (
+				9CCEEB971BFCF35600E63A55 /* Custom Controls */,
+				9CCEEB961BFCF34E00E63A55 /* Categories */,
 				9CCEEB8C1BFC2B4B00E63A55 /* Data */,
 				9CCEEB771BFBEFE100E63A55 /* UI */,
 				9CCEEB471BFBEF1400E63A55 /* AppDelegate.h */,
@@ -212,6 +220,24 @@
 				9CCEEB911BFC2F3A00E63A55 /* DuaModel.m */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		9CCEEB961BFCF34E00E63A55 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEEB9C1BFCF42500E63A55 /* UIViewController+Navigation.h */,
+				9CCEEB9D1BFCF42500E63A55 /* UIViewController+Navigation.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		9CCEEB971BFCF35600E63A55 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				9CCEEB981BFCF39000E63A55 /* SWRevealViewController.h */,
+				9CCEEB991BFCF39000E63A55 /* SWRevealViewController.m */,
+			);
+			path = "Custom Controls";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +422,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CCEEB9E1BFCF42500E63A55 /* UIViewController+Navigation.m in Sources */,
+				9CCEEB9A1BFCF39000E63A55 /* SWRevealViewController.m in Sources */,
 				9CCEEB921BFC2F3A00E63A55 /* DuaModel.m in Sources */,
 				9CCEEB8F1BFC2B8300E63A55 /* DuaData.m in Sources */,
 				9CCEEB491BFBEF1400E63A55 /* AppDelegate.m in Sources */,
