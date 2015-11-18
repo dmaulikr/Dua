@@ -63,6 +63,11 @@
     [self addLeftButtonImageItem:barButtonImage selector:selector animation:NO];
 }
 
+- (void)addLeftButtonImageItem:(UIImage *)imageName selector:(SEL)selector withLeftTarget:(nullable id)target{
+    UIImage *barButtonImage = imageName;
+    [self addLeftButtonImageItem:barButtonImage selector:selector animation:NO withLeftTarget:target];
+}
+
 - (void)addLeftButtonImageItem:(UIImage *)imageName selector:(SEL)selector animation:(BOOL)animation {
     // Create a custom button with the image
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -70,6 +75,27 @@
     leftButton.frame = CGRectMake(0, 0, imageName.size.width, imageName.size.height);
     // Add the target
     [leftButton addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
+    
+    // Add the container bar button
+    self.navigationItem.backBarButtonItem = nil;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
+    
+    if (animation) {
+        [leftButton setAlpha:0.0f];
+        [UIView animateWithDuration:0.5f animations:^{
+            [leftButton setAlpha:1.0f];
+        }];
+    }
+}
+
+
+- (void)addLeftButtonImageItem:(UIImage *)imageName selector:(SEL)selector animation:(BOOL)animation withLeftTarget:(nullable id)target{
+    // Create a custom button with the image
+    UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftButton setImage:imageName forState:UIControlStateNormal];
+    leftButton.frame = CGRectMake(0, 0, imageName.size.width, imageName.size.height);
+    // Add the target
+    [leftButton addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
     
     // Add the container bar button
     self.navigationItem.backBarButtonItem = nil;
@@ -164,11 +190,12 @@
 - (void)navBarWithTitle:(NSString *)title
     andLeftButtonImage:(UIImage *)leftButtonImage
                leftButtonSelector:(SEL)leftButtonSelector
+                     leftTarget:(nullable id)target
               andRightButtonImage:(UIImage *)rightButtonImage
               rightButtonSelector:(SEL)rightButtonSelector{
     
     [self setNavBarTitle:title];
-    [self addLeftButtonImageItem:leftButtonImage selector:leftButtonSelector];
+    [self addLeftButtonImageItem:leftButtonImage selector:leftButtonSelector withLeftTarget:target];
     [self addRightButtonImageItem:rightButtonImage selector:rightButtonSelector];
 }
 

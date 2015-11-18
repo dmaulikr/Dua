@@ -28,8 +28,10 @@
 - (void)navBarWithTitle:(NSString *)title
      andLeftButtonImage:(UIImage *)leftButtonImage
      leftButtonSelector:(SEL)leftButtonSelector
+             leftTarget:(id)target
     andRightButtonImage:(UIImage *)rightButtonImage
     rightButtonSelector:(SEL)rightButtonSelector;
+
 
 
 - (void)navBarWithLeftButtonImage:(UIImage *)leftButtonImage

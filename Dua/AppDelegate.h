@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class DashboardViewController;
+@class SWRevealViewController;
+
+
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) DashboardViewController *dashboardViewController;
+@property (strong, nonatomic) SWRevealViewController *viewController;
+
+
 
 
 @end

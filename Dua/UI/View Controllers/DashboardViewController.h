@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWRevealViewController.h"
+
 
 @interface DashboardViewController : UIViewController
+
++ (DashboardViewController *)create;
+
+@property (nonatomic, weak) SWRevealViewController *revealViewController;
+
 
 @end

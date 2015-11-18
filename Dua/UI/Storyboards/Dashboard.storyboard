@@ -8,7 +8,7 @@
         <!--Dashboard View Controller-->
         <scene sceneID="TEk-Z9-uoV">
             <objects>
-                <viewController id="Dok-UH-NBC" customClass="DashboardViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" id="Dok-UH-NBC" customClass="DashboardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6y8-Y7-ySh"/>
                         <viewControllerLayoutGuide type="bottom" id="1cg-QS-dxX"/>
@@ -43,6 +43,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxG-mR-2cv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1721" y="345"/>
+        </scene>
+        <!--Rear View Controller-->
+        <scene sceneID="IG6-Ee-gJ6">
+            <objects>
+                <viewController storyboardIdentifier="RearViewController" id="CLe-c9-MLv" customClass="RearViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wP1-DZ-k5E"/>
+                        <viewControllerLayoutGuide type="bottom" id="5uv-lA-nwR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RQg-4d-bzV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQg-Xh-C3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2244" y="215"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YT0-6N-7NC">

@@ -14,28 +14,39 @@
 #import <AMWaveTransition.h>
 #import "CategoryViewController.h"
 #import "UIViewController+Navigation.h"
+#import "CategoryViewController.h"
+
 
 static NSString *kCellId = @"cellId";
 
-@interface DashboardViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate>
+@interface DashboardViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate, SWRevealViewControllerDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *duasArray;
+
 
 @end
 
 @implementation DashboardViewController
 
++ (DashboardViewController *)create {
+    DashboardViewController *vc = [[UIStoryboard storyboardWithName:@"Dashboard" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([DashboardViewController class])];
+    return vc;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
-    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
-
-    [self navBarWithTitle:@"DUA" andLeftButtonImage:[UIImage imageNamed:@"icon_sideMenu"] leftButtonSelector:nil andRightButtonImage:[UIImage imageNamed:@"icon_favorites"] rightButtonSelector:nil];
-
     [self setupCollectionView];
+    
+    //reveal view controller
+    SWRevealViewController *revealController = [self revealViewController];
+    [revealController panGestureRecognizer];
+    [revealController tapGestureRecognizer];
+    
+    [self navBarWithTitle:@"DUA" andLeftButtonImage:[UIImage imageNamed:@"icon_sideMenu"]  leftButtonSelector:@selector(revealToggle:) leftTarget:revealController andRightButtonImage:[UIImage imageNamed:@"icon_favorites"] rightButtonSelector:nil];
+    
     
     NSArray *array = [DuaData getAllDuas];
     NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
@@ -162,5 +173,27 @@ static NSString *kCellId = @"cellId";
 - (NSArray*)visibleCells {
     return [self.collectionView visibleCells];
 }
+
+#pragma mark - SWRevealViewControllerDelegate
+- (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position {
+    if (FrontViewPositionRight == position) {
+        self.view.userInteractionEnabled = NO;
+    }
+    else if (FrontViewPositionLeft == position) {
+        self.view.userInteractionEnabled = YES;
+    }
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)revealController:(SWRevealViewController *)revealController
+                              animationControllerForOperation:(SWRevealControllerOperation)operation
+                                           fromViewController:(UIViewController *)fromVC
+                                             toViewController:(UIViewController *)toVC {
+    if ( operation != SWRevealControllerOperationReplaceRightController) {
+        return nil;
+    }
+    
+    return nil;
+}
+
 
 @end

@@ -8,8 +8,9 @@
 
 #import "AppDelegate.h"
 #import "DashboardViewController.h"
+#import "RearViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <SWRevealViewControllerDelegate>
 
 @end
 
@@ -19,7 +20,31 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // Override point for customization after application launch.
+    [UINavigationBar appearance].barStyle = UIBarStyleBlack;
+    [UINavigationBar appearance].barTintColor = [UIColor blackColor];
+    
+    
+    DashboardViewController *frontViewController = [[DashboardViewController alloc] init];
+    RearViewController *rearViewController = [[RearViewController alloc] init];
+    
+    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
+    
+    SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
+    revealController.delegate = self;
+    revealController.rearViewRevealWidth = 315;
+    
 
+    
+    //revealController.bounceBackOnOverdraw=NO;
+    //revealController.stableDragOnOverdraw=YES;
+    
+    self.viewController = revealController;
+    
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+
+    
     return YES;
 }
 
@@ -44,5 +69,26 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+#pragma mark - SWRevealViewDelegate
+
+- (id <UIViewControllerAnimatedTransitioning>)revealController:(SWRevealViewController *)revealController animationControllerForOperation:(SWRevealControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+{
+    if ( operation != SWRevealControllerOperationReplaceRightController )
+        return nil;
+    
+//    if ( [toVC isKindOfClass:[RightViewController class]] )
+//    {
+//        if ( [(RightViewController*)toVC wantsCustomAnimation] )
+//        {
+//            id<UIViewControllerAnimatedTransitioning> animationController = [[CustomAnimationController alloc] init];
+//            return animationController;
+//        }
+//    }
+    
+    return nil;
+}
+
 
 @end
