@@ -19,6 +19,7 @@
 		9CCEEB8B1BFBF3FC00E63A55 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9CCEEB8A1BFBF3FC00E63A55 /* Podfile */; };
 		9CCEEB8F1BFC2B8300E63A55 /* DuaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB8E1BFC2B8300E63A55 /* DuaData.m */; };
 		9CCEEB921BFC2F3A00E63A55 /* DuaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB911BFC2F3A00E63A55 /* DuaModel.m */; };
+		9CCEEB951BFC5D8E00E63A55 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB941BFC5D8E00E63A55 /* CategoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		9CCEEB8E1BFC2B8300E63A55 /* DuaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuaData.m; sourceTree = "<group>"; };
 		9CCEEB901BFC2F3A00E63A55 /* DuaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuaModel.h; sourceTree = "<group>"; };
 		9CCEEB911BFC2F3A00E63A55 /* DuaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuaModel.m; sourceTree = "<group>"; };
+		9CCEEB931BFC5D8E00E63A55 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		9CCEEB941BFC5D8E00E63A55 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		D6A2E68FE86A8F6AF2E3CB49 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +197,8 @@
 			children = (
 				9CCEEB7F1BFBF07C00E63A55 /* DashboardViewController.h */,
 				9CCEEB801BFBF07C00E63A55 /* DashboardViewController.m */,
+				9CCEEB931BFC5D8E00E63A55 /* CategoryViewController.h */,
+				9CCEEB941BFC5D8E00E63A55 /* CategoryViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				9CCEEB8F1BFC2B8300E63A55 /* DuaData.m in Sources */,
 				9CCEEB491BFBEF1400E63A55 /* AppDelegate.m in Sources */,
 				9CCEEB811BFBF07C00E63A55 /* DashboardViewController.m in Sources */,
+				9CCEEB951BFC5D8E00E63A55 /* CategoryViewController.m in Sources */,
 				9CCEEB461BFBEF1400E63A55 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

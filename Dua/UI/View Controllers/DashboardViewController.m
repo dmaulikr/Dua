@@ -11,10 +11,12 @@
 #import "MPSkewedParallaxLayout.h"
 #import "DuaData.h"
 #import "DuaModel.h"
+#import <AMWaveTransition.h>
+#import "CategoryViewController.h"
 
 static NSString *kCellId = @"cellId";
 
-@interface DashboardViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource>
+@interface DashboardViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *duasArray;
@@ -84,6 +86,26 @@ static NSString *kCellId = @"cellId";
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationController setDelegate:self];
+}
+
+- (void)dealloc {
+    [self.navigationController setDelegate:nil];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                  animationControllerForOperation:(UINavigationControllerOperation)operation
+                                               fromViewController:(UIViewController*)fromVC
+                                                 toViewController:(UIViewController*)toVC {
+    if (operation != UINavigationControllerOperationNone) {
+        // Return your preferred transition operation
+        return [AMWaveTransition transitionWithOperation:operation];
+    }
+    return nil;
+}
+
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     [(MPSkewedParallaxLayout *)self.collectionView.collectionViewLayout setItemSize:CGSizeMake(CGRectGetWidth(self.view.bounds), 150)];
@@ -95,11 +117,11 @@ static NSString *kCellId = @"cellId";
 }
 
 - (void)handleLongGesture:(UILongPressGestureRecognizer*)gesture {
-     NSIndexPath *selectedIndex = [self.collectionView indexPathForItemAtPoint:[gesture locationInView:self.collectionView]];
     switch (gesture.state) {
         case UIGestureRecognizerStateBegan:
         {
-//            NSIndexPath *selectedIndex = [self.collectionView indexPathForItemAtPoint:[gesture locationInView:self.collectionView]];
+            NSIndexPath *selectedIndex = [self.collectionView indexPathForItemAtPoint:[gesture locationInView:self.collectionView]];
+            
             if (selectedIndex) {
                 [self.collectionView beginInteractiveMovementForItemAtIndexPath:selectedIndex];
             }
@@ -140,10 +162,10 @@ static NSString *kCellId = @"cellId";
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     NSLog(@"%@ %zd", NSStringFromSelector(_cmd), indexPath.item);
-    DuaModel *dua = self.duasArray[indexPath.row];
-
-    NSLog(@"%@", dua.name);
+    CategoryViewController *vc = [CategoryViewController create];
+    [self.navigationController pushViewController:vc animated:YES];
 
 }
 
@@ -154,9 +176,10 @@ static NSString *kCellId = @"cellId";
         [(NSMutableArray *)self.duasArray removeObjectAtIndex:sourceIndexPath.item];
         [(NSMutableArray *)self.duasArray insertObject:dua atIndex:destinationIndexPath.item];
     }
-    
-   
 }
 
+- (NSArray*)visibleCells {
+    return [self.collectionView visibleCells];
+}
 
 @end
