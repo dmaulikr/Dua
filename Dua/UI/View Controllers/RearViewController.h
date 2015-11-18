@@ -10,4 +10,6 @@
 
 @interface RearViewController : UIViewController
 
++ (RearViewController*)create;
+
 @end

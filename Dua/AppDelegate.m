@@ -24,8 +24,8 @@
     [UINavigationBar appearance].barTintColor = [UIColor blackColor];
     
     
-    DashboardViewController *frontViewController = [[DashboardViewController alloc] init];
-    RearViewController *rearViewController = [[RearViewController alloc] init];
+    DashboardViewController *frontViewController = [DashboardViewController create];
+    RearViewController *rearViewController = [RearViewController create];
     
     UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
     UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:rearViewController];
@@ -36,7 +36,7 @@
     
 
     
-    //revealController.bounceBackOnOverdraw=NO;
+//    revealController.bounceBackOnOverdraw=YES;
     //revealController.stableDragOnOverdraw=YES;
     
     self.viewController = revealController;
