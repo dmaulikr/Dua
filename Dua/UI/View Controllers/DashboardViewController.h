@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DashboardViewController.h
 //  Dua
 //
 //  Created by Sameer Siddiqui on 11/17/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DashboardViewController : UIViewController
 
 @end
-
