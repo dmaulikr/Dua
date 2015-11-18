@@ -17,7 +17,7 @@ static NSString *kCellId = @"cellId";
 @interface DashboardViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) NSArray *duasArray;
+@property (nonatomic, strong) NSMutableArray *duasArray;
 
 
 @end
@@ -70,6 +70,9 @@ static NSString *kCellId = @"cellId";
     [self.collectionView registerClass:[MPSkewedCell class] forCellWithReuseIdentifier:kCellId];
     [self.view addSubview:self.collectionView];
     
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongGesture:)];
+    [self.collectionView addGestureRecognizer:longPressGesture];
+    
 
     NSArray *array = [DuaData getAllDuas];
     NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
@@ -77,7 +80,7 @@ static NSString *kCellId = @"cellId";
         DuaModel *dua = [[DuaModel alloc] initWithJson:duaDict];
         [mutArray addObject:dua];
     }
-    _duasArray = mutArray.copy;
+    _duasArray = mutArray;
     
 }
 
@@ -91,6 +94,32 @@ static NSString *kCellId = @"cellId";
     // Dispose of any resources that can be recreated.
 }
 
+- (void)handleLongGesture:(UILongPressGestureRecognizer*)gesture {
+     NSIndexPath *selectedIndex = [self.collectionView indexPathForItemAtPoint:[gesture locationInView:self.collectionView]];
+    switch (gesture.state) {
+        case UIGestureRecognizerStateBegan:
+        {
+//            NSIndexPath *selectedIndex = [self.collectionView indexPathForItemAtPoint:[gesture locationInView:self.collectionView]];
+            if (selectedIndex) {
+                [self.collectionView beginInteractiveMovementForItemAtIndexPath:selectedIndex];
+            }
+        }
+            break;
+        case UIGestureRecognizerStateChanged:{
+            [self.collectionView updateInteractiveMovementTargetPosition:[gesture locationInView:gesture.view]];
+        }
+            break;
+        case UIGestureRecognizerStateEnded:{
+            [self.collectionView endInteractiveMovement];
+        }
+            break;
+        default:
+        {
+            [self.collectionView cancelInteractiveMovement];
+        }
+            break;
+    }
+}
 
 #pragma mark - UICollectionViewDataSource
 
@@ -112,8 +141,22 @@ static NSString *kCellId = @"cellId";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"%@ %zd", NSStringFromSelector(_cmd), indexPath.item);
+    DuaModel *dua = self.duasArray[indexPath.row];
+
+    NSLog(@"%@", dua.name);
+
 }
 
+-(void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    
+    if ([self.duasArray isKindOfClass:[NSMutableArray class]]) {
+        DuaModel *dua = [self.duasArray objectAtIndex:sourceIndexPath.item];
+        [(NSMutableArray *)self.duasArray removeObjectAtIndex:sourceIndexPath.item];
+        [(NSMutableArray *)self.duasArray insertObject:dua atIndex:destinationIndexPath.item];
+    }
+    
+   
+}
 
 
 @end

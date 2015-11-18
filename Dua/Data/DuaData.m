@@ -12,7 +12,7 @@
 
 + (NSArray *)getAllDuas {
     return @[
-             @{
+            @{
                  @"dua:image" : @"Mosque1",
                  @"dua:categories" : @[
                          @"Fasting"],
@@ -25,6 +25,14 @@
                  @"dua:categories" : @[
                          @"Prayer"],
                  @"dua:name" : @"Prayer",
+                 @"dua:arabic" : @"جَنَْهْ",
+                 @"dua:transliteration" : @"Jannah",
+                 },
+             @{
+                 @"dua:image" : @"Mosque4",
+                 @"dua:categories" : @[
+                         @"Salat"],
+                 @"dua:name" : @"Salat",
                  @"dua:arabic" : @"جَنَْهْ",
                  @"dua:transliteration" : @"Jannah",
                  }
