@@ -46,10 +46,9 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     RearTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
     [cell setBackgroundColor:[UIColor clearColor]];
-    
     switch (indexPath.row) {
         case 0:
             [cell initializeCellWithTitle:@"Search" withImageNamed:nil];
@@ -57,7 +56,6 @@
         case 1:
             [cell initializeCellWithTitle:@"About" withImageNamed:nil];
             break;
-            
         default:
             break;
     }

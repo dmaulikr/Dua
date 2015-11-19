@@ -25,6 +25,8 @@
 		9CCEEBA11BFCFB5E00E63A55 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEBA01BFCFB5E00E63A55 /* UIImage+Scale.m */; };
 		9CCEEBA41BFD11BE00E63A55 /* RearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEBA31BFD11BE00E63A55 /* RearViewController.m */; };
 		9CE9E9191BFD31CB00FEC901 /* RearTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E9181BFD31CB00FEC901 /* RearTableViewCell.m */; };
+		9CE9E9231BFDB72500FEC901 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E9221BFDB72500FEC901 /* UIImage+ImageEffects.m */; };
+		9CE9E9261BFDB73300FEC901 /* ParallaxHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E9251BFDB73300FEC901 /* ParallaxHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,10 @@
 		9CCEEBA31BFD11BE00E63A55 /* RearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearViewController.m; sourceTree = "<group>"; };
 		9CE9E9171BFD31CB00FEC901 /* RearTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearTableViewCell.h; sourceTree = "<group>"; };
 		9CE9E9181BFD31CB00FEC901 /* RearTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearTableViewCell.m; sourceTree = "<group>"; };
+		9CE9E9211BFDB72500FEC901 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		9CE9E9221BFDB72500FEC901 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		9CE9E9241BFDB73300FEC901 /* ParallaxHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxHeaderView.h; sourceTree = "<group>"; };
+		9CE9E9251BFDB73300FEC901 /* ParallaxHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxHeaderView.m; sourceTree = "<group>"; };
 		D6A2E68FE86A8F6AF2E3CB49 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,6 +246,8 @@
 				9CCEEB9D1BFCF42500E63A55 /* UIViewController+Navigation.m */,
 				9CCEEB9F1BFCFB5E00E63A55 /* UIImage+Scale.h */,
 				9CCEEBA01BFCFB5E00E63A55 /* UIImage+Scale.m */,
+				9CE9E9211BFDB72500FEC901 /* UIImage+ImageEffects.h */,
+				9CE9E9221BFDB72500FEC901 /* UIImage+ImageEffects.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -249,6 +257,8 @@
 			children = (
 				9CCEEB981BFCF39000E63A55 /* SWRevealViewController.h */,
 				9CCEEB991BFCF39000E63A55 /* SWRevealViewController.m */,
+				9CE9E9241BFDB73300FEC901 /* ParallaxHeaderView.h */,
+				9CE9E9251BFDB73300FEC901 /* ParallaxHeaderView.m */,
 				9CE9E9171BFD31CB00FEC901 /* RearTableViewCell.h */,
 				9CE9E9181BFD31CB00FEC901 /* RearTableViewCell.m */,
 			);
@@ -325,6 +335,7 @@
 				TargetAttributes = {
 					9CCEEB401BFBEF1400E63A55 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4FCRR969NA;
 					};
 					9CCEEB591BFBEF1400E63A55 = {
 						CreatedOnToolsVersion = 7.1;
@@ -441,10 +452,12 @@
 				9CCEEB9A1BFCF39000E63A55 /* SWRevealViewController.m in Sources */,
 				9CCEEB921BFC2F3A00E63A55 /* DuaModel.m in Sources */,
 				9CCEEB8F1BFC2B8300E63A55 /* DuaData.m in Sources */,
+				9CE9E9261BFDB73300FEC901 /* ParallaxHeaderView.m in Sources */,
 				9CCEEBA41BFD11BE00E63A55 /* RearViewController.m in Sources */,
 				9CCEEBA11BFCFB5E00E63A55 /* UIImage+Scale.m in Sources */,
 				9CCEEB491BFBEF1400E63A55 /* AppDelegate.m in Sources */,
 				9CCEEB811BFBF07C00E63A55 /* DashboardViewController.m in Sources */,
+				9CE9E9231BFDB72500FEC901 /* UIImage+ImageEffects.m in Sources */,
 				9CCEEB951BFC5D8E00E63A55 /* CategoryViewController.m in Sources */,
 				9CCEEB461BFBEF1400E63A55 /* main.m in Sources */,
 				9CE9E9191BFD31CB00FEC901 /* RearTableViewCell.m in Sources */,
@@ -581,11 +594,14 @@
 			baseConfigurationReference = D6A2E68FE86A8F6AF2E3CB49 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Dua/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.Dua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -595,11 +611,14 @@
 			baseConfigurationReference = 004B1DB5F2B06C43E6549B51 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Dua/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.Dua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

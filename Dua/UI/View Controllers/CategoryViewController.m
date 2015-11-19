@@ -8,9 +8,14 @@
 
 #import "CategoryViewController.h"
 #import "UIViewController+Navigation.h"
-@interface CategoryViewController ()
+#import "ParallaxHeaderView.h"
+
+@interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
+
 
 @implementation CategoryViewController
 
@@ -23,6 +28,20 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blackColor];
     [self navBarWithWhiteBackButtonAndTitle:[self.dua.name uppercaseString]];
+    self.tableView.delegate = (id)self;
+    self.tableView.dataSource = (id)self;
+    
+    // Create ParallaxHeaderView with specified size, and set it as uitableView Header, that's it
+    ParallaxHeaderView *headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:[UIImage imageNamed:self.dua.image] forSize:CGSizeMake(self.tableView.frame.size.width, 300)];
+    headerView.headerTitleLabel.text = self.dua.name;
+    
+    [self.tableView setTableHeaderView:headerView];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [(ParallaxHeaderView *)self.tableView.tableHeaderView refreshBlurViewForNewImage];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,4 +49,59 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - tableview delegate and data source
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 40;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellid=@"cell";
+    CategoryTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellid];
+    [cell initializeCellWithTitle:@"hello" withImageNamed:nil];
+    return cell;
+}
+
+
+#pragma mark -
+#pragma mark UISCrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == self.tableView)
+    {
+        // pass the current offset of the UITableView so that the ParallaxHeaderView layouts the subViews.
+        [(ParallaxHeaderView *)self.tableView.tableHeaderView layoutHeaderViewForScrollViewOffset:scrollView.contentOffset];
+    }
+}
+
+
 @end
+
+
+@implementation CategoryTableViewCell
+
+#pragma mark - Life Cycle
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    // Initialization code
+    self.backgroundColor = [UIColor blackColor];
+    
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.05];
+    [self setSelectedBackgroundView:bgColorView];
+}
+
+- (void)initializeCellWithTitle:(NSString *)title withImageNamed:(NSString *)imageName {
+    
+    self.label.attributedText = [[NSAttributedString alloc]initWithString:[title uppercaseString]
+                                                               attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                                            NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:14.0],
+                                                                            NSKernAttributeName: @(2.0f)}];
+    self.image.image = [UIImage imageNamed:imageName];
+}
+
+
+@end
+
+
