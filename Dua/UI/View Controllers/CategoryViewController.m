@@ -8,7 +8,6 @@
 
 #import "CategoryViewController.h"
 #import "UIViewController+Navigation.h"
-#import "ParallaxHeaderView.h"
 
 @interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
