@@ -24,6 +24,7 @@
 		9CCEEB9E1BFCF42500E63A55 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB9D1BFCF42500E63A55 /* UIViewController+Navigation.m */; };
 		9CCEEBA11BFCFB5E00E63A55 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEBA01BFCFB5E00E63A55 /* UIImage+Scale.m */; };
 		9CCEEBA41BFD11BE00E63A55 /* RearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEBA31BFD11BE00E63A55 /* RearViewController.m */; };
+		9CE9E9191BFD31CB00FEC901 /* RearTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E9181BFD31CB00FEC901 /* RearTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		9CCEEBA01BFCFB5E00E63A55 /* UIImage+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 		9CCEEBA21BFD11BE00E63A55 /* RearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearViewController.h; sourceTree = "<group>"; };
 		9CCEEBA31BFD11BE00E63A55 /* RearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearViewController.m; sourceTree = "<group>"; };
+		9CE9E9171BFD31CB00FEC901 /* RearTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RearTableViewCell.h; sourceTree = "<group>"; };
+		9CE9E9181BFD31CB00FEC901 /* RearTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RearTableViewCell.m; sourceTree = "<group>"; };
 		D6A2E68FE86A8F6AF2E3CB49 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +249,8 @@
 			children = (
 				9CCEEB981BFCF39000E63A55 /* SWRevealViewController.h */,
 				9CCEEB991BFCF39000E63A55 /* SWRevealViewController.m */,
+				9CE9E9171BFD31CB00FEC901 /* RearTableViewCell.h */,
+				9CE9E9181BFD31CB00FEC901 /* RearTableViewCell.m */,
 			);
 			path = "Custom Controls";
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 				9CCEEB811BFBF07C00E63A55 /* DashboardViewController.m in Sources */,
 				9CCEEB951BFC5D8E00E63A55 /* CategoryViewController.m in Sources */,
 				9CCEEB461BFBEF1400E63A55 /* main.m in Sources */,
+				9CE9E9191BFD31CB00FEC901 /* RearTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
