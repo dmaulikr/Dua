@@ -22,4 +22,12 @@
 
 @property (nonatomic, readonly) NSString *transliteration;
 
+@property (nonatomic, readonly) NSString *title;
+
+@property (nonatomic, readonly) BOOL isFavorite;
+
+@property (nonatomic, readonly) NSArray *searchKeys;
+
+
+
 @end

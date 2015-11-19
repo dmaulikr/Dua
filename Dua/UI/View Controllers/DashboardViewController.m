@@ -22,7 +22,8 @@ static NSString *kCellId = @"cellId";
 @interface DashboardViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate, SWRevealViewControllerDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-@property (nonatomic, strong) NSMutableArray *duasArray;
+@property (nonatomic, strong) NSMutableArray *categoriesArray;
+
 
 
 @end
@@ -48,13 +49,13 @@ static NSString *kCellId = @"cellId";
     [self navBarWithTitle:@"DUA" andLeftButtonImage:[UIImage imageNamed:@"icon_sideMenu"]  leftButtonSelector:@selector(revealToggle:) leftTarget:revealController andRightButtonImage:[UIImage imageNamed:@"icon_favorites"] rightButtonSelector:nil];
     
     
-    NSArray *array = [DuaData getAllDuas];
+    NSArray *array = [DuaData duas];
     NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
-    for (NSDictionary *duaDict in array) {
-        DuaModel *dua = [[DuaModel alloc] initWithJson:duaDict];
-        [mutArray addObject:dua];
+    for (NSDictionary *categoryDict in array) {
+        [mutArray addObject:categoryDict];
     }
-    _duasArray = mutArray;
+    _categoriesArray = mutArray;
+
     
 }
 
@@ -137,16 +138,18 @@ static NSString *kCellId = @"cellId";
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.duasArray.count;//self.titles.count; // random
+    return self.categoriesArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MPSkewedCell* cell = (MPSkewedCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kCellId forIndexPath:indexPath];
     
-    DuaModel *dua = self.duasArray[indexPath.row];
-    cell.image =[UIImage imageNamed:dua.image];
-    cell.text = [dua.name uppercaseString];
+    NSDictionary *categories = self.categoriesArray[indexPath.row];
+    NSString *category = [categories objectForKey:@"category"];
+    NSString *imageString = [categories objectForKey:@"image"];
     
+    cell.image =[UIImage imageNamed:imageString];
+    cell.text = category;    
     return cell;
 }
 
@@ -156,17 +159,20 @@ static NSString *kCellId = @"cellId";
     
     NSLog(@"%@ %zd", NSStringFromSelector(_cmd), indexPath.item);
     CategoryViewController *vc = [CategoryViewController create];
-    vc.dua = self.duasArray[indexPath.row];
+    NSDictionary *category = self.categoriesArray[indexPath.row];
+
+    vc.duasArray = [category objectForKey:@"duas"];
+    vc.category = category;
     [self.navigationController pushViewController:vc animated:YES];
 
 }
 
 -(void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
     
-    if ([self.duasArray isKindOfClass:[NSMutableArray class]]) {
-        DuaModel *dua = [self.duasArray objectAtIndex:sourceIndexPath.item];
-        [(NSMutableArray *)self.duasArray removeObjectAtIndex:sourceIndexPath.item];
-        [(NSMutableArray *)self.duasArray insertObject:dua atIndex:destinationIndexPath.item];
+    if ([self.categoriesArray isKindOfClass:[NSMutableArray class]]) {
+        NSString *dua = [self.categoriesArray objectAtIndex:sourceIndexPath.item];
+        [(NSMutableArray *)self.categoriesArray removeObjectAtIndex:sourceIndexPath.item];
+        [(NSMutableArray *)self.categoriesArray insertObject:dua atIndex:destinationIndexPath.item];
     }
 }
 

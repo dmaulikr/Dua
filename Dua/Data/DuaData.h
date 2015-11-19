@@ -10,6 +10,8 @@
 
 @interface DuaData : NSObject
 
-+ (NSArray *)getAllDuas;
++ (NSArray *)duas;
+
+
 
 @end

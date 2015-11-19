@@ -8,6 +8,7 @@
 
 #import "CategoryViewController.h"
 #import "UIViewController+Navigation.h"
+#import "DuaData.h"
 
 @interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
@@ -37,11 +38,20 @@ const static CGFloat kTableCutAway = 50.0f;
     self.view.backgroundColor = [UIColor blackColor];
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+//    NSArray *array = [DuaData getDuasForCategory:[self.category objectForKey:@"category"]];
+    NSArray *array = self.duasArray;
+    NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
+    for (NSDictionary *duaDict in array) {
+        DuaModel *dua = [[DuaModel alloc] initWithJson:duaDict];
+        [mutArray addObject:dua];
+    }
+    _duasArray = mutArray;
 
     [self navBarWithWhiteBackButtonAndTitle:@""];
 
     //title that sets into place
-    [self setTitle:self.dua.name];
+    [self setTitle:[self.category objectForKey:@"category"]];
     titleView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 200.0, 44.0)];
     [titleView setContentSize:CGSizeMake(0.0, 88.0)];
     [self.view insertSubview:titleView atIndex:0];
@@ -57,6 +67,8 @@ const static CGFloat kTableCutAway = 50.0f;
     
     self.tableView.delegate = (id)self;
     self.tableView.dataSource = (id)self;
+    
+    
 
 }
 
@@ -73,7 +85,7 @@ const static CGFloat kTableCutAway = 50.0f;
     headerMarkLayer.fillColor = [UIColor blackColor].CGColor;
     header.layer.mask = headerMarkLayer;
     
-    self.topImage.image = [UIImage imageNamed:self.dua.image];
+    self.topImage.image = [UIImage imageNamed:[self.category objectForKey:@"image"]];
     self.topLabel.attributedText = [[NSAttributedString alloc]initWithString:[self.title uppercaseString]
                                                                   attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:30.0],
@@ -106,15 +118,32 @@ const static CGFloat kTableCutAway = 50.0f;
 
 #pragma mark - tableview delegate and data source
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 40;
+    return self.duasArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellid=@"cell";
     CategoryTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellid];
-    [cell initializeCellWithTitle:@"hello" withImageNamed:nil];
+    
+    DuaModel *dua = self.duasArray[indexPath.row];
+    [cell initializeCellWithTitle:dua.title withImageNamed:nil];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DuaModel *dua = self.duasArray[indexPath.row];
+    if (dua.isFavorite) {
+        NSLog(@"YES");
+    }
 }
 
 #pragma mark - UISCrollViewDelegate
@@ -124,10 +153,8 @@ const static CGFloat kTableCutAway = 50.0f;
     CGPoint contentOffset = CGPointMake(0.0,MIN(scrollView.contentOffset.y + 167.0, 44.0) );
     [titleView setContentOffset:contentOffset];
     
-    
     [self updateHeaderView];
 }
-
 
 @end
 
@@ -144,6 +171,8 @@ const static CGFloat kTableCutAway = 50.0f;
     UIView *bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.05];
     [self setSelectedBackgroundView:bgColorView];
+    
+    self.label.numberOfLines = 0;
 }
 
 - (void)initializeCellWithTitle:(NSString *)title withImageNamed:(NSString *)imageName {
@@ -152,7 +181,9 @@ const static CGFloat kTableCutAway = 50.0f;
                                                                attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                             NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:14.0],
                                                                             NSKernAttributeName: @(2.0f)}];
-    self.image.image = [UIImage imageNamed:imageName];
+    if (imageName) {
+        self.image.image = [UIImage imageNamed:imageName];
+    }
 }
 @end
 

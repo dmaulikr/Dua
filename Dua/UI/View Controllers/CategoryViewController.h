@@ -14,6 +14,9 @@
 + (CategoryViewController *)create;
 
 @property (nonatomic) DuaModel *dua;
+@property (nonatomic) NSArray *duasArray;
+@property (nonatomic) NSDictionary *category;
+
 
 @end
 

@@ -18,6 +18,15 @@ NSString *const kAttrArabic=@"dua:arabic";
 
 NSString *const kAttrTransliteration=@"dua:transliteration";
 
+NSString *const kAttrTitle=@"dua:title";
+
+NSString *const kAttrFavorite=@"isFavorite";
+
+NSString *const kAttrSearchKeys=@"searchKeys";
+
+
+
+
 @interface DuaModel ()
 
 @property (nonatomic, strong, readonly) NSDictionary *json;
@@ -31,6 +40,7 @@ NSString *const kAttrTransliteration=@"dua:transliteration";
 @dynamic arabic;
 @dynamic transliteration;
 @dynamic image;
+@dynamic title;
 
 #pragma mark - Life Cycle
 - (instancetype)init {
@@ -74,6 +84,18 @@ NSString *const kAttrTransliteration=@"dua:transliteration";
 
 - (NSString *)categories {
     return self.json[kAttrCategories];
+}
+
+- (NSString *)title {
+    return self.json[kAttrTitle];
+}
+
+- (BOOL)isFavorite {
+    return [self.json[kAttrFavorite] boolValue];
+}
+
+- (NSArray *)searchKeys {
+    return self.json[kAttrSearchKeys];
 }
 
 

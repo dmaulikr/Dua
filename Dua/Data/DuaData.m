@@ -10,82 +10,37 @@
 
 @implementation DuaData
 
-+ (NSArray *)getAllDuas {
-    return @[
-            @{
-                 @"dua:image" : @"Mosque1",
-                 @"dua:categories" : @[
-                         @"Fasting"],
-                 @"dua:name" : @"Morning",
-                 @"dua:arabic" : @"جَنَْهْ",
-                 @"dua:transliteration" : @"Jannah",
-                 },
-             @{
-                 @"dua:image" : @"Mosque2",
-                 @"dua:categories" : @[
-                         @"Prayer"],
-                 @"dua:name" : @"Eating",
-                 @"dua:arabic" : @"جَنَْهْ",
-                 @"dua:transliteration" : @"Jannah",
-                 },
-             @{
-                 @"dua:image" : @"Mosque4",
-                 @"dua:categories" : @[
-                         @"Salat"],
-                 @"dua:name" : @"Traveling",
-                 @"dua:arabic" : @"جَنَْهْ",
-                 @"dua:transliteration" : @"Jannah",
-                 },
-            @{
-                @"dua:image" : @"Mosque1",
-                @"dua:categories" : @[
-                        @"Fasting"],
-                @"dua:name" : @"Difficulty",
-                @"dua:arabic" : @"جَنَْهْ",
-                @"dua:transliteration" : @"Jannah",
++ (NSArray *)duas{
+    return  @[
+              @{@"category":@"Morning",@"image":@"Mosque1",
+                @"duas":@[@{
+                              @"dua:image" : @"Mosque1",
+                              @"dua:arabic" : @"جَنَْهْ",
+                              @"dua:transliteration" : @"Jannah",
+                              @"dua:title" : @"Waking up in the Morning",
+                              @"isFavorite" : @"YES",
+                              @"searchKeys":@""},
+                          
+                          @{
+                              @"dua:image" : @"Mosque1",
+                              @"dua:arabic" : @"جَنَْهْ",
+                              @"dua:transliteration" : @"Jannah",
+                              @"dua:title" : @"Bathroom",
+                              @"isFavorite" : @"NO",
+                              @"searchKeys":@""}
+                          ]
                 },
-            @{
-                @"dua:image" : @"Mosque2",
-                @"dua:categories" : @[
-                        @"Prayer"],
-                @"dua:name" : @"Night",
-                @"dua:arabic" : @"جَنَْهْ",
-                @"dua:transliteration" : @"Jannah",
-                },
-            @{
-                @"dua:image" : @"Mosque4",
-                @"dua:categories" : @[
-                        @"Salat"],
-                @"dua:name" : @"Salat",
-                @"dua:arabic" : @"جَنَْهْ",
-                @"dua:transliteration" : @"Jannah",
-                },
-            @{
-                @"dua:image" : @"Mosque1",
-                @"dua:categories" : @[
-                        @"Fasting"],
-                @"dua:name" : @"Beginning Fasting",
-                @"dua:arabic" : @"جَنَْهْ",
-                @"dua:transliteration" : @"Jannah",
-                },
-            @{
-                @"dua:image" : @"Mosque2",
-                @"dua:categories" : @[
-                        @"Prayer"],
-                @"dua:name" : @"Prayer",
-                @"dua:arabic" : @"جَنَْهْ",
-                @"dua:transliteration" : @"Jannah",
-                },
-            @{
-                @"dua:image" : @"Mosque4",
-                @"dua:categories" : @[
-                        @"Salat"],
-                @"dua:name" : @"Salat",
-                @"dua:arabic" : @"جَنَْهْ",
-                @"dua:transliteration" : @"Jannah",
+              @{@"category":@"Evening",@"image":@"Mosque2",
+                @"duas":@[@{
+                              @"dua:image" : @"Mosque2",
+                              @"dua:arabic" : @"جَنَْهْ",
+                              @"dua:transliteration" : @"Jannah",
+                              @"dua:title" : @"Waking up in the Morning",
+                              @"isFavorite" : @"YES",
+                              @"searchKeys":@""}
+                          ]
                 }
-
-             ];
+              ];
 }
 
 @end
