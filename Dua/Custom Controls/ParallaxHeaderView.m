@@ -75,6 +75,7 @@ static CGFloat kLabelPaddingDist = 8.0f;
         self.imageScrollView.frame = rect;
         self.clipsToBounds = NO;
         self.headerTitleLabel.alpha = 1 - (delta) * 1 / kMaxTitleAlphaOffset;
+        
     }
 }
 
@@ -109,7 +110,8 @@ static CGFloat kLabelPaddingDist = 8.0f;
     headerLabel.lineBreakMode = NSLineBreakByWordWrapping;
     headerLabel.autoresizingMask = imageView.autoresizingMask;
     headerLabel.textColor = [UIColor whiteColor];
-    headerLabel.font = [UIFont fontWithName:@"AvenirNextCondensed-Regular" size:23];
+    headerLabel.font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:23];
+   
     self.headerTitleLabel = headerLabel;
     [self.imageScrollView addSubview:self.headerTitleLabel];
     

@@ -10,14 +10,17 @@
 #import "UIViewController+Navigation.h"
 #import "ParallaxHeaderView.h"
 
-@interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 
-@implementation CategoryViewController
+@implementation CategoryViewController{
+    ParallaxHeaderView *headerView ;
+        UIScrollView *titleView;
+}
 
 + (CategoryViewController *)create {
     return [[UIStoryboard storyboardWithName:@"Dashboard" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CategoryViewController class])];
@@ -27,15 +30,46 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor blackColor];
-    [self navBarWithWhiteBackButtonAndTitle:[self.dua.name uppercaseString]];
+    [self navBarWithWhiteBackButtonAndTitle:@""];
+    //title that sets into place
+    [self setTitle:self.dua.name];
+    titleView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 200.0, 44.0)];
+    [titleView setContentSize:CGSizeMake(0.0, 88.0)];
+    [self.view insertSubview:titleView atIndex:0];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 44.0, CGRectGetWidth(titleView.frame), 44.0)];
+    [titleLabel setTextAlignment:NSTextAlignmentCenter];
+//    [titleLabel setFont:[UIFont boldSystemFontOfSize:17.0]];
+//    [titleLabel setText:self.title];
+//    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.attributedText = [[NSAttributedString alloc]initWithString:[self.title uppercaseString]
+                                                               attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                                            NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:14.0],
+                                                                            NSKernAttributeName: @(2.0f)}];
+    [titleView addSubview:titleLabel];
+    
+    
+    self.navigationItem.titleView = titleView;
+    
+    
+    
     self.tableView.delegate = (id)self;
     self.tableView.dataSource = (id)self;
     
     // Create ParallaxHeaderView with specified size, and set it as uitableView Header, that's it
-    ParallaxHeaderView *headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:[UIImage imageNamed:self.dua.image] forSize:CGSizeMake(self.tableView.frame.size.width, 300)];
-    headerView.headerTitleLabel.text = self.dua.name;
+    headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:[UIImage imageNamed:self.dua.image] forSize:CGSizeMake(self.tableView.frame.size.width, 250)];
+//    headerView.headerTitleLabel.text = self.dua.name;
+    headerView.headerTitleLabel.attributedText = [[NSAttributedString alloc]initWithString: [self.dua.name uppercaseString]
+                                                                                attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                                             NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:14.0],
+                                                                             NSKernAttributeName: @(2.0f)}];
     
+   
     [self.tableView setTableHeaderView:headerView];
+    
+    
+    
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -72,6 +106,12 @@
         // pass the current offset of the UITableView so that the ParallaxHeaderView layouts the subViews.
         [(ParallaxHeaderView *)self.tableView.tableHeaderView layoutHeaderViewForScrollViewOffset:scrollView.contentOffset];
     }
+    
+    CGPoint contentOffset = CGPointMake(0.0,MIN(scrollView.contentOffset.y - 95.0, 44.0) );
+    [titleView setContentOffset:contentOffset];
+    
+    
+    
 }
 
 
@@ -100,8 +140,6 @@
                                                                             NSKernAttributeName: @(2.0f)}];
     self.image.image = [UIImage imageNamed:imageName];
 }
-
-
 @end
 
 
