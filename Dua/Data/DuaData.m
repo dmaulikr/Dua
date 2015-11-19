@@ -16,7 +16,7 @@
                  @"dua:image" : @"Mosque1",
                  @"dua:categories" : @[
                          @"Fasting"],
-                 @"dua:name" : @"Beginning Fasting",
+                 @"dua:name" : @"Morning",
                  @"dua:arabic" : @"جَنَْهْ",
                  @"dua:transliteration" : @"Jannah",
                  },
@@ -24,7 +24,7 @@
                  @"dua:image" : @"Mosque2",
                  @"dua:categories" : @[
                          @"Prayer"],
-                 @"dua:name" : @"Prayer",
+                 @"dua:name" : @"Eating",
                  @"dua:arabic" : @"جَنَْهْ",
                  @"dua:transliteration" : @"Jannah",
                  },
@@ -32,7 +32,7 @@
                  @"dua:image" : @"Mosque4",
                  @"dua:categories" : @[
                          @"Salat"],
-                 @"dua:name" : @"Salat",
+                 @"dua:name" : @"Traveling",
                  @"dua:arabic" : @"جَنَْهْ",
                  @"dua:transliteration" : @"Jannah",
                  },
@@ -40,7 +40,7 @@
                 @"dua:image" : @"Mosque1",
                 @"dua:categories" : @[
                         @"Fasting"],
-                @"dua:name" : @"Beginning Fasting",
+                @"dua:name" : @"Difficulty",
                 @"dua:arabic" : @"جَنَْهْ",
                 @"dua:transliteration" : @"Jannah",
                 },
@@ -48,7 +48,7 @@
                 @"dua:image" : @"Mosque2",
                 @"dua:categories" : @[
                         @"Prayer"],
-                @"dua:name" : @"Prayer",
+                @"dua:name" : @"Night",
                 @"dua:arabic" : @"جَنَْهْ",
                 @"dua:transliteration" : @"Jannah",
                 },
