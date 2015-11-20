@@ -16,6 +16,8 @@ NSString *const kAttrCategories=@"dua:categories";
 
 NSString *const kAttrArabic=@"dua:arabic";
 
+NSString *const kAttrArabic2=@"dua:arabic2";
+
 NSString *const kAttrTransliteration=@"dua:transliteration";
 
 NSString *const kAttrTitle=@"dua:title";
@@ -23,6 +25,12 @@ NSString *const kAttrTitle=@"dua:title";
 NSString *const kAttrFavorite=@"isFavorite";
 
 NSString *const kAttrSearchKeys=@"searchKeys";
+
+NSString *const kAttrTranslation=@"dua:translation";
+
+NSString *const kAttrTranslation2=@"dua:translation2";
+
+
 
 
 
@@ -38,6 +46,9 @@ NSString *const kAttrSearchKeys=@"searchKeys";
 @dynamic categories;
 @dynamic name;
 @dynamic arabic;
+@dynamic arabic2;
+@dynamic translation;
+@dynamic translation2;
 @dynamic transliteration;
 @dynamic image;
 @dynamic title;
@@ -78,6 +89,10 @@ NSString *const kAttrSearchKeys=@"searchKeys";
     return self.json[kAttrArabic];
 }
 
+- (NSString *)arabic2 {
+    return self.json[kAttrArabic2];
+}
+
 - (NSString *)transliteration {
     return self.json[kAttrTransliteration];
 }
@@ -88,6 +103,14 @@ NSString *const kAttrSearchKeys=@"searchKeys";
 
 - (NSString *)title {
     return self.json[kAttrTitle];
+}
+
+- (NSString *)translation {
+    return self.json[kAttrTranslation];
+}
+
+- (NSString *)translation2 {
+    return self.json[kAttrTranslation2];
 }
 
 - (BOOL)isFavorite {

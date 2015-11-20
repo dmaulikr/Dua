@@ -9,6 +9,7 @@
 #import "CategoryViewController.h"
 #import "UIViewController+Navigation.h"
 #import "DuaData.h"
+#import "DuaDetailViewController.h"
 
 @interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
@@ -141,9 +142,9 @@ const static CGFloat kTableCutAway = 50.0f;
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     DuaModel *dua = self.duasArray[indexPath.row];
-    if (dua.isFavorite) {
-        NSLog(@"YES");
-    }
+    DuaDetailViewController *vc = [DuaDetailViewController create];
+    vc.dua = dua;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UISCrollViewDelegate

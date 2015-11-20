@@ -20,9 +20,15 @@
 
 @property (nonatomic, readonly) NSString *arabic;
 
+@property (nonatomic, readonly) NSString *arabic2;
+
 @property (nonatomic, readonly) NSString *transliteration;
 
 @property (nonatomic, readonly) NSString *title;
+
+@property (nonatomic, readonly) NSString *translation;
+
+@property (nonatomic, readonly) NSString *translation2;
 
 @property (nonatomic, readonly) BOOL isFavorite;
 
