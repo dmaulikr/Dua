@@ -11,6 +11,7 @@
 
 @interface DuaDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIImageView *topImage;
 
 @end
 
@@ -31,6 +32,12 @@
     
 }
 
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.topImage.image = [UIImage imageNamed:self.dua.image];
+    self.topImage.contentMode = UIViewContentModeScaleAspectFill;
+    self.topImage.clipsToBounds = YES;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -105,7 +112,7 @@
     self.translationLabel.numberOfLines = 0;
     self.arabicLabel.attributedText = [[NSAttributedString alloc]initWithString:arabic
                                                                      attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                                                  NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:20.0],
+                                                                                  NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-UltraLight" size:22.0],
                                                                                   NSKernAttributeName: @(2.0f)}];
     self.translationLabel.attributedText = [[NSAttributedString alloc]initWithString:translation
                                                                           attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
