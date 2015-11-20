@@ -10,16 +10,20 @@
 #import "UIViewController+Navigation.h"
 #import "UIImage+Scale.h"
 
-@interface DuaDetailViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface DuaDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (weak, nonatomic) IBOutlet UILabel *topLabel;
 - (IBAction)shareButtonPressed:(id)sender;
 - (IBAction)favoriteButtonPressed:(id)sender;
 
 @end
 
-@implementation DuaDetailViewController
+@implementation DuaDetailViewController{
+    UIScrollView *titleView;
+
+}
 
 + (DuaDetailViewController *)create {
     return [[UIStoryboard storyboardWithName:@"Dashboard" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([DuaDetailViewController class])];
@@ -28,15 +32,45 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self navBarWithWhiteBackButtonAndTitle:self.dua.title];
+    [self navBarWithWhiteBackButtonAndTitle:@""];
     self.view.backgroundColor = [UIColor blackColor];
     self.tableView.backgroundColor = [UIColor clearColor];
-    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+//    [self.tableView setTableFooterView:[[UIView alloc] init]];
+    self.topLabel.attributedText = [[NSAttributedString alloc]initWithString:self.dua.title
+                                                                  attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                                               NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:13.0],
+                                                                               NSKernAttributeName: @(2.0f)}];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 1)];
 
+    
+//    if (self.dua.arabic2 == nil) {
+//        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+//    } else {
+//        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
+//    }
+    
 }
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    
+    //title that sets into place
+    [self setTitle:self.dua.title];
+    titleView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.tableView.frame.size.width - 200.0, 44.0)];
+    [titleView setContentSize:CGSizeMake(0.0, 88.0)];
+    [self.view insertSubview:titleView atIndex:0];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 44.0, CGRectGetWidth(titleView.frame), 44.0)];
+    [titleLabel setTextAlignment:NSTextAlignmentCenter];
+    titleLabel.numberOfLines = 2;
+    titleLabel.attributedText = [[NSAttributedString alloc]initWithString:self.title
+                                                               attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                                            NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:13.0],
+                                                                            NSKernAttributeName: @(2.0f)}];
+    [titleView addSubview:titleLabel];
+    self.navigationItem.titleView = titleView;
+
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -110,6 +144,19 @@
 
 - (IBAction)favoriteButtonPressed:(id)sender {
 }
+
+
+#pragma mark - UISCrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    CGPoint contentOffset = CGPointMake(0.0,MIN(scrollView.contentOffset.y + 54.0, 44.0) );
+    [titleView setContentOffset:contentOffset];
+    
+}
+
+
+
 @end
 
 
@@ -128,10 +175,12 @@
     [self setSelectedBackgroundView:bgColorView];
     self.arabicLabel.numberOfLines = 0;
     self.translationLabel.numberOfLines = 0;
+    self.transliterationLabel.numberOfLines = 0;
+
     self.arabicLabel.attributedText = [[NSAttributedString alloc]initWithString:arabic
                                                                      attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                                                  NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-UltraLight" size:22.0],
-                                                                                  NSKernAttributeName: @(2.0f)}];
+                                                                                  NSFontAttributeName: [UIFont fontWithName:@"Thonburi-Light" size:30.0],
+                                                                                  NSKernAttributeName: @(1.0f)}];
     self.translationLabel.attributedText = [[NSAttributedString alloc]initWithString:translation
                                                                           attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                        NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:14.0],
