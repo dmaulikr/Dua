@@ -238,9 +238,47 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="ih6-ms-Q42">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0E4-l6-kY2">
+                                            <rect key="frame" x="8" y="13" width="40" height="40"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="COZ-9S-zIM"/>
+                                                <constraint firstAttribute="width" constant="40" id="EjB-0N-Kjx"/>
+                                            </constraints>
+                                            <state key="normal" image="icon_favorites"/>
+                                            <connections>
+                                                <action selector="favoriteButtonPressed:" destination="YlK-Nc-JHP" eventType="touchUpInside" id="7Jd-UB-5vd"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikh-Fs-gCM">
+                                            <rect key="frame" x="555" y="15" width="30" height="35"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="Itx-19-gPZ"/>
+                                                <constraint firstAttribute="height" constant="35" id="tKD-eF-UGU"/>
+                                            </constraints>
+                                            <state key="normal" image="share"/>
+                                            <connections>
+                                                <action selector="shareButtonPressed:" destination="YlK-Nc-JHP" eventType="touchUpInside" id="vTF-sA-4fe"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Ikh-Fs-gCM" secondAttribute="trailing" constant="15" id="TyP-ki-aDw"/>
+                                        <constraint firstItem="Ikh-Fs-gCM" firstAttribute="top" secondItem="ih6-ms-Q42" secondAttribute="top" constant="15" id="UpP-tY-i4s"/>
+                                        <constraint firstItem="0E4-l6-kY2" firstAttribute="top" secondItem="ih6-ms-Q42" secondAttribute="top" constant="13" id="mvY-qh-JOE"/>
+                                        <constraint firstItem="0E4-l6-kY2" firstAttribute="leading" secondItem="ih6-ms-Q42" secondAttribute="leading" constant="8" id="zoJ-b5-iY8"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="340" id="ukw-3H-p1V" customClass="DuaDetailCell">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="340"/>
+                                        <rect key="frame" x="0.0" y="93" width="600" height="340"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ukw-3H-p1V" id="byp-fV-VaG">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="339"/>
@@ -317,12 +355,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="favoriteButton" destination="0E4-l6-kY2" id="r8W-qs-kif"/>
+                        <outlet property="shareButton" destination="Ikh-Fs-gCM" id="uS1-MJ-5lF"/>
                         <outlet property="tableView" destination="LpZ-jy-NiS" id="kfs-Wa-kM1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0H-VU-uSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2969" y="155"/>
+            <point key="canvasLocation" x="2972" y="174"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YT0-6N-7NC">
@@ -346,5 +386,7 @@
     </scenes>
     <resources>
         <image name="chevron_white" width="9" height="15"/>
+        <image name="icon_favorites" width="60" height="60"/>
+        <image name="share" width="120" height="120"/>
     </resources>
 </document>

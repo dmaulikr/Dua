@@ -24,6 +24,8 @@ typedef NS_ENUM(NSUInteger, GradientType) {
 - (UIImage *)scaleImageToSize:(CGSize)size;
 - (UIImage *)exactZoomScaleAndCutSizeInCenter:(CGSize)size;
 - (UIImage *)backgroundZoomScaleAndCutSizeInCenter:(CGSize)size;
++ (UIImage *)changeColorOfImage:(NSString *)imageName withColor:(UIColor *)color;
+
 
 - (UIImage *)setAlpha:(CGFloat)alpha;
 - (UIImage *)cutImage:(CGRect) rect;
@@ -39,6 +41,8 @@ typedef NS_ENUM(NSUInteger, GradientType) {
 - (UIImage *)convertImageToGrayScale;
 
 - (UIImage *)invertColor;
+- (UIImage *)negativeImage;
+
 
 + (UIImage *)gradientColorImageFromColors:(NSArray*)colors gradientType:(GradientType)gradientType imgSize:(CGSize)imgSize;
 

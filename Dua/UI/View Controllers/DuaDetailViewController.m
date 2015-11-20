@@ -8,10 +8,14 @@
 
 #import "DuaDetailViewController.h"
 #import "UIViewController+Navigation.h"
+#import "UIImage+Scale.h"
 
 @interface DuaDetailViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIImageView *topImage;
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
+- (IBAction)shareButtonPressed:(id)sender;
+- (IBAction)favoriteButtonPressed:(id)sender;
 
 @end
 
@@ -29,15 +33,12 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
-    
 }
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    self.topImage.image = [UIImage imageNamed:self.dua.image];
-    self.topImage.contentMode = UIViewContentModeScaleAspectFill;
-    self.topImage.clipsToBounds = YES;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -92,6 +93,23 @@
     return nil;
 }
 
+- (IBAction)shareButtonPressed:(id)sender {
+    UIView *subView = self.view;
+    UIGraphicsBeginImageContextWithOptions(subView.bounds.size, YES, 0.0f);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [subView.layer renderInContext:context];
+    UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    NSArray *objectsToShare = @[snapshotImage];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
+
+- (IBAction)favoriteButtonPressed:(id)sender {
+}
 @end
 
 
