@@ -15,4 +15,5 @@
 @property (nonatomic) NSString *translation;
 @property (nonatomic) NSString *transliteration;
 
+
 @end

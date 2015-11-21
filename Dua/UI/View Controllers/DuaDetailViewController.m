@@ -71,7 +71,7 @@
     NSArray *array = [self readArrayWithCustomObjFromUserDefaults:@"favorites"];
     for (FavoriteModel *model in array) {
         if ([model.title isEqualToString:self.dua.title]) {
-            [self.favoriteButton.imageView setImage:[UIImage imageNamed:@"icon_favoritesFilled"]];
+            [self.favoriteButton setImage:[UIImage imageNamed:@"icon_favoritesFilled"] forState:UIControlStateNormal];
             _checkedState = YES;
         }
     }
@@ -153,23 +153,6 @@
     [self toggle];
 }
 
-
--(void)writeArrayWithCustomObjToUserDefaults:(NSString *)keyName withArray:(NSMutableArray *)myArray {
-
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:myArray];
-    [defaults setObject:data forKey:keyName];
-    [defaults synchronize];
-}
-
--(NSArray *)readArrayWithCustomObjFromUserDefaults:(NSString*)keyName {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSData *data = [defaults objectForKey:keyName];
-    NSArray *myArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    return myArray;
-}
-
-
 - (void) toggle {
     [self setChecked:!_checkedState];
 }
@@ -193,8 +176,7 @@
         [mutArray addObject:model];
         [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:mutArray];
 
-        [self.favoriteButton.imageView setImage:[UIImage imageNamed:@"icon_favoritesFilled"]];
-
+        [self.favoriteButton setImage:[UIImage imageNamed:@"icon_favoritesFilled"] forState:UIControlStateNormal];
     }
     else {
         
@@ -218,9 +200,24 @@
         }
         [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:mutArray];
 
-        [self.favoriteButton.imageView setImage:[UIImage imageNamed:@"icon_favorites"]];
+        [self.favoriteButton setImage:[UIImage imageNamed:@"icon_favorites"] forState:UIControlStateNormal];
         NSLog(@"%@",mutArray);
     }
+}
+
+- (void)writeArrayWithCustomObjToUserDefaults:(NSString *)keyName withArray:(NSMutableArray *)myArray {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:myArray];
+    [defaults setObject:data forKey:keyName];
+    [defaults synchronize];
+}
+
+- (NSArray *)readArrayWithCustomObjFromUserDefaults:(NSString*)keyName {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [defaults objectForKey:keyName];
+    NSArray *myArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    return myArray;
 }
 
 

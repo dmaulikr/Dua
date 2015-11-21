@@ -24,6 +24,7 @@ NSString *const kAttrTranslate=@"dua:translation";
 
 @implementation FavoriteModel
 
+
 #pragma mark - NSCoding support
 - (id)initWithCoder:(NSCoder*)decoder {
     if (self = [self init]) {

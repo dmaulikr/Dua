@@ -15,6 +15,7 @@
 #import "CategoryViewController.h"
 #import "UIViewController+Navigation.h"
 #import "CategoryViewController.h"
+#import "FavoritesViewController.h"
 
 
 static NSString *kCellId = @"cellId";
@@ -46,7 +47,7 @@ static NSString *kCellId = @"cellId";
     [revealController panGestureRecognizer];
     [revealController tapGestureRecognizer];
     
-    [self navBarWithTitle:@"DUA" andLeftButtonImage:[UIImage imageNamed:@"icon_sideMenu"]  leftButtonSelector:@selector(revealToggle:) leftTarget:revealController andRightButtonImage:[UIImage imageNamed:@"icon_favorites"] rightButtonSelector:nil];
+    [self navBarWithTitle:@"DUA" andLeftButtonImage:[UIImage imageNamed:@"icon_sideMenu"]  leftButtonSelector:@selector(revealToggle:) leftTarget:revealController andRightButtonImage:[UIImage imageNamed:@"icon_favorites"] rightButtonSelector:@selector(favPressed)];
     
     
     NSArray *array = [DuaData duas];
@@ -199,6 +200,12 @@ static NSString *kCellId = @"cellId";
     }
     
     return nil;
+}
+
+- (void)favPressed {
+    FavoritesViewController *vc = [FavoritesViewController create];
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 

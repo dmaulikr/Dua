@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface DuaModel : NSObject
+
 - (instancetype)initWithJson:(NSDictionary *)json;
 
 @property (nonatomic, copy) NSString *name;
