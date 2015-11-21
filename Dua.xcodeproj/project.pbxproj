@@ -29,6 +29,7 @@
 		9CE9E96B1BFF083700FEC901 /* DuaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E96A1BFF083700FEC901 /* DuaDetailViewController.m */; };
 		9CE9E96E1C0072F200FEC901 /* FavoriteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E96D1C0072F200FEC901 /* FavoriteModel.m */; };
 		9CE9E9711C00881700FEC901 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E9701C00881700FEC901 /* FavoritesViewController.m */; };
+		9CE9E9741C009D5400FEC901 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E9731C009D5400FEC901 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,8 @@
 		9CE9E96D1C0072F200FEC901 /* FavoriteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteModel.m; sourceTree = "<group>"; };
 		9CE9E96F1C00881700FEC901 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
 		9CE9E9701C00881700FEC901 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
+		9CE9E9721C009D5400FEC901 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		9CE9E9731C009D5400FEC901 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D6A2E68FE86A8F6AF2E3CB49 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +237,8 @@
 				9CE9E96A1BFF083700FEC901 /* DuaDetailViewController.m */,
 				9CE9E96F1C00881700FEC901 /* FavoritesViewController.h */,
 				9CE9E9701C00881700FEC901 /* FavoritesViewController.m */,
+				9CE9E9721C009D5400FEC901 /* SearchViewController.h */,
+				9CE9E9731C009D5400FEC901 /* SearchViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				9CCEEB921BFC2F3A00E63A55 /* DuaModel.m in Sources */,
 				9CCEEB8F1BFC2B8300E63A55 /* DuaData.m in Sources */,
 				9CE9E9711C00881700FEC901 /* FavoritesViewController.m in Sources */,
+				9CE9E9741C009D5400FEC901 /* SearchViewController.m in Sources */,
 				9CCEEBA41BFD11BE00E63A55 /* RearViewController.m in Sources */,
 				9CCEEBA11BFCFB5E00E63A55 /* UIImage+Scale.m in Sources */,
 				9CCEEB491BFBEF1400E63A55 /* AppDelegate.m in Sources */,

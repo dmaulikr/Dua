@@ -30,7 +30,7 @@
                               @"dua:translation2" : @"O Allah, I submit my soul unto You, and I turn my face towards You, and I totally rely on You, and I entrust my affair unto You, in hope and fear of You. Verily, there is no refuge nor safe haven from You except with You. I believe in Your Book which You have sent down and in Your Prophet whom You have sent. (Bukhari, Muslim)",
                               @"dua:title" : @"Going to Sleep",
                               @"isFavorite" : @"NO",
-                              @"searchKeys":@""},
+                              @"searchKeys":@"hello"},
                           
                           @{
                               @"dua:image" : @"Mosque1",
