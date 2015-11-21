@@ -9,6 +9,7 @@
 #import "DuaDetailViewController.h"
 #import "UIViewController+Navigation.h"
 #import "UIImage+Scale.h"
+#import "FavoriteModel.h"
 
 @interface DuaDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -20,9 +21,9 @@
 
 @end
 
-@implementation DuaDetailViewController{
+@implementation DuaDetailViewController {
     UIScrollView *titleView;
-
+    BOOL _checkedState;
 }
 
 + (DuaDetailViewController *)create {
@@ -35,19 +36,16 @@
     [self navBarWithWhiteBackButtonAndTitle:@""];
     self.view.backgroundColor = [UIColor blackColor];
     self.tableView.backgroundColor = [UIColor clearColor];
-//    [self.tableView setTableFooterView:[[UIView alloc] init]];
     self.topLabel.attributedText = [[NSAttributedString alloc]initWithString:self.dua.title
                                                                   attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:13.0],
                                                                                NSKernAttributeName: @(2.0f)}];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 1)];
-
     
-//    if (self.dua.arabic2 == nil) {
-//        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-//    } else {
-//        [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];
-//    }
+    
+    
+    
+
     
 }
 
@@ -69,7 +67,15 @@
                                                                             NSKernAttributeName: @(2.0f)}];
     [titleView addSubview:titleLabel];
     self.navigationItem.titleView = titleView;
-
+    
+    NSArray *array = [self readArrayWithCustomObjFromUserDefaults:@"favorites"];
+    for (FavoriteModel *model in array) {
+        if ([model.title isEqualToString:self.dua.title]) {
+            [self.favoriteButton.imageView setImage:[UIImage imageNamed:@"icon_favoritesFilled"]];
+            _checkedState = YES;
+        }
+    }
+   
 
 }
 
@@ -105,7 +111,8 @@
         [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:nil];
         
         return cell;
-    }else {
+    }
+    else {
         switch (indexPath.row) {
             case 0:
             {
@@ -143,7 +150,79 @@
 }
 
 - (IBAction)favoriteButtonPressed:(id)sender {
+    [self toggle];
 }
+
+
+-(void)writeArrayWithCustomObjToUserDefaults:(NSString *)keyName withArray:(NSMutableArray *)myArray {
+
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:myArray];
+    [defaults setObject:data forKey:keyName];
+    [defaults synchronize];
+}
+
+-(NSArray *)readArrayWithCustomObjFromUserDefaults:(NSString*)keyName {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [defaults objectForKey:keyName];
+    NSArray *myArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    return myArray;
+}
+
+
+- (void) toggle {
+    [self setChecked:!_checkedState];
+}
+
+- (void) setChecked:(BOOL)state {
+    _checkedState = state;
+    if (state) {
+        
+        FavoriteModel *model = [[FavoriteModel alloc]init];
+        model.title = self.dua.title;
+        model.arabic = self.dua.arabic;
+        model.translation = self.dua.translation;
+        model.transliteration = self.dua.transliteration;
+        
+        NSArray *array = [self readArrayWithCustomObjFromUserDefaults:@"favorites"];
+        NSMutableArray *mutArray = [[NSMutableArray alloc]init];
+        if (array != nil) {
+            [mutArray addObjectsFromArray:array];
+        }
+        
+        [mutArray addObject:model];
+        [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:mutArray];
+
+        [self.favoriteButton.imageView setImage:[UIImage imageNamed:@"icon_favoritesFilled"]];
+
+    }
+    else {
+        
+        FavoriteModel *model = [[FavoriteModel alloc]init];
+        model.title = self.dua.title;
+        model.arabic = self.dua.arabic;
+        model.translation = self.dua.translation;
+        model.transliteration = self.dua.transliteration;
+        
+        NSArray *array = [self readArrayWithCustomObjFromUserDefaults:@"favorites"];
+        NSMutableArray *mutArray = [[NSMutableArray alloc]init];
+        if (array != nil) {
+            [mutArray addObjectsFromArray:array];
+        }
+        
+        for (int i=(int)mutArray.count-1; i>=0; i--) {
+            FavoriteModel *fav = [mutArray objectAtIndex:i];
+            if ([fav.title isEqualToString:self.dua.title]) {
+                [mutArray removeObject:fav];
+            }
+        }
+        [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:mutArray];
+
+        [self.favoriteButton.imageView setImage:[UIImage imageNamed:@"icon_favorites"]];
+        NSLog(@"%@",mutArray);
+    }
+}
+
 
 
 #pragma mark - UISCrollViewDelegate

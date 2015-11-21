@@ -69,8 +69,6 @@ const static CGFloat kTableCutAway = 50.0f;
     self.tableView.delegate = (id)self;
     self.tableView.dataSource = (id)self;
     
-    
-
 }
 
 -(void)viewWillAppear:(BOOL)animated {

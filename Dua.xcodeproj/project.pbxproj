@@ -27,6 +27,7 @@
 		9CE9E9191BFD31CB00FEC901 /* RearTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E9181BFD31CB00FEC901 /* RearTableViewCell.m */; };
 		9CE9E9231BFDB72500FEC901 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E9221BFDB72500FEC901 /* UIImage+ImageEffects.m */; };
 		9CE9E96B1BFF083700FEC901 /* DuaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E96A1BFF083700FEC901 /* DuaDetailViewController.m */; };
+		9CE9E96E1C0072F200FEC901 /* FavoriteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE9E96D1C0072F200FEC901 /* FavoriteModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		9CE9E9221BFDB72500FEC901 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		9CE9E9691BFF083700FEC901 /* DuaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuaDetailViewController.h; sourceTree = "<group>"; };
 		9CE9E96A1BFF083700FEC901 /* DuaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuaDetailViewController.m; sourceTree = "<group>"; };
+		9CE9E96C1C0072F200FEC901 /* FavoriteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteModel.h; sourceTree = "<group>"; };
+		9CE9E96D1C0072F200FEC901 /* FavoriteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteModel.m; sourceTree = "<group>"; };
 		D6A2E68FE86A8F6AF2E3CB49 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,6 +240,8 @@
 				9CCEEB8E1BFC2B8300E63A55 /* DuaData.m */,
 				9CCEEB901BFC2F3A00E63A55 /* DuaModel.h */,
 				9CCEEB911BFC2F3A00E63A55 /* DuaModel.m */,
+				9CE9E96C1C0072F200FEC901 /* FavoriteModel.h */,
+				9CE9E96D1C0072F200FEC901 /* FavoriteModel.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 				9CCEEB951BFC5D8E00E63A55 /* CategoryViewController.m in Sources */,
 				9CCEEB461BFBEF1400E63A55 /* main.m in Sources */,
 				9CE9E9191BFD31CB00FEC901 /* RearTableViewCell.m in Sources */,
+				9CE9E96E1C0072F200FEC901 /* FavoriteModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

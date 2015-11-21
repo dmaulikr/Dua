@@ -19,8 +19,7 @@
                               @"dua:transliteration" : @"Jannah",
                               @"dua:translation" : @"Praise be to Allah who gave us life after having given us death, unto Him is [our] final return (Bukhari, Muslim).",
                               @"dua:title" : @"Waking Up",
-                              @"isFavorite" : @"NO",
-                              @"searchKeys":@""},
+                              },
                           
                           @{
                               @"dua:image" : @"Mosque2",

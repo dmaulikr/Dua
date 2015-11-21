@@ -32,10 +32,7 @@ NSString *const kAttrTranslation2=@"dua:translation2";
 
 
 
-
-
-
-@interface DuaModel ()
+@interface DuaModel () 
 
 @property (nonatomic, strong, readonly) NSDictionary *json;
 
@@ -43,24 +40,14 @@ NSString *const kAttrTranslation2=@"dua:translation2";
 
 @implementation DuaModel
 
-@dynamic categories;
-@dynamic name;
-@dynamic arabic;
-@dynamic arabic2;
-@dynamic translation;
-@dynamic translation2;
-@dynamic transliteration;
-@dynamic image;
-@dynamic title;
-
 #pragma mark - Life Cycle
-- (instancetype)init {
-    if (self = [super init]) {
-        [NSException raise:NSInternalInconsistencyException
-                    format:@"Always use initWithJson: to initialize this class"];
-    }
-    return self;
-}
+//- (instancetype)init {
+//    if (self = [super init]) {
+//        [NSException raise:NSInternalInconsistencyException
+//                    format:@"Always use initWithJson: to initialize this class"];
+//    }
+//    return self;
+//}
 
 - (instancetype)initWithJson:(NSDictionary *)json {
     if (self = [super init]) {
@@ -120,7 +107,5 @@ NSString *const kAttrTranslation2=@"dua:translation2";
 - (NSArray *)searchKeys {
     return self.json[kAttrSearchKeys];
 }
-
-
 
 @end

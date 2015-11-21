@@ -9,31 +9,28 @@
 #import <Foundation/Foundation.h>
 
 @interface DuaModel : NSObject
-
 - (instancetype)initWithJson:(NSDictionary *)json;
 
-@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, copy) NSString *name;
 
-@property (nonatomic, readonly) NSString *image;
+@property (nonatomic, copy) NSString *image;
 
-@property (nonatomic, readonly) NSString *categories;
+@property (nonatomic) NSString *categories;
 
-@property (nonatomic, readonly) NSString *arabic;
+@property (nonatomic, copy) NSString *arabic;
 
-@property (nonatomic, readonly) NSString *arabic2;
+@property (nonatomic) NSString *arabic2;
 
-@property (nonatomic, readonly) NSString *transliteration;
+@property (nonatomic, copy) NSString *transliteration;
 
-@property (nonatomic, readonly) NSString *title;
+@property (nonatomic, copy) NSString *title;
 
-@property (nonatomic, readonly) NSString *translation;
+@property (nonatomic, copy) NSString *translation;
 
-@property (nonatomic, readonly) NSString *translation2;
+@property (nonatomic) NSString *translation2;
 
-@property (nonatomic, readonly) BOOL isFavorite;
+@property (nonatomic) BOOL isFavorite;
 
-@property (nonatomic, readonly) NSArray *searchKeys;
-
-
+@property (nonatomic) NSArray *searchKeys;
 
 @end
