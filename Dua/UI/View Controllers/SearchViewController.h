@@ -10,4 +10,6 @@
 
 @interface SearchViewController : UIViewController
 
++ (SearchViewController *)create;
+
 @end

@@ -482,10 +482,10 @@
             </objects>
             <point key="canvasLocation" x="2972" y="174"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="9Jn-Zc-Eg4">
             <objects>
-                <viewController id="WXe-Nq-Xxc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="WXe-Nq-Xxc" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y5Z-Wj-Ees"/>
                         <viewControllerLayoutGuide type="bottom" id="74k-rH-ckF"/>
@@ -493,9 +493,42 @@
                     <view key="view" contentMode="scaleToFill" id="45L-QN-CYl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nou-Ac-OGE">
+                                <rect key="frame" x="0.0" y="103" width="600" height="497"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WXe-Nq-Xxc" id="NBh-o2-2fh"/>
+                                    <outlet property="delegate" destination="WXe-Nq-Xxc" id="nc3-go-FH9"/>
+                                </connections>
+                            </tableView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fc6-mN-VGS">
+                                <rect key="frame" x="53" y="37" width="494" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WXe-Nq-Xxc" id="tiY-0U-v1S"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fc6-mN-VGS" firstAttribute="top" secondItem="Y5Z-Wj-Ees" secondAttribute="bottom" constant="17" id="0IA-lx-d8a"/>
+                            <constraint firstItem="74k-rH-ckF" firstAttribute="top" secondItem="Nou-Ac-OGE" secondAttribute="bottom" id="1up-7k-eNx"/>
+                            <constraint firstItem="Nou-Ac-OGE" firstAttribute="top" secondItem="Y5Z-Wj-Ees" secondAttribute="bottom" constant="83" id="2BK-eS-R8C"/>
+                            <constraint firstItem="Nou-Ac-OGE" firstAttribute="leading" secondItem="45L-QN-CYl" secondAttribute="leading" id="4ag-wf-cHe"/>
+                            <constraint firstAttribute="trailing" secondItem="Nou-Ac-OGE" secondAttribute="trailing" id="OTs-tu-KAV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fc6-mN-VGS" secondAttribute="trailing" constant="33" id="SUM-Ng-QFa"/>
+                            <constraint firstItem="fc6-mN-VGS" firstAttribute="leading" secondItem="45L-QN-CYl" secondAttribute="leadingMargin" constant="33" id="b5L-gQ-GZ0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="fc6-mN-VGS" id="cie-XV-c4b"/>
+                        <outlet property="tableView" destination="Nou-Ac-OGE" id="xiJ-Vl-Qcv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUZ-dX-Tey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

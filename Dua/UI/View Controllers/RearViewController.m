@@ -9,13 +9,17 @@
 #import "RearViewController.h"
 #import "RearTableViewCell.h"
 #import "UIImage+Scale.h"
+#import "SearchViewController.h"
+#import "AppDelegate.h"
+#import "SWRevealViewController.h"
 
 @interface RearViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
-
-@implementation RearViewController
+@implementation RearViewController {
+        NSInteger _presentedRow;
+    }
 
 + (RearViewController*)create {
     RearViewController *vc = [[UIStoryboard storyboardWithName:@"Dashboard" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([RearViewController class])];
@@ -62,4 +66,23 @@
     
     return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self.revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
+
+    
+    if (indexPath.row == 0)
+    {
+        
+        SearchViewController *vc = [SearchViewController create];
+        [((UINavigationController *)self.revealViewController.frontViewController) pushViewController:vc animated:YES];
+    }
+    
+    else if (indexPath.row == 1)
+    {
+    }
+
+}
+
 @end
