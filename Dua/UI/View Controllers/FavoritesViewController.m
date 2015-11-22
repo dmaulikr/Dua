@@ -88,29 +88,30 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellid=@"cell";
     if (duasArray.count > 0) {
-
-    CategoryTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellid];
+        CategoryTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellid];
         FavoriteModel *dua = duasArray[indexPath.row];
         [cell initializeCellWithTitle:dua.title withImageNamed:nil];
         return cell;
-    } else {
+    }
+    else {
         NoFavCell *cell = [tableView dequeueReusableCellWithIdentifier:@"favCell"];
         [cell initializeCellWithTitle:@"Looks like you have no favorites yet. Add any Dua to your favorites for quick access by pressing the star symbol!"];
         return cell;
-
     }
     
     return nil;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    FavoriteModel *fav = duasArray[indexPath.row];
-    NSDictionary *json = [[NSDictionary alloc]init];
-    json = @{@"dua:title":fav.title, @"dua:arabic":fav.arabic, @"dua:translation" : fav.translation, @"dua:transliteration" : fav.transliteration};
-    DuaModel *dua = [[DuaModel alloc]initWithJson:json];;
-    DuaDetailViewController *vc = [DuaDetailViewController create];
-    vc.dua = dua;
-    [self.navigationController pushViewController:vc animated:YES];
+    if (duasArray.count > 0) {
+        FavoriteModel *fav = duasArray[indexPath.row];
+        NSDictionary *json = [[NSDictionary alloc]init];
+        json = @{@"dua:title":fav.title, @"dua:arabic":fav.arabic, @"dua:translation" : fav.translation, @"dua:transliteration" : fav.transliteration};
+        DuaModel *dua = [[DuaModel alloc]initWithJson:json];;
+        DuaDetailViewController *vc = [DuaDetailViewController create];
+        vc.dua = dua;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 

@@ -24,6 +24,19 @@
     [UINavigationBar appearance].barTintColor = [UIColor blackColor];
     
     
+    
+    
+    
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage new]
+                                      forBarPosition:UIBarPositionAny
+                                          barMetrics:UIBarMetricsDefault];
+    [UINavigationBar appearance].backgroundColor = [UIColor blackColor];
+    
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+   
+
+    
+    
     DashboardViewController *frontViewController = [DashboardViewController create];
     RearViewController *rearViewController = [RearViewController create];
     
@@ -32,7 +45,7 @@
     
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
     revealController.delegate = self;
-    revealController.rearViewRevealWidth = 315;
+    revealController.rearViewRevealWidth = 215;
     
 
     

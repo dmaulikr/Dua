@@ -49,6 +49,15 @@ static NSString *kCellId = @"cellId";
     
     [self navBarWithTitle:@"DUA" andLeftButtonImage:[UIImage imageNamed:@"icon_sideMenu"]  leftButtonSelector:@selector(revealToggle:) leftTarget:revealController andRightButtonImage:[UIImage imageNamed:@"icon_favorites"] rightButtonSelector:@selector(favPressed)];
     
+//    UINavigationBar *navigationBar = self.navigationController.navigationBar;
+//    
+//    [navigationBar setBackgroundImage:[UIImage new]
+//                       forBarPosition:UIBarPositionAny
+//                           barMetrics:UIBarMetricsDefault];
+//    navigationBar.backgroundColor = [UIColor blackColor];
+//    
+//    [navigationBar setShadowImage:[UIImage new]];
+    
     
     NSArray *array = [DuaData duas];
     NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];

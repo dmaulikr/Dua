@@ -66,6 +66,13 @@ const static CGFloat kTableCutAway = 50.0f;
     [titleView addSubview:titleLabel];
     self.navigationItem.titleView = titleView;
     
+    //change statusbar to balck
+    UIView *addStatusBar = [[UIView alloc] init];
+    addStatusBar.frame = CGRectMake(0, -20, self.view.bounds.size.width, 20);
+    addStatusBar.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:addStatusBar];
+    [self.navigationController.navigationBar addSubview:addStatusBar];
+    
     self.tableView.delegate = (id)self;
     self.tableView.dataSource = (id)self;
     
