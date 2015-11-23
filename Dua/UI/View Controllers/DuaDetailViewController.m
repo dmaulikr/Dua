@@ -10,6 +10,8 @@
 #import "UIViewController+Navigation.h"
 #import "UIImage+Scale.h"
 #import "FavoriteModel.h"
+#import <Crashlytics/Crashlytics.h>
+
 
 @interface DuaDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -42,6 +44,8 @@
                                                                                NSKernAttributeName: @(2.0f)}];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 1)];
     
+    [Answers logCustomEventWithName:self.dua.title
+                   customAttributes:@{}];
     
     
     
