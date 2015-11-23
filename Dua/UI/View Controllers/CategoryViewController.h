@@ -25,6 +25,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *disclosure;
+@property (weak, nonatomic) IBOutlet UIImageView *disclosureImage;
 
 - (void)initializeCellWithTitle:(NSString *)title withImageNamed:(NSString *)imageName;
 

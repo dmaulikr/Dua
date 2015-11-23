@@ -135,12 +135,17 @@
 }
 
 - (IBAction)shareButtonPressed:(id)sender {
+    [self.favoriteButton setHidden:YES];
+    [self.shareButton setHidden:YES];
     UIView *subView = self.view;
     UIGraphicsBeginImageContextWithOptions(subView.bounds.size, YES, 0.0f);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [subView.layer renderInContext:context];
     UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
+    [self.favoriteButton setHidden:NO];
+    [self.shareButton setHidden:NO];
     
     NSArray *objectsToShare = @[snapshotImage];
     

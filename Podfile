@@ -1,3 +1,5 @@
 pod 'MPSkewed'
 pod 'AMWaveTransition'
 pod 'CSStickyHeaderFlowLayout'
+pod 'Fabric'
+pod 'Crashlytics'
