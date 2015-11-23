@@ -72,11 +72,10 @@
                 },
               @{@"category":@"Bathroom",@"image":@"bathroom",
                 @"duas":@[@{
-                              @"dua:image" : @"Mosque2",
-                              @"dua:arabic" : @"جَنَْهْ",
+                              @"dua:arabic" : @"بِسْمِ اللَّهِ الَّذِي لَا إِلَهَ إِلَّا هُوَ",
                               @"dua:transliteration" : @"Jannah",
-                              @"dua:title" : @"Waking up in the Morning",
-                              @"isFavorite" : @"YES",
+                              @"dua:translation" : @"In the name of Allah, besides whom there is no good (Ibn al-Sunni).",
+                              @"dua:title" : @"Before removing clothing",
                               @"searchKeys":@""}
                           ]
                 }
