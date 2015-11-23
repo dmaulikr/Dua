@@ -14,6 +14,9 @@
 @property (nonatomic) NSString *arabic;
 @property (nonatomic) NSString *translation;
 @property (nonatomic) NSString *transliteration;
+@property (nonatomic) NSString *arabic2;
+@property (nonatomic) NSString *translation2;
+@property (nonatomic) NSString *transliteration2;
 
 
 @end

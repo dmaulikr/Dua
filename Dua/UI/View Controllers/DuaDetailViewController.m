@@ -112,7 +112,7 @@
     DuaDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     [cell setBackgroundColor:[UIColor clearColor]];
     if (self.dua.arabic2 == nil) {
-        [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:nil];
+        [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:self.dua.transliteration];
         
         return cell;
     }
@@ -120,13 +120,13 @@
         switch (indexPath.row) {
             case 0:
             {
-                [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:nil];
+                [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:self.dua.transliteration];
                 return cell;
             }
                 break;
             case 1:
             {
-                [cell initializeCellWithArabic:self.dua.arabic2 withTranslation:self.dua.translation2 andTransliteration:nil];
+                [cell initializeCellWithArabic:self.dua.arabic2 withTranslation:self.dua.translation2 andTransliteration:self.dua.transliteration2];
                 return cell;
             }
                 break;
@@ -175,6 +175,11 @@
         model.arabic = self.dua.arabic;
         model.translation = self.dua.translation;
         model.transliteration = self.dua.transliteration;
+        if (self.dua.arabic != nil) {
+            model.arabic2 = self.dua.arabic2;
+            model.translation2 = self.dua.translation2;
+            model.transliteration2 = self.dua.transliteration2;
+        }
         
         NSArray *array = [self readArrayWithCustomObjFromUserDefaults:@"favorites"];
         NSMutableArray *mutArray = [[NSMutableArray alloc]init];
@@ -270,9 +275,9 @@
                                                                           attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                        NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:14.0],
                                                                                        NSKernAttributeName: @(2.0f)}];
-    self.transliterationLabel.attributedText = [[NSAttributedString alloc]initWithString:@""
+    self.transliterationLabel.attributedText = [[NSAttributedString alloc]initWithString:transliteration
                                                                               attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                                                           NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:20.0],
+                                                                                           NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-MediumItalic" size:14.0],
                                                                                            NSKernAttributeName: @(2.0f)}];
 }
 

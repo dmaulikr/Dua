@@ -24,6 +24,8 @@
 
 @property (nonatomic, copy) NSString *transliteration;
 
+@property (nonatomic, copy) NSString *transliteration2;
+
 @property (nonatomic, copy) NSString *title;
 
 @property (nonatomic, copy) NSString *translation;

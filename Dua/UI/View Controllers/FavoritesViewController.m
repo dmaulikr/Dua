@@ -106,7 +106,11 @@
     if (duasArray.count > 0) {
         FavoriteModel *fav = duasArray[indexPath.row];
         NSDictionary *json = [[NSDictionary alloc]init];
+        if (fav.arabic2 != nil) {
+            json = @{@"dua:title":fav.title, @"dua:arabic":fav.arabic, @"dua:translation" : fav.translation, @"dua:transliteration" : fav.transliteration, @"dua:arabic2":fav.arabic2, @"dua:translation2" : fav.translation2, @"dua:transliteration2" : fav.transliteration2};
+        } else {
         json = @{@"dua:title":fav.title, @"dua:arabic":fav.arabic, @"dua:translation" : fav.translation, @"dua:transliteration" : fav.transliteration};
+        }
         DuaModel *dua = [[DuaModel alloc]initWithJson:json];;
         DuaDetailViewController *vc = [DuaDetailViewController create];
         vc.dua = dua;

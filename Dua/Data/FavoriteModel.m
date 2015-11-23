@@ -18,8 +18,14 @@ NSString *const kAttrTrans=@"dua:transliteration";
 
 NSString *const kAttrTitl=@"dua:title";
 
-
 NSString *const kAttrTranslate=@"dua:translation";
+
+NSString *const kAttrArab2=@"dua:arabic2";
+
+NSString *const kAttrTrans2=@"dua:transliteration2";
+
+NSString *const kAttrTranslate2=@"dua:translation2";
+
 
 
 @implementation FavoriteModel
@@ -33,6 +39,9 @@ NSString *const kAttrTranslate=@"dua:translation";
         self.arabic = [decoder decodeObjectForKey:kAttrArab];
         self.translation = [decoder decodeObjectForKey:kAttrTranslate];
         self.transliteration = [decoder decodeObjectForKey:kAttrTrans];
+        self.arabic2 = [decoder decodeObjectForKey:kAttrArab2];
+        self.translation2 = [decoder decodeObjectForKey:kAttrTranslate2];
+        self.transliteration2 = [decoder decodeObjectForKey:kAttrTrans2];
     }
     
     return self;
@@ -45,6 +54,10 @@ NSString *const kAttrTranslate=@"dua:translation";
     [encoder encodeObject:self.arabic forKey:kAttrArab];
     [encoder encodeObject:self.translation forKey:kAttrTranslate];
     [encoder encodeObject:self.transliteration forKey:kAttrTrans];
+    [encoder encodeObject:self.arabic2 forKey:kAttrArab2];
+    [encoder encodeObject:self.translation2 forKey:kAttrTranslate2];
+    [encoder encodeObject:self.transliteration2 forKey:kAttrTrans2];
+
 }
 
 

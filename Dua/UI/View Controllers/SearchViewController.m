@@ -35,7 +35,6 @@
     self.view.backgroundColor = [UIColor blackColor];
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-//    [self.searchBar addTarget:self action:@selector(textFieldEdited:event:) forControlEvents:UIControlEventEditingChanged];
     
     CALayer *bottomBorder = [CALayer layer];
     bottomBorder.frame = CGRectMake(0.0f, self.searchBar.frame.size.height - 1, self.searchBar.frame.size.width, 2.0f);
@@ -185,39 +184,36 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     CategoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if ([[self.searchResultArray objectAtIndex:0]isKindOfClass:[DuaModel class]]) {
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(changeLabel) object:nil];
-
+        
         DuaModel *dua = [self.searchResultArray objectAtIndex:indexPath.row];
         [cell initializeCellWithTitle:dua.title withImageNamed:@""];
         [cell.disclosureImage setHidden:NO];
-
+        
         cell.hidden = NO;
-
-
+        
+        
     } else {
         [cell.disclosureImage setHidden:YES];
         if ([self.searchResultArray objectAtIndex:0] != nil) {
-        [cell initializeCellWithTitle:[self.searchResultArray objectAtIndex:0] withImageNamed:@""];
+            [cell initializeCellWithTitle:[self.searchResultArray objectAtIndex:0] withImageNamed:@""];
             cell.hidden = NO;
             if ([[[self.searchResultArray objectAtIndex:0] lowercaseString] isEqualToString:[@"Searching..." lowercaseString]]) {
-
+                
                 [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(changeLabel) object:nil];
                 [self performSelector:@selector(changeLabel) withObject:nil afterDelay:1.0f];
             }
-
-      
+            
+            
         } else {
             cell.hidden = YES;
         }
-        
-        
     }
+    return cell;
     
-        return cell;
-
 }
 
 - (void)changeLabel {

@@ -20,6 +20,8 @@ NSString *const kAttrArabic2=@"dua:arabic2";
 
 NSString *const kAttrTransliteration=@"dua:transliteration";
 
+NSString *const kAttrTransliteration2=@"dua:transliteration2";
+
 NSString *const kAttrTitle=@"dua:title";
 
 NSString *const kAttrFavorite=@"isFavorite";
@@ -82,6 +84,10 @@ NSString *const kAttrTranslation2=@"dua:translation2";
 
 - (NSString *)transliteration {
     return self.json[kAttrTransliteration];
+}
+
+- (NSString *)transliteration2 {
+    return self.json[kAttrTransliteration2];
 }
 
 - (NSString *)categories {
