@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "DashboardViewController.h"
 #import "RearViewController.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 
 @interface AppDelegate () <SWRevealViewControllerDelegate>
 
@@ -56,6 +59,8 @@
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    [Fabric with:@[[Crashlytics class]]];
 
     
     return YES;
