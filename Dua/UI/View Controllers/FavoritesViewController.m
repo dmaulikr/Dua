@@ -16,9 +16,6 @@
 @interface FavoritesViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, retain) UIBarButtonItem *editButton;
-@property (nonatomic, retain) UIBarButtonItem *doneButton;
-
 @end
 
 @implementation FavoritesViewController{
@@ -45,21 +42,13 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
-    
-    
 }
-
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
     [super setEditing:editing animated:animated];
     [self.tableView setEditing:editing animated:YES];
-    if (editing) {
-
-
-    } else {
-
-    }
 }
+
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -77,11 +66,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)editTapped {
-    [self.tableView setEditing:YES animated:YES];
-}
-
 
 - (void)writeArrayWithCustomObjToUserDefaults:(NSString *)keyName withArray:(NSMutableArray *)myArray {
     
@@ -127,7 +111,7 @@
 
         [duasArray removeObjectAtIndex:indexPath.row];
         [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:duasArray];
-        [self.tableView reloadData]; 
+        [self.tableView reloadData];
     }
 }
 
