@@ -277,7 +277,7 @@
                                                                                        NSKernAttributeName: @(2.0f)}];
     self.transliterationLabel.attributedText = [[NSAttributedString alloc]initWithString:transliteration
                                                                               attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                                                           NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-MediumItalic" size:14.0],
+                                                                                           NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-MediumItalic" size:16.0],
                                                                                            NSKernAttributeName: @(2.0f)}];
 }
 

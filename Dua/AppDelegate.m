@@ -49,6 +49,7 @@
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
     revealController.delegate = self;
     revealController.rearViewRevealWidth = 215;
+//    revealController.rearViewRevealDisplacement = 200.0f;
 //    [revealController panGestureRecognizer];
 //    [revealController tapGestureRecognizer];
 

@@ -30,6 +30,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithRed:39.0/255.0 green:43.0/255.0 blue:46.0/255.0 alpha:1.0f];
     self.navigationController.navigationBarHidden = YES;
+    self.tableView.scrollEnabled = NO;
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 
@@ -55,7 +56,7 @@
     [cell setBackgroundColor:[UIColor clearColor]];
     switch (indexPath.row) {
         case 0:
-            [cell initializeCellWithTitle:@"Search" withImageNamed:nil];
+            [cell initializeCellWithTitle:@"Search" withImageNamed:@"search"];
             break;
         case 1:
             [cell initializeCellWithTitle:@"About" withImageNamed:nil];
@@ -70,6 +71,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [self.revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
 
     
     if (indexPath.row == 0)

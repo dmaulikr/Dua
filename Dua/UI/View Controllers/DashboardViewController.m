@@ -47,8 +47,10 @@ static NSString *kCellId = @"cellId";
     [revealController panGestureRecognizer];
     [revealController tapGestureRecognizer];
     self.revealViewController.delegate = self;
+    self.revealViewController.rearViewRevealDisplacement = 0;
+
     
-    [self navBarWithTitle:@"DUA" andLeftButtonImage:[UIImage imageNamed:@"icon_sideMenu"]  leftButtonSelector:@selector(revealToggle:) leftTarget:revealController andRightButtonImage:[UIImage imageNamed:@"icon_favorites"] rightButtonSelector:@selector(favPressed)];
+    [self navBarWithTitle:@"Daily Duas" andLeftButtonImage:[UIImage imageNamed:@"icon_sideMenu"]  leftButtonSelector:@selector(revealToggle:) leftTarget:revealController andRightButtonImage:[UIImage imageNamed:@"icon_favorites"] rightButtonSelector:@selector(favPressed)];
     
     
     NSArray *array = [DuaData duas];

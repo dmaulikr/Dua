@@ -66,7 +66,7 @@ const static CGFloat kTableCutAway = 50.0f;
     [titleView addSubview:titleLabel];
     self.navigationItem.titleView = titleView;
     
-    //change statusbar to balck
+    //change statusbar to black
     UIView *addStatusBar = [[UIView alloc] init];
     addStatusBar.frame = CGRectMake(0, -20, self.view.bounds.size.width, 20);
     addStatusBar.backgroundColor = [UIColor blackColor];
@@ -103,6 +103,10 @@ const static CGFloat kTableCutAway = 50.0f;
     
     [self updateHeaderView];
 
+}
+
+- (void)setupHeader {
+    
 }
 
 - (void)updateHeaderView {
@@ -187,7 +191,7 @@ const static CGFloat kTableCutAway = 50.0f;
 
 - (void)initializeCellWithTitle:(NSString *)title withImageNamed:(NSString *)imageName {
     
-    self.label.attributedText = [[NSAttributedString alloc]initWithString:[title uppercaseString]
+    self.label.attributedText = [[NSAttributedString alloc]initWithString:title
                                                                attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                             NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:14.0],
                                                                             NSKernAttributeName: @(2.0f)}];
