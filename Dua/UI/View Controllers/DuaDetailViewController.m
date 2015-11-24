@@ -266,6 +266,7 @@
     self.arabicLabel.numberOfLines = 0;
     self.translationLabel.numberOfLines = 0;
     self.transliterationLabel.numberOfLines = 0;
+    
 
     self.arabicLabel.attributedText = [[NSAttributedString alloc]initWithString:arabic
                                                                      attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],

@@ -16,6 +16,9 @@
 @interface FavoritesViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic, retain) UIBarButtonItem *editButton;
+@property (nonatomic, retain) UIBarButtonItem *doneButton;
+
 @end
 
 @implementation FavoritesViewController{
@@ -29,13 +32,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self navBarWithWhiteBackButtonAndTitle:[@"Favorites" uppercaseString]];    
+    [self navBarWithWhiteBackButtonAndTitle:[@"Favorites" uppercaseString]];
+   
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.editButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                 NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:15.0],
+                                                 NSKernAttributeName: @(2.0f)} forState:UIControlStateNormal];
+
+    
+    
     self.view.backgroundColor = [UIColor blackColor];
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
     
     
+}
+
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
+    [self.tableView setEditing:editing animated:YES];
+    if (editing) {
+
+
+    } else {
+
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -53,6 +76,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)editTapped {
+    [self.tableView setEditing:YES animated:YES];
 }
 
 
@@ -79,6 +106,29 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    [duasArray insertObject: [duasArray objectAtIndex:sourceIndexPath.row] atIndex:destinationIndexPath.row];
+    [duasArray removeObjectAtIndex:(sourceIndexPath.row + 1)];
+    [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:duasArray];
+    [self.tableView reloadData];
+
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+
+        [duasArray removeObjectAtIndex:indexPath.row];
+        [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:duasArray];
+        [self.tableView reloadData]; 
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
