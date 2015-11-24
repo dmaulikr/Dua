@@ -49,13 +49,15 @@
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
     revealController.delegate = self;
     revealController.rearViewRevealWidth = 215;
-    
+//    [revealController panGestureRecognizer];
+//    [revealController tapGestureRecognizer];
 
     
-//    revealController.bounceBackOnOverdraw=YES;
+    revealController.bounceBackOnOverdraw=YES;
     //revealController.stableDragOnOverdraw=YES;
     
     self.viewController = revealController;
+    frontViewController.revealViewController = revealController;
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
@@ -95,15 +97,6 @@
 {
     if ( operation != SWRevealControllerOperationReplaceRightController )
         return nil;
-    
-//    if ( [toVC isKindOfClass:[RightViewController class]] )
-//    {
-//        if ( [(RightViewController*)toVC wantsCustomAnimation] )
-//        {
-//            id<UIViewControllerAnimatedTransitioning> animationController = [[CustomAnimationController alloc] init];
-//            return animationController;
-//        }
-//    }
     
     return nil;
 }

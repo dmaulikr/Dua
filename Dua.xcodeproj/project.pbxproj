@@ -68,7 +68,7 @@
 		9CCEEB7F1BFBF07C00E63A55 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
 		9CCEEB801BFBF07C00E63A55 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 		9CCEEB821BFBF08C00E63A55 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
-		9CCEEB8A1BFBF3FC00E63A55 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		9CCEEB8A1BFBF3FC00E63A55 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9CCEEB8D1BFC2B8300E63A55 /* DuaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuaData.h; sourceTree = "<group>"; };
 		9CCEEB8E1BFC2B8300E63A55 /* DuaData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DuaData.m; sourceTree = "<group>"; };
 		9CCEEB901BFC2F3A00E63A55 /* DuaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DuaModel.h; sourceTree = "<group>"; };
