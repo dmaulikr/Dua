@@ -16,6 +16,8 @@ typedef NS_ENUM(NSUInteger, GradientType) {
 };
 @interface UIImage(Scale)
 
++ (UIImage *)imageWithImage:(UIImage *)image convertToSize:(CGSize)size;
+
 + (UIImage *)getImage:(NSString *)imageName andScale:(CGSize)size;
 
 + (UIImage *)image:(NSString *)imageName withCut:(CGRect)rect;

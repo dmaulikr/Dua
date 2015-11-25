@@ -54,6 +54,15 @@ CGFloat RadiansToDegrees(CGFloat radians) {return radians * 180/M_PI;};
     return newImage;
 }
 
++ (UIImage *)imageWithImage:(UIImage *)image convertToSize:(CGSize)size {
+    
+    UIGraphicsBeginImageContext(size);
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage *destImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return destImage;
+}
+
 - (UIImage *)cutImage:(CGRect) rect {
     CGRect fromRect = CGRectMake(rect.origin.x * self.scale,
                                  rect.origin.y * self.scale,

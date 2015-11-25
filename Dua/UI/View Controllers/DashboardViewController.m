@@ -16,6 +16,7 @@
 #import "UIViewController+Navigation.h"
 #import "CategoryViewController.h"
 #import "FavoritesViewController.h"
+#import "UIImage+Scale.h"
 
 
 static NSString *kCellId = @"cellId";
@@ -59,6 +60,12 @@ static NSString *kCellId = @"cellId";
         [mutArray addObject:categoryDict];
     }
     _categoriesArray = mutArray;
+    
+    UIView *addStatusBar = [[UIView alloc] init];
+    addStatusBar.frame = CGRectMake(0, -20, self.view.bounds.size.width, 20);
+    addStatusBar.backgroundColor = [UIColor blackColor];
+    [self.view addSubview:addStatusBar];
+    [self.navigationController.navigationBar addSubview:addStatusBar];
 
     
 }
@@ -148,12 +155,20 @@ static NSString *kCellId = @"cellId";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     MPSkewedCell* cell = (MPSkewedCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kCellId forIndexPath:indexPath];
     
-    NSDictionary *categories = self.categoriesArray[indexPath.row];
-    NSString *category = [categories objectForKey:@"category"];
-    NSString *imageString = [categories objectForKey:@"image"];
+    if (cell != nil) {
+        cell.layer.shouldRasterize = YES;
+        cell.layer.rasterizationScale = [UIScreen mainScreen].scale;
+        NSDictionary *categories = self.categoriesArray[indexPath.row];
+        NSString *category = [categories objectForKey:@"category"];
+        NSString *imageString = [categories objectForKey:@"image"];
+        UIImage *image = [UIImage imageNamed:imageString];
+//        NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
+//        NSLog(@"%lu KB",(imageData.length/1024));
+        
+        cell.image = image;
+        cell.text = category;
+    }
     
-    cell.image =[UIImage imageNamed:imageString];
-    cell.text = category;    
     return cell;
 }
 

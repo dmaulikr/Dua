@@ -20,6 +20,6 @@
 
 @interface DuaDetailCell : UITableViewCell
 
-- (void)initializeCellWithArabic:(NSString *)arabic withTranslation:(NSString *)translation andTransliteration:(NSString *)transliteration;
+- (void)initializeCellWithArabic:(NSString *)arabic withTranslation:(NSString *)translation andTransliteration:(NSString *)transliteration withFontSize:(CGFloat)size;
 
 @end

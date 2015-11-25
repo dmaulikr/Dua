@@ -99,7 +99,29 @@
                               @"dua:title" : @"After making ablution (wudhu)",
                               @"searchKeys":@"after ablution wudhu wudu"}
                           ]
-                }
+                },
+              @{@"category":@"Food",@"image":@"food",
+                @"duas":@[]},
+              @{@"category":@"Family",@"image":@"family",
+                @"duas":@[]},
+              @{@"category":@"Social",@"image":@"social",
+                @"duas":@[]},
+              @{@"category":@"Business",@"image":@"business",
+                @"duas":@[]},
+              @{@"category":@"Masjid",@"image":@"mosque",
+                @"duas":@[]},
+              @{@"category":@"Travel",@"image":@"travel",
+                @"duas":@[]},
+              @{@"category":@"Marriage",@"image":@"marriage",
+                @"duas":@[]},
+              @{@"category":@"Health",@"image":@"health",
+                @"duas":@[]},
+              @{@"category":@"Difficulty",@"image":@"difficulty",
+                @"duas":@[]},
+              @{@"category":@"Death",@"image":@"death",
+                @"duas":@[]},
+              @{@"category":@"Miscellaneous",@"image":@"miscellaneous",
+                @"duas":@[]}
               ];
 }
 

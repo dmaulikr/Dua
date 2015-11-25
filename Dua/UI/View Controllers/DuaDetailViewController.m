@@ -26,6 +26,7 @@
 @implementation DuaDetailViewController {
     UIScrollView *titleView;
     BOOL _checkedState;
+    CGFloat scale;
 }
 
 + (DuaDetailViewController *)create {
@@ -48,9 +49,45 @@
                    customAttributes:@{}];
     
     
+    UIPinchGestureRecognizer *gesture = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchDetected:)];
+    [self.view addGestureRecognizer:gesture];
+
+    scale = 1;
     
 
     
+}
+
+- (void)pinchDetected:(UIPinchGestureRecognizer*) gestureRecognizer {
+//    scale = pinchRecognizer.scale;
+    
+//    
+//    if([gestureRecognizer state] == UIGestureRecognizerStateBegan) {
+//        // Reset the last scale, necessary if there are multiple objects with different scales
+//        scale = [gestureRecognizer scale];
+//    }
+//    
+//    if ([gestureRecognizer state] == UIGestureRecognizerStateBegan ||
+//        [gestureRecognizer state] == UIGestureRecognizerStateChanged) {
+//        
+//        CGFloat currentScale = [[[gestureRecognizer view].layer valueForKeyPath:@"transform.scale"] floatValue];
+//        
+//        // Constants to adjust the max/min values of zoom
+//        const CGFloat kMaxScale = 2.0;
+//        const CGFloat kMinScale = 1.0;
+//        
+//        CGFloat newScale = 1 -  (scale - [gestureRecognizer scale]);
+//        newScale = MIN(newScale, kMaxScale / currentScale);
+//        newScale = MAX(newScale, kMinScale / currentScale);
+//        CGAffineTransform transform = CGAffineTransformScale([[gestureRecognizer view] transform], newScale, newScale);
+//        [gestureRecognizer view].transform = transform;
+    
+        scale = [gestureRecognizer scale];  // Store the previous scale factor for the next pinch gesture call
+//    }
+    
+    
+    
+    [self.tableView reloadData];
 }
 
 -(void)viewDidLayoutSubviews {
@@ -112,7 +149,7 @@
     DuaDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     [cell setBackgroundColor:[UIColor clearColor]];
     if (self.dua.arabic2 == nil) {
-        [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:self.dua.transliteration];
+        [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:self.dua.transliteration withFontSize:scale];
         
         return cell;
     }
@@ -120,13 +157,13 @@
         switch (indexPath.row) {
             case 0:
             {
-                [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:self.dua.transliteration];
+                [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:self.dua.transliteration withFontSize:scale];
                 return cell;
             }
                 break;
             case 1:
             {
-                [cell initializeCellWithArabic:self.dua.arabic2 withTranslation:self.dua.translation2 andTransliteration:self.dua.transliteration2];
+                [cell initializeCellWithArabic:self.dua.arabic2 withTranslation:self.dua.translation2 andTransliteration:self.dua.transliteration2 withFontSize:scale];
                 return cell;
             }
                 break;
@@ -258,7 +295,7 @@
 @end
 @implementation DuaDetailCell
 
-- (void)initializeCellWithArabic:(NSString *)arabic withTranslation:(NSString *)translation andTransliteration:(NSString *)transliteration {
+- (void)initializeCellWithArabic:(NSString *)arabic withTranslation:(NSString *)translation andTransliteration:(NSString *)transliteration withFontSize:(CGFloat)size{
     self.backgroundColor = [UIColor blackColor];
     UIView *bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.05];
@@ -267,18 +304,36 @@
     self.translationLabel.numberOfLines = 0;
     self.transliterationLabel.numberOfLines = 0;
     
+    
+    CGFloat arabicSize;
+    CGFloat translationSize;
+
+    arabicSize = 30 * size;
+    if (arabicSize >= 60) {
+        arabicSize = 60;
+    }
+    if (arabicSize <= 30) {
+        arabicSize = 30;
+    }
+    translationSize = 14 * size;
+    if (translationSize >= 28) {
+        translationSize = 28;
+    }
+    if (translationSize<=14) {
+        translationSize = 14;
+    }
 
     self.arabicLabel.attributedText = [[NSAttributedString alloc]initWithString:arabic
                                                                      attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                                                  NSFontAttributeName: [UIFont fontWithName:@"Thonburi-Light" size:30.0],
+                                                                                  NSFontAttributeName: [UIFont fontWithName:@"Thonburi-Light" size:arabicSize],
                                                                                   NSKernAttributeName: @(1.0f)}];
     self.translationLabel.attributedText = [[NSAttributedString alloc]initWithString:translation
                                                                           attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                                                       NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:14.0],
+                                                                                       NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:translationSize],
                                                                                        NSKernAttributeName: @(2.0f)}];
     self.transliterationLabel.attributedText = [[NSAttributedString alloc]initWithString:transliteration
                                                                               attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                                                           NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-MediumItalic" size:16.0],
+                                                                                           NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-MediumItalic" size:translationSize],
                                                                                            NSKernAttributeName: @(2.0f)}];
 }
 
