@@ -101,17 +101,176 @@
                           ]
                 },
               @{@"category":@"Food",@"image":@"food",
-                @"duas":@[]},
+                @"duas":@[@{
+                              @"dua:arabic" : @"بِسْمِ الله وَبَرَكَةِ الله",
+                              @"dua:transliteration" : @"Bismi 'Llāhi wa barakati 'Llah(i)",
+                              @"dua:translation" : @"In the name of Allah and with the blessings of Allah (Mustadrak).",
+                              @"dua:title" : @"Before meal",
+                              @"searchKeys":@"before eating food meal dinner lunch breakfast"},
+                          @{
+                              @"dua:arabic2" : @"الْحَمْدُ لِلهِ الَّذِي أَطْعَمَنِي هَذَا الطَّعَامَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ",
+                              @"dua:transliteration2" : @"alḥamdu lillaahil-ladhee aṭ‛amanee haadhaa aṭ‛aama wa razaqaneehi min ghayri ḥawlin minnee wa laa quwwah",
+                              @"dua:translation2" : @"Praise be to Allah who fed me this food and bestowed it upon me without any strength and ability on my part. (Abū Dāwūd, Tirmidhī)",
+                              @"dua:arabic" : @"الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا ْمُسْلِمِينَ",
+                              @"dua:transliteration" : @"Al-hamdu li 'Llāhi 'lladhī at'amanā wa saqānā wa ja-'alanā mina 'l-muslimīn",
+                              @"dua:translation" : @"Praise be to Allah who fed us and gave us to drink and made us Muslims (Abū Dāwūd, Tirmidhī).",
+                              @"dua:title" : @"After meal",
+                              @"searchKeys":@"after eating food meal dinner lunch breakfast"},
+                          @{
+                              @"dua:arabic" : @"بِسْمِ اللهِ فِي أَوَّلِهِ وَآخِرِهِ",
+                              @"dua:transliteration" : @"bismillaahi fee awwalihi wa aakhirihi",
+                              @"dua:translation" : @"In the name of Allah, at the beginning of it [the meal] and at the end of it (Abū Dāwūd).",
+                              @"dua:title" : @"If one forgets supplication prior to meal",
+                              @"searchKeys":@"eating food meal dinner lunch breakfast forgets forgot"},
+                          @{
+                              @"dua:arabic" : @"للَّهمَّ إِنِّي أَسْأَلُكَ بِرَحْمَتِكَ الَّتِي وَسِعَتْ كُلَّ شَيء،ٍ أَنْ تَغْفِرَ لِي",
+                              @"dua:transliteration" : @"Allahumma innee as'aluka bi-rahmatikal-latee wasi'ath kulla shai'in an taghfira lee.",
+                              @"dua:translation" : @"O Allah, Verily I ask You, bu Your mercy which encompasses everything , to forgive me (Ign Mãja)",
+                              @"dua:arabic2" : @"اللَّهُمَّ لَكَ صُمْتُ وَعَلَى رِزْقِكَ اَفْطَرْتُ",
+                              @"dua:transliteration2" : @"Allāhumma laka sumtu wa 'ala rizqika aftart(u)",
+                              @"dua:translation2" : @"O Allah, for You have I fasted, and by what [food] You have blessed me with have I broken it (Abū Dāwūd in his Marāsīl)",
+                              @"dua:title" : @"Breaking one's fast",
+                              @"searchKeys":@"breaking fast fasting iftar ramadan food"},
+                          @{
+                              @"dua:arabic" : @"اللَّهُمَّ أَطْعِمْ مَنْ أَطْعَمَنِي وَاسْقِ مَنْ سَقَانِي",
+                              @"dua:transliteration" : @"Allahuma at'im man at'amani wa'sqi man saqānī",
+                              @"dua:translation" : @"O Allah, feed those who have fed me and sate those who have sated me (Muslim).",
+                              @"dua:title" : @"Dining at someone's house",
+                              @"searchKeys":@"dining eat food eating dinner"},
+                          @{
+                              @"dua:arabic" : @"اللَّهُمَّ بَارِكْ لَنَا فِيهِ وَزِدْنَا مِنْهُ",
+                              @"dua:transliteration" : @"allaahumma baarik lanaa feehi wa zidnaa minh",
+                              @"dua:translation" : @"O Allah, bless us by it, and increase us in it (Tirmidhi).",
+                              @"dua:title" : @"After drinking milk",
+                              @"searchKeys":@"after drinking milk drink food"},
+                          @{
+                              @"dua:arabic" : @"اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمَاً نَافِعَاًً وَرِزْقَاً وَاسِعَاًَ وَشِفَاءً مِنْ كُلِّ دَاءٍ",
+                              @"dua:transliteration" : @"Allahuma innī as'aluka 'ilman nāfi-'aw wa rizqaw wāsi-'aw wa shifā'am min kulli dā(in)",
+                              @"dua:translation" : @"O Allah, I ask of You, beneficial knowledge, ample provisions, and restoration from every ilness (Mustadrak).",
+                              @"dua:title" : @"After drinking Zam Zam",
+                              @"searchKeys":@"after drinking zam zam food drink"}
+]},
               @{@"category":@"Family",@"image":@"family",
-                @"duas":@[]},
+                @"duas":@[
+                        @{
+                            @"dua:arabic" : @"",
+                            @"dua:transliteration" : @"",
+                            @"dua:translation" : @"",
+                            @"dua:title" : @"",
+                            @"searchKeys":@""},
+                        @{
+                            @"dua:arabic" : @"",
+                            @"dua:transliteration" : @"",
+                            @"dua:translation" : @"",
+                            @"dua:title" : @"",
+                            @"searchKeys":@""},
+                        @{
+                            @"dua:arabic" : @"",
+                            @"dua:transliteration" : @"",
+                            @"dua:translation" : @"",
+                            @"dua:title" : @"",
+                            @"searchKeys":@""}
+
+
+]},
               @{@"category":@"Social",@"image":@"social",
-                @"duas":@[]},
+                @"duas":@[@{
+                              @"dua:arabic" : @"سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ",
+                              @"dua:transliteration" : @"subḥaanak-allaahumma wa bi ḥamdika, ash-hadu an laa ilaaha illaa anta, astaghfiruka wa atoobu ilayk",
+                              @"dua:translation" : @"Exalted are you, O Allah, by Your praise: I bear witness that there is no god but You. I seek forgiveness from You and I repent to you\nVirtue - Whoever recites this dua will hav all the sins commited by him in the gathering forgiven (Tirmidhi, Mustadrak).",
+                              @"dua:title" : @"At the end of a gathering",
+                              @"searchKeys":@"social gathering ending end friends"},
+                          @{
+                              @"dua:arabic" : @"جَزَاكَ اللهُ خَيْرًا",
+                              @"dua:transliteration" : @"jazaak-allaahu khayran",
+                              @"dua:translation" : @"May Allah reward you well (Tirmidhi).",
+                              @"dua:title" : @"When thanking somebody",
+                              @"searchKeys":@"thanking people friends social"},
+                          @{
+                              @"dua:arabic" : @"أَضْحَكَ اللَّهُ سِنَّكَ",
+                              @"dua:transliteration" : @"",
+                              @"dua:translation" : @"May Allah fill your life with laughter (Bukhāri, Abū Dawūd).",
+                              @"dua:title" : @"When seeing a muslim happy",
+                              @"searchKeys":@"seeing muslim happy when social friends friend"}
+
+
+]},
               @{@"category":@"Business",@"image":@"business",
-                @"duas":@[]},
+                @"duas":@[  @{
+                                @"dua:arabic" : @"لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ ، يُحْيِي وَيُمِيتُ وَهُوَ حَيٌّ لَا يَمُوتُ ، بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+                                @"dua:transliteration" : @"laa ilaaha ill-allaahu waḥdahu laa shareeka lah, lah-ul-mulku wa lahul-ḥamdu, yuḥyee wa yumeetu wa huwa ḥayun laa yamootu, bi yadi-hil-khayru, wa huwa ‛alaa kulli shay’in qadeer",
+                                @"dua:translation" : @"There is no god but Allah. He is one and has no partner. His is the Kingdom and to Him is all praise. He gives life and gives death. He is living, not subject to death. In His hand is goodness and He has power over all things.\nVirtue - Whoever recites this dua, Allah will reward him with a million good deeds, forgive a million of his sins, and raise his rank by a million degrees (Tirmidhī, Mustadrak).",
+                                @"dua:title" : @"When entering a market/shop",
+                                @"searchKeys":@"market store shop shopping buy buying finance business"
+                                },
+                            @{
+                                @"dua:arabic" : @"اللَّهُمَّ اكْفِنِي بِحَلالِكَ عَنْ حَرَامِكَ ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ",
+                                @"dua:transliteration" : @"allaahummak-finee bi ḥalaalika ‛an ḥaraamika, wa aghninee bi faḍlika ‛amman siwaak",
+                                @"dua:translation" : @"O Allah suffice me with what You have made lawful in place of what You have made unlawful, and by Your grace free me of the need for anyone besides You (Tirmidhi).",
+                                @"dua:title" : @"When becoming frustrated about paying a debt",
+                                @"searchKeys":@"debt business money paying frustrated"}
+
+]},
               @{@"category":@"Masjid",@"image":@"mosque",
-                @"duas":@[]},
+                @"duas":@[
+                        @{
+                            @"dua:arabic" : @"اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+                            @"dua:transliteration" : @"allaahum-maf-taḥ lee abwaaba raḥmatik",
+                            @"dua:translation" : @"O Allah, open for me the doors of Your mercy.\n\nBefore reciting this dua, one should send blessings and salutations upon the Messenger of Allah (Muslim).",
+                            @"dua:title" : @"Upon entering the Masjid",
+                            @"searchKeys":@"masjid mosque entering"},
+                        @{
+                            @"dua:arabic" : @"اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ وَالصَّلاةِ الْقَائِمَةِ آتِ مُحَمَّدًا الوَسِيلَةَ وَالْفَضِيلَةَ وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَه",
+                            @"dua:transliteration" : @"allaahumma rabba haadhi-hid-da‛watit-taammah, waṣ-ṣalaatil-qaa’imah, aati muḥammadan-il-waseelata wal-faḍeelah, wab‛ath-hu maqaaman maḥmoodan-illadhee wa‛adtah",
+                            @"dua:translation" : @"O Allah, Lord of this perfect call and established prayer, grant Muhammad a place near to You, an excellence and exalted degree, and raise him to the praiseworthy station that you have promised him. (Bukhārī)",
+                            @"dua:title" : @"After the Adhan",
+                            @"searchKeys":@"adhan azan masjid"},
+                        @{
+                            @"dua:arabic" : @"اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
+                            @"dua:transliteration" : @"allaa-hum-ma innee as’aluka min faḍ-lik",
+                            @"dua:translation" : @"O Allah, I ask of You Your favor (Muslim).",
+                            @"dua:title" : @"After exiting the masjid",
+                            @"searchKeys":@"exit exiting masjid mosque leaving leave"}
+
+
+]},
               @{@"category":@"Travel",@"image":@"travel",
-                @"duas":@[]},
+                @"duas":@[
+                        @{
+                            @"dua:arabic" : @"  بِسْمِ اللهِ تَوَكَّلْتُ عَلَى اللهِ،اللَّهُمَّ إني أَعُوذُ بِكَ أَنْ أَضِلَّ أَوْ أُضَلَّ ، أَوْ أَزِلَّ أَوْ أُزَلَّ ، أَوْ أَظْلِمَ أَوْ أُظْلَمَ ، أَوْ أَجْهَلَ أَوْ يُجْهَلَ عَلَيَّ",
+                            @"dua:transliteration" : @"allaahumma innee a‛oodhu bika an aḍilla aw uḍalla, aw azilla aw uzalla, aw aẓlima aw uẓlama, aw ajhala aw yujhala ‛alayy",
+                            @"dua:translation" : @"In the name of Allah, I trust in Allah. O Allah I seek protection from misleading and being mislead, from causing someone to slip or slipping, from oppressing and oppression, and from promoting folly and being foolish (Abū Dawūd)",
+                            @"dua:arabic2" : @"بِسْمِ اللهِ ، تَوَكَّلْتُ عَلَى اللهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ",
+                            @"dua:transliteration2" : @"bismillaah, tawakkaltu ‛alal-laah, wa laa ḥawla wa laa quwwata illaa billaah",
+                            @"dua:translation2" : @"In the name of Allah, I depend on Allah and there is no power [to do good] or restraint [to avoid evil] except with Allah",
+                            @"dua:title" : @"When leaving home",
+                            @"searchKeys":@"dua leaving home house exit leave"},
+                        @{
+                            @"dua:arabic" : @"بِسْمِ اللهِ الْحَمْدُ لِلهِ ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ ، الْحَمْدُ لِلهِ ، الْحَمْدُ لِلهِ ، الْحَمْدُ لِلهِ ، اللهُ أَكْبَرُ ، اللهُ أَكْبَرُ ، اللهُ أَكْبَرُ ، سُبْحَانَكَ اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي ، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
+                            @"dua:transliteration" : @"bismillaah al-ḥamdu lillaahi, subḥaan-alladhee sakhkhara lanaa haadhaa wa maa kunnaa lahu muqrineen, wa innaa ilaa rabbinaa la munqaliboon\nal-ḥamdu lillaah, al-ḥamdu lillaah, al-ḥamdu lillaah, allaahu akbar, allaahu akbar, allaahu akbar\nsubḥaanak-allaahumma innee ẓalamtu nafsee faghfir lee, fa innahu laa yaghfir-udh-dhunooba illaa ant ",
+                            @"dua:translation" : @"Upon mounting the beast or the vehicle: 'In the name of Allah' and then say after mounting the beast, or having already settled in the vehicle: 'All praise is for Allah. How far from imperfections He is, the One Who has placed this (transport) at our service and we ourselves would not have been capable of that, and to our Lord is our final destiny. All praise is for Allah, All praise is for Allah, All praise is for Allah, Allah is the greatest, Allah is the greatest, Allah is the greatest. How far from imperfections You are, O Allah, verily I have wronged my soul, so forgive me, for surely none can forgive sins except You.'\nNote: The prophet of Allah (may the Peace and Blessing of Allah be upon him): Allah approves of his slave when he says: 'forgive me my sins', and would say: 'he knows that non forgives the sins but Me' (Abū Dawūd).",
+                            @"dua:title" : @"When boarding a vehicle/mounting animal",
+                            @"searchKeys":@"car travel traveling vehicle mounting animal trip"},
+                        @{
+                            @"dua:arabic" : @"آيِبُونَ تَائِبُونَ عَابِدُونَ لِرَبِّنَا حَامِدُونَ",
+                            @"dua:transliteration" : @"aayiboona taa’iboona ‛aabidoona li rabbinaa ḥaamidoon",
+                            @"dua:translation" : @"We now return [from our journey] repenting [to Allah], worshipping [Him], and praising our Lord[Allah] (Bukhari).",
+                            @"dua:title" : @"When returning home from journey",
+                            @"searchKeys":@"return returning journey home travel traveling"},
+                        @{
+                            @"dua:arabic" : @"",
+                            @"dua:transliteration" : @"",
+                            @"dua:translation" : @"",
+                            @"dua:title" : @"When entering home",
+                            @"searchKeys":@""},
+                        @{
+                            @"dua:arabic" : @"",
+                            @"dua:transliteration" : @"",
+                            @"dua:translation" : @"",
+                            @"dua:title" : @"When bidding farewell to someone",
+                            @"searchKeys":@""}
+
+]},
               @{@"category":@"Marriage",@"image":@"marriage",
                 @"duas":@[]},
               @{@"category":@"Health",@"image":@"health",
@@ -132,6 +291,19 @@
 //@"dua:translation" : @"",
 //@"dua:title" : @"",
 //@"searchKeys":@""}
+
+//
+//  @{
+//@"dua:arabic" : @"",
+//@"dua:transliteration" : @"",
+//@"dua:translation" : @"",
+//@"dua:arabic2" : @"",
+//@"dua:transliteration2" : @"",
+//@"dua:translation2" : @"",
+//@"dua:title" : @"",
+//@"searchKeys":@""
+//}
+
 
 
 @end

@@ -162,9 +162,6 @@ static NSString *kCellId = @"cellId";
         NSString *category = [categories objectForKey:@"category"];
         NSString *imageString = [categories objectForKey:@"image"];
         UIImage *image = [UIImage imageNamed:imageString];
-//        NSData *imageData = UIImageJPEGRepresentation(image, 0.5);
-//        NSLog(@"%lu KB",(imageData.length/1024));
-        
         cell.image = image;
         cell.text = category;
     }
