@@ -30,18 +30,22 @@
     [super viewDidLoad];
 
     [self navBarWithWhiteBackButtonAndTitle:[@"Favorites" uppercaseString]];
-   
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.editButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                 NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:15.0],
-                                                 NSKernAttributeName: @(2.0f)} forState:UIControlStateNormal];
-
     
+        self.navigationItem.rightBarButtonItem = self.editButtonItem;
+        [self.editButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                      NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:15.0],
+                                                      NSKernAttributeName: @(2.0f)} forState:UIControlStateNormal];
     
     self.view.backgroundColor = [UIColor blackColor];
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+  
+
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated {
@@ -130,6 +134,8 @@
     else {
         NoFavCell *cell = [tableView dequeueReusableCellWithIdentifier:@"favCell"];
         [cell initializeCellWithTitle:@"Looks like you have no favorites yet. Add any Dua to your favorites for quick access by pressing the star symbol!"];
+        self.navigationItem.rightBarButtonItem = nil;
+        [self setEditing:NO animated:YES];
         return cell;
     }
     
