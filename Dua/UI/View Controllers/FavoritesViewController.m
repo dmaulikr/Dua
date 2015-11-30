@@ -113,8 +113,11 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
 
+        [self.tableView beginUpdates];
         [duasArray removeObjectAtIndex:indexPath.row];
+        
         [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:duasArray];
+        [self.tableView endUpdates];
         [self.tableView reloadData];
     }
 }

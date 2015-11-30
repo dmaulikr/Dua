@@ -151,6 +151,14 @@
     [self setNavBarTitle:title];
 }
 
+- (void)navBarWithWhiteBackButtonAndTitle:(NSString *)title withSelector:(SEL)selector{
+    // Display the back button if necessary
+    if (self.navigationController.viewControllers.count > 1) {
+        [self addWhiteLeftButtonItem:@"button_back" selector:selector];
+    }
+    [self setNavBarTitle:title];
+}
+
 - (void)navBarWithBackButtonAndTitle:(NSString *)title
                 rightButtonImageName:(NSString *)imageName
                  rightButtonSelector:(SEL)selector {

@@ -15,6 +15,8 @@
 - (void)navBarWithBackButtonAndTitle:(NSString *)title;
 - (void)navBarWithWhiteBackButtonAndTitle:(NSString *)title;
 
+- (void)navBarWithWhiteBackButtonAndTitle:(NSString *)title withSelector:(SEL)selector;
+
 - (void)navBarWithBackButtonAndTitle:(NSString *)title
                 rightButtonImageName:(NSString *)imageName
                  rightButtonSelector:(SEL)selector;

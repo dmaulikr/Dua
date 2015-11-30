@@ -11,17 +11,21 @@
 #import "UIImage+Scale.h"
 #import "FavoriteModel.h"
 #import <Crashlytics/Crashlytics.h>
+#import <AMWaveTransition.h>
 
 
-@interface DuaDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
+@interface DuaDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, AMWaveTransitioning>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 @property (weak, nonatomic) IBOutlet UILabel *topLabel;
+@property (weak, nonatomic) IBOutlet UIView *header;
+
 - (IBAction)shareButtonPressed:(id)sender;
 - (IBAction)favoriteButtonPressed:(id)sender;
 
 @end
+
 
 @implementation DuaDetailViewController {
     UIScrollView *titleView;
@@ -37,7 +41,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self navBarWithWhiteBackButtonAndTitle:@""];
-    self.view.backgroundColor = [UIColor blackColor];
+//    [self navBarWithWhiteBackButtonAndTitle:@"" withSelector:@selector(backPressed)];
+    self.view.backgroundColor = [UIColor clearColor];
+    self.navigationController.view.backgroundColor = [UIColor blackColor];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.topLabel.attributedText = [[NSAttributedString alloc]initWithString:self.dua.title
                                                                   attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
@@ -53,8 +59,6 @@
     [self.view addGestureRecognizer:gesture];
 
     scale = 1;
-    
-
     
 }
 
@@ -92,6 +96,7 @@
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+
     
     //title that sets into place
     [self setTitle:self.dua.title];
@@ -118,6 +123,34 @@
     }
    
 
+}
+
+
+
+
+-(NSArray *)visibleCells {
+    NSMutableArray *cells = [@[]mutableCopy];
+    if (self.header != nil) {
+        [cells addObject:self.header];
+    }
+    [cells addObjectsFromArray:[self.tableView visibleCells]];
+    
+    return cells;
+}
+
+- (void)backPressed {
+    UIViewController *source = self;
+    
+    CATransition* transition = [CATransition animation];
+    transition.duration = .25;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    transition.type = kCATransitionPush;
+    transition.subtype = kCATransitionFromLeft;
+    
+    [source.navigationController.view.layer addAnimation:transition
+                                                  forKey:kCATransition];
+    [self.navigationController popViewControllerAnimated:NO];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -296,7 +329,7 @@
 @implementation DuaDetailCell
 
 - (void)initializeCellWithArabic:(NSString *)arabic withTranslation:(NSString *)translation andTransliteration:(NSString *)transliteration withFontSize:(CGFloat)size{
-    self.backgroundColor = [UIColor blackColor];
+    self.backgroundColor = [UIColor clearColor];
     UIView *bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.05];
     [self setSelectedBackgroundView:bgColorView];
@@ -325,8 +358,8 @@
 
     self.arabicLabel.attributedText = [[NSAttributedString alloc]initWithString:arabic
                                                                      attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                                                  NSFontAttributeName: [UIFont fontWithName:@"Thonburi-Light" size:arabicSize],
-                                                                                  NSKernAttributeName: @(1.0f)}];
+                                                                                  NSFontAttributeName: [UIFont fontWithName:@"AlQalamQuranMajeed2" size:arabicSize]}];
+//                                                                                  NSKernAttributeName: @(1.0f)}];
     self.translationLabel.attributedText = [[NSAttributedString alloc]initWithString:translation
                                                                           attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                        NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:translationSize],

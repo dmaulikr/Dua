@@ -54,7 +54,7 @@
 //    [revealController tapGestureRecognizer];
 
     
-    revealController.bounceBackOnOverdraw=YES;
+//    revealController.bounceBackOnOverdraw=YES;
     //revealController.stableDragOnOverdraw=YES;
     
     self.viewController = revealController;
@@ -64,7 +64,7 @@
     [self.window makeKeyAndVisible];
     
     [Fabric with:@[[Crashlytics class]]];
-
+    
     
     return YES;
 }

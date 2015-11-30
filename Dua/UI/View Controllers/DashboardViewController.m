@@ -21,7 +21,7 @@
 
 static NSString *kCellId = @"cellId";
 
-@interface DashboardViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate, SWRevealViewControllerDelegate>
+@interface DashboardViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate, SWRevealViewControllerDelegate, AMWaveTransitioning>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *categoriesArray;
@@ -42,6 +42,8 @@ static NSString *kCellId = @"cellId";
     // Do any additional setup after loading the view.
     
     [self setupCollectionView];
+    self.navigationController.view.backgroundColor = [UIColor blackColor];
+
     
     //reveal view controller
     SWRevealViewController *revealController = [self revealViewController];
@@ -86,10 +88,11 @@ static NSString *kCellId = @"cellId";
                                                  toViewController:(UIViewController*)toVC {
     if (operation != UINavigationControllerOperationNone) {
         // Return your preferred transition operation
-        return [AMWaveTransition transitionWithOperation:operation];
+        return [AMWaveTransition transitionWithOperation:operation andTransitionType:AMWaveTransitionTypeNervous];
     }
     return nil;
 }
+
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
@@ -179,6 +182,23 @@ static NSString *kCellId = @"cellId";
 
     vc.duasArray = [category objectForKey:@"duas"];
     vc.category = category;
+    
+//    
+//    UIViewController *source = self;
+//    UIViewController *destination = vc;
+//    
+//    CATransition* transition = [CATransition animation];
+//    transition.duration = .25;
+//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+//    transition.type = kCATransitionPush;
+//    transition.subtype = kCATransitionFromRight;
+//    
+//    [source.navigationController.view.layer addAnimation:transition
+//                                                  forKey:kCATransition];
+//    
+//    [source.navigationController pushViewController:destination animated:NO];
+    
+    
     [self.navigationController pushViewController:vc animated:YES];
 
 }
@@ -193,7 +213,9 @@ static NSString *kCellId = @"cellId";
 }
 
 - (NSArray*)visibleCells {
-    return [self.collectionView visibleCells];
+     NSMutableArray *cells = [@[] mutableCopy];
+    [cells addObjectsFromArray:[self.collectionView visibleCells]];
+    return cells;
 }
 
 #pragma mark - SWRevealViewControllerDelegate

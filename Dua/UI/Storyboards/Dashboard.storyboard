@@ -153,7 +153,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="go5-4y-XKl">
-                                <rect key="frame" x="0.0" y="144" width="600" height="456"/>
+                                <rect key="frame" x="0.0" y="176" width="600" height="424"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -204,18 +204,38 @@
                                     <outlet property="delegate" destination="hgo-tx-qNb" id="5WY-GF-dlg"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DuaHands" translatesAutoresizingMaskIntoConstraints="NO" id="8P5-1A-WGK">
+                                <rect key="frame" x="255" y="46" width="50" height="50"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="5RI-rh-JW7"/>
+                                    <constraint firstAttribute="height" constant="50" id="wHI-1i-nQN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuA-1W-OQz">
+                                <rect key="frame" x="259" y="111" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="go5-4y-XKl" firstAttribute="leading" secondItem="Z6t-JI-l9t" secondAttribute="leading" id="0v6-MQ-OX1"/>
-                            <constraint firstItem="go5-4y-XKl" firstAttribute="top" secondItem="DCG-PZ-g7i" secondAttribute="bottom" constant="124" id="5BQ-3d-HgS"/>
+                            <constraint firstItem="8P5-1A-WGK" firstAttribute="top" secondItem="DCG-PZ-g7i" secondAttribute="bottom" constant="26" id="0xb-RW-gEL"/>
+                            <constraint firstItem="go5-4y-XKl" firstAttribute="top" secondItem="DCG-PZ-g7i" secondAttribute="bottom" constant="156" id="5BQ-3d-HgS"/>
                             <constraint firstItem="wF3-x0-EWh" firstAttribute="top" secondItem="go5-4y-XKl" secondAttribute="bottom" id="8w6-Es-EmI"/>
+                            <constraint firstItem="PuA-1W-OQz" firstAttribute="top" secondItem="8P5-1A-WGK" secondAttribute="bottom" constant="15" id="MN3-no-3X9"/>
+                            <constraint firstItem="PuA-1W-OQz" firstAttribute="centerX" secondItem="8P5-1A-WGK" secondAttribute="centerX" id="RLN-Cd-oVk"/>
+                            <constraint firstItem="8P5-1A-WGK" firstAttribute="centerX" secondItem="Z6t-JI-l9t" secondAttribute="centerX" constant="-20" id="tMG-yt-Eqd"/>
                             <constraint firstAttribute="trailing" secondItem="go5-4y-XKl" secondAttribute="trailing" id="uUh-LQ-8hs"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="go5-4y-XKl" id="20w-PO-v8T"/>
+                        <outlet property="topLabel" destination="PuA-1W-OQz" id="VV7-Ow-OfD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="99N-JC-NNF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -473,6 +493,7 @@
                     </view>
                     <connections>
                         <outlet property="favoriteButton" destination="0E4-l6-kY2" id="r8W-qs-kif"/>
+                        <outlet property="header" destination="ih6-ms-Q42" id="MWT-Iy-AjY"/>
                         <outlet property="shareButton" destination="Ikh-Fs-gCM" id="uS1-MJ-5lF"/>
                         <outlet property="tableView" destination="LpZ-jy-NiS" id="kfs-Wa-kM1"/>
                         <outlet property="topLabel" destination="h1k-zA-YD2" id="2y0-tN-Ek7"/>
@@ -620,6 +641,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="DuaHands" width="512" height="512"/>
         <image name="chevron_white" width="9" height="15"/>
         <image name="icon_favorites" width="60" height="60"/>
         <image name="search" width="44" height="44"/>

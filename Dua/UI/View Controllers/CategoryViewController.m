@@ -10,12 +10,15 @@
 #import "UIViewController+Navigation.h"
 #import "DuaData.h"
 #import "DuaDetailViewController.h"
+#import <AMWaveTransition.h>
 
-@interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
+@interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, AMWaveTransitioning>
 
 @property (weak, nonatomic) IBOutlet UIImageView *topImage;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *topLabel;
+@property (weak, nonatomic) UIView *header;
+
 
 @end
 
@@ -25,7 +28,6 @@ const static CGFloat kTableCutAway = 50.0f;
 
 @implementation CategoryViewController{
     UIScrollView *titleView;
-    UIView *header;
     CAShapeLayer *headerMarkLayer;
 }
 
@@ -36,11 +38,12 @@ const static CGFloat kTableCutAway = 50.0f;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor clearColor];
+    self.navigationController.view.backgroundColor = [UIColor blackColor];
+
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
-//    NSArray *array = [DuaData getDuasForCategory:[self.category objectForKey:@"category"]];
     NSArray *array = self.duasArray;
     NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
     for (NSDictionary *duaDict in array) {
@@ -50,7 +53,8 @@ const static CGFloat kTableCutAway = 50.0f;
     _duasArray = mutArray;
 
     [self navBarWithWhiteBackButtonAndTitle:@""];
-
+    
+    
     //title that sets into place
     [self setTitle:[self.category objectForKey:@"category"]];
     titleView = [[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 200.0, 44.0)];
@@ -66,6 +70,7 @@ const static CGFloat kTableCutAway = 50.0f;
     [titleView addSubview:titleLabel];
     self.navigationItem.titleView = titleView;
     
+    
     //change statusbar to black
     UIView *addStatusBar = [[UIView alloc] init];
     addStatusBar.frame = CGRectMake(0, -20, self.view.bounds.size.width, 20);
@@ -75,25 +80,64 @@ const static CGFloat kTableCutAway = 50.0f;
     
     self.tableView.delegate = (id)self;
     self.tableView.dataSource = (id)self;
+
     
 }
 
+- (NSArray*)visibleCells {
+    
+    NSMutableArray *cells = [@[]mutableCopy];
+    if (self.header != nil) {
+        [cells addObject:self.header];
+    }
+    [cells addObjectsFromArray:[self.tableView visibleCells]];
+    
+    return cells;
+}
+
+//- (void)backPressed {
+//    UIViewController *source = self;
+//    
+//    CATransition* transition = [CATransition animation];
+//    transition.duration = .25;
+//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+//    transition.type = kCATransitionPush;
+//    transition.subtype = kCATransitionFromLeft;
+//    
+//    [source.navigationController.view.layer addAnimation:transition
+//                                                  forKey:kCATransition];
+//    [self.navigationController popViewControllerAnimated:NO];
+//
+//}
+
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.view.backgroundColor = [UIColor blackColor];
+
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    header = self.tableView.tableHeaderView;
-    self.tableView.tableHeaderView = nil;
-    [self.tableView addSubview:header];
+    if (self.tableView.tableHeaderView != nil) {
+        self.header = self.tableView.tableHeaderView;
+        self.tableView.tableHeaderView = nil;
+    }
+   
+
+    [self.tableView addSubview:self.header];
     self.tableView.contentInset = UIEdgeInsetsMake(kTableViewHeaderHeight, 0, 0, 0);
     self.tableView.contentOffset = CGPointMake(0, -kTableViewHeaderHeight);
     
     headerMarkLayer = [[CAShapeLayer alloc]init];
     headerMarkLayer.fillColor = [UIColor blackColor].CGColor;
-    header.layer.mask = headerMarkLayer;
+    self.header.layer.mask = headerMarkLayer;
     
     self.topImage.image = [UIImage imageNamed:[self.category objectForKey:@"image"]];
     self.topLabel.attributedText = [[NSAttributedString alloc]initWithString:[self.title uppercaseString]
@@ -103,6 +147,7 @@ const static CGFloat kTableCutAway = 50.0f;
     
     [self updateHeaderView];
 
+
 }
 
 - (void)setupHeader {
@@ -110,18 +155,20 @@ const static CGFloat kTableCutAway = 50.0f;
 }
 
 - (void)updateHeaderView {
+
     CGRect headerRect = CGRectMake(0, -kTableViewHeaderHeight, self.tableView.bounds.size.width, kTableViewHeaderHeight);
     if (self.tableView.contentOffset.y < -kTableViewHeaderHeight) {
         headerRect.origin.y = self.tableView.contentOffset.y;
         headerRect.size.height = -self.tableView.contentOffset.y;
     }
-    header.frame = headerRect;
+    self.header.frame = headerRect;
     UIBezierPath *path = [[UIBezierPath alloc]init];
     [path moveToPoint:CGPointMake(0, 0)];
     [path addLineToPoint:CGPointMake(headerRect.size.width, 0)];
     [path addLineToPoint:CGPointMake(headerRect.size.width, headerRect.size.height)];
     [path addLineToPoint:CGPointMake(0, headerRect.size.height - kTableCutAway)];
     headerMarkLayer.path = path.CGPath;
+
 }
 
 
@@ -157,6 +204,21 @@ const static CGFloat kTableCutAway = 50.0f;
     DuaModel *dua = self.duasArray[indexPath.row];
     DuaDetailViewController *vc = [DuaDetailViewController create];
     vc.dua = dua;
+    
+//    UIViewController *source = self;
+//    UIViewController *destination = vc;
+//    
+//    CATransition* transition = [CATransition animation];
+//    transition.duration = .25;
+//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+//    transition.type = kCATransitionPush;
+//    transition.subtype = kCATransitionFromRight;
+//    
+//    [source.navigationController.view.layer addAnimation:transition
+//                                                  forKey:kCATransition];
+//    
+//    [source.navigationController pushViewController:destination animated:NO];
+
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -180,7 +242,7 @@ const static CGFloat kTableCutAway = 50.0f;
     [super awakeFromNib];
     
     // Initialization code
-    self.backgroundColor = [UIColor blackColor];
+    self.backgroundColor = [UIColor clearColor];
     
     UIView *bgColorView = [[UIView alloc] init];
     bgColorView.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.05];
