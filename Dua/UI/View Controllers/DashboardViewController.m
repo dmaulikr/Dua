@@ -17,7 +17,7 @@
 #import "CategoryViewController.h"
 #import "FavoritesViewController.h"
 #import "UIImage+Scale.h"
-
+#import "ImageDownloader.h"
 
 static NSString *kCellId = @"cellId";
 
@@ -164,8 +164,9 @@ static NSString *kCellId = @"cellId";
         NSDictionary *categories = self.categoriesArray[indexPath.row];
         NSString *category = [categories objectForKey:@"category"];
         NSString *imageString = [categories objectForKey:@"image"];
-        UIImage *image = [UIImage imageNamed:imageString];
-        cell.image = image;
+        [ImageDownloader retrieveImageWithName:imageString withCompletionBlock:^(id responseData) {
+            cell.image = responseData;
+        }];
         cell.text = category;
     }
     

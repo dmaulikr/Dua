@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4372E8FC3981F7A7982D9AC5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B183805D67043D173F545BD /* libPods.a */; };
+		9C33E7751D078F35000798AF /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C33E7741D078F35000798AF /* ImageDownloader.m */; };
 		9C4126621C091CB300D139D5 /* QuranFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4126611C09197800D139D5 /* QuranFont.ttf */; };
 		9C4126641C091DA900D139D5 /* QuranFont1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4126631C091D8000D139D5 /* QuranFont1.ttf */; };
 		9CCEEB461BFBEF1400E63A55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB451BFBEF1400E63A55 /* main.m */; };
@@ -54,6 +55,8 @@
 /* Begin PBXFileReference section */
 		004B1DB5F2B06C43E6549B51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7B183805D67043D173F545BD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C33E7731D078F35000798AF /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		9C33E7741D078F35000798AF /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
 		9C4126611C09197800D139D5 /* QuranFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuranFont.ttf; sourceTree = "<group>"; };
 		9C4126631C091D8000D139D5 /* QuranFont1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuranFont1.ttf; sourceTree = "<group>"; };
 		9CCEEB411BFBEF1400E63A55 /* Dua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dua.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +285,8 @@
 				9CCEEB991BFCF39000E63A55 /* SWRevealViewController.m */,
 				9CE9E9171BFD31CB00FEC901 /* RearTableViewCell.h */,
 				9CE9E9181BFD31CB00FEC901 /* RearTableViewCell.m */,
+				9C33E7731D078F35000798AF /* ImageDownloader.h */,
+				9C33E7741D078F35000798AF /* ImageDownloader.m */,
 			);
 			path = "Custom Controls";
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 				9CE9E9231BFDB72500FEC901 /* UIImage+ImageEffects.m in Sources */,
 				9CCEEB951BFC5D8E00E63A55 /* CategoryViewController.m in Sources */,
 				9CCEEB461BFBEF1400E63A55 /* main.m in Sources */,
+				9C33E7751D078F35000798AF /* ImageDownloader.m in Sources */,
 				9CE9E9191BFD31CB00FEC901 /* RearTableViewCell.m in Sources */,
 				9CE9E96E1C0072F200FEC901 /* FavoriteModel.m in Sources */,
 			);

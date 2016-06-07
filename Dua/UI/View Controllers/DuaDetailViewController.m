@@ -336,6 +336,7 @@
     self.arabicLabel.numberOfLines = 0;
     self.translationLabel.numberOfLines = 0;
     self.transliterationLabel.numberOfLines = 0;
+
     
     
     CGFloat arabicSize;
@@ -368,6 +369,16 @@
                                                                               attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                            NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-MediumItalic" size:translationSize],
                                                                                            NSKernAttributeName: @(2.0f)}];
+    
+    
+}
+
+-(void)layoutSubviews {
+    [super layoutSubviews];
+    
+    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, self.frame.size.height - 3, self.frame.size.width, 3)];
+    line.backgroundColor = [UIColor colorWithRed:39.0/255.0 green:43.0/255.0 blue:46.0/255.0 alpha:1.0f];
+    [self addSubview:line];
 }
 
 @end
