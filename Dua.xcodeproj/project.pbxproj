@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4372E8FC3981F7A7982D9AC5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B183805D67043D173F545BD /* libPods.a */; };
 		9C33E7751D078F35000798AF /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C33E7741D078F35000798AF /* ImageDownloader.m */; };
+		9C33E7961D0CAF15000798AF /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C33E7951D0CAF15000798AF /* AboutViewController.m */; };
 		9C4126621C091CB300D139D5 /* QuranFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4126611C09197800D139D5 /* QuranFont.ttf */; };
 		9C4126641C091DA900D139D5 /* QuranFont1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4126631C091D8000D139D5 /* QuranFont1.ttf */; };
 		9CCEEB461BFBEF1400E63A55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB451BFBEF1400E63A55 /* main.m */; };
@@ -57,6 +58,8 @@
 		7B183805D67043D173F545BD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C33E7731D078F35000798AF /* ImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
 		9C33E7741D078F35000798AF /* ImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		9C33E7941D0CAF15000798AF /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		9C33E7951D0CAF15000798AF /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		9C4126611C09197800D139D5 /* QuranFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuranFont.ttf; sourceTree = "<group>"; };
 		9C4126631C091D8000D139D5 /* QuranFont1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuranFont1.ttf; sourceTree = "<group>"; };
 		9CCEEB411BFBEF1400E63A55 /* Dua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dua.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +249,8 @@
 				9CE9E9701C00881700FEC901 /* FavoritesViewController.m */,
 				9CE9E9721C009D5400FEC901 /* SearchViewController.h */,
 				9CE9E9731C009D5400FEC901 /* SearchViewController.m */,
+				9C33E7941D0CAF15000798AF /* AboutViewController.h */,
+				9C33E7951D0CAF15000798AF /* AboutViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -490,6 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C33E7961D0CAF15000798AF /* AboutViewController.m in Sources */,
 				9CCEEB9E1BFCF42500E63A55 /* UIViewController+Navigation.m in Sources */,
 				9CCEEB9A1BFCF39000E63A55 /* SWRevealViewController.m in Sources */,
 				9CE9E96B1BFF083700FEC901 /* DuaDetailViewController.m in Sources */,

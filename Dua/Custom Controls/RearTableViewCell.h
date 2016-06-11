@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
+- (void)initializeCellWithTitle:(NSString *)title;
 - (void)initializeCellWithTitle:(NSString *)title withImageNamed:(NSString *)imageName;
 
 @end

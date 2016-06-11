@@ -22,12 +22,16 @@
     [self setSelectedBackgroundView:bgColorView];
 }
 
-- (void)initializeCellWithTitle:(NSString *)title withImageNamed:(NSString *)imageName {
-    
+- (void)initializeCellWithTitle:(NSString *)title{
     self.label.attributedText = [[NSAttributedString alloc]initWithString:[title uppercaseString]
                                                                attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                             NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:14.0],
                                                                             NSKernAttributeName: @(2.0f)}];
+}
+
+- (void)initializeCellWithTitle:(NSString *)title withImageNamed:(NSString *)imageName {
+    
+    [self initializeCellWithTitle:title];
     self.image.image = [UIImage imageNamed:imageName];
 }
 

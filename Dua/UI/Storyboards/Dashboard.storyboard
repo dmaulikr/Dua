@@ -574,6 +574,61 @@
             </objects>
             <point key="canvasLocation" x="3046" y="836"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="248-mH-f4d">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Jq-pU-u7w" customClass="AboutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0L8-7u-9ne"/>
+                        <viewControllerLayoutGuide type="bottom" id="ydl-p9-E1w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="efl-3M-3rU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DuaHands" translatesAutoresizingMaskIntoConstraints="NO" id="WrC-u2-Icj">
+                                <rect key="frame" x="238" y="130" width="124" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="GBf-ds-0Wq"/>
+                                    <constraint firstAttribute="height" constant="114" id="LCw-Ye-alY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBs-23-ZW1">
+                                <rect key="frame" x="20" y="252" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfE-LI-uII">
+                                <rect key="frame" x="20" y="559" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WrC-u2-Icj" firstAttribute="top" secondItem="0L8-7u-9ne" secondAttribute="bottom" constant="110" id="2ZH-A8-jtr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HfE-LI-uII" secondAttribute="trailing" id="4nq-Hk-Kod"/>
+                            <constraint firstItem="WrC-u2-Icj" firstAttribute="centerX" secondItem="efl-3M-3rU" secondAttribute="centerX" id="6Ag-zp-4Tx"/>
+                            <constraint firstItem="HfE-LI-uII" firstAttribute="centerX" secondItem="efl-3M-3rU" secondAttribute="centerX" id="93m-68-odp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MBs-23-ZW1" secondAttribute="leading" id="Aoj-Ox-JfU"/>
+                            <constraint firstItem="MBs-23-ZW1" firstAttribute="centerX" secondItem="efl-3M-3rU" secondAttribute="centerX" id="Mpm-8H-LIb"/>
+                            <constraint firstItem="MBs-23-ZW1" firstAttribute="top" secondItem="WrC-u2-Icj" secondAttribute="bottom" constant="8" id="PDr-dm-h1M"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="HfE-LI-uII" secondAttribute="leading" id="iiL-59-h5u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MBs-23-ZW1" secondAttribute="trailing" id="uFo-dX-6XB"/>
+                            <constraint firstItem="ydl-p9-E1w" firstAttribute="top" secondItem="HfE-LI-uII" secondAttribute="bottom" constant="20" id="yha-XR-pZl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="aboutLabel" destination="MBs-23-ZW1" id="E8Q-De-TnA"/>
+                        <outlet property="disclosureLabel" destination="HfE-LI-uII" id="1xp-qH-yve"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dgo-FQ-cfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3656" y="779"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="YT0-6N-7NC">
             <objects>
@@ -596,7 +651,7 @@
     <resources>
         <image name="DuaHands" width="512" height="512"/>
         <image name="chevron_white" width="9" height="15"/>
-        <image name="icon_favorites" width="60" height="60"/>
+        <image name="icon_favorites" width="30" height="30"/>
         <image name="search" width="44" height="44"/>
         <image name="share" width="120" height="120"/>
     </resources>

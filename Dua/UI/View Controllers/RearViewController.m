@@ -12,6 +12,8 @@
 #import "SearchViewController.h"
 #import "AppDelegate.h"
 #import "SWRevealViewController.h"
+#import "AboutViewController.h"
+#import "FavoritesViewController.h"
 
 @interface RearViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -58,7 +60,7 @@
 #pragma mark - table view delegate and data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -74,7 +76,11 @@
             [cell initializeCellWithTitle:@"Search" withImageNamed:@"search"];
             break;
         case 1:
-            [cell initializeCellWithTitle:@"About" withImageNamed:nil];
+            [cell initializeCellWithTitle:@"Favorites"];
+            break;
+
+        case 2:
+            [cell initializeCellWithTitle:@"About"];
             break;
         default:
             break;
@@ -88,17 +94,22 @@
     [self.revealViewController setFrontViewPosition:FrontViewPositionLeft animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-
-    
     if (indexPath.row == 0)
     {
-        
         SearchViewController *vc = [SearchViewController create];
         [((UINavigationController *)self.revealViewController.frontViewController) pushViewController:vc animated:YES];
     }
-    
     else if (indexPath.row == 1)
     {
+        FavoritesViewController *vc = [FavoritesViewController create];
+        [((UINavigationController *)self.revealViewController.frontViewController) pushViewController:vc animated:YES];
+    }
+
+    
+    else if (indexPath.row == 2)
+    {
+        AboutViewController *vc = [AboutViewController create];
+        [((UINavigationController *)self.revealViewController.frontViewController) pushViewController:vc animated:YES];
     }
 
 }

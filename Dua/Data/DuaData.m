@@ -12,13 +12,15 @@
 
 + (NSArray *)duas{
     return  @[
+              @{@"category":@"Ramadan",@"image":@"Ramadan",
+                @"duas":@[]},
               @{@"category":@"Bedroom",@"image":@"bedroom",
                 @"duas":@[@{
                               @"dua:arabic" : @"الحَمْدُ لِلهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
                               @"dua:transliteration" : @"alḥamdu lillaahil-ladhee aḥyaanaa ba‛da maa amaatanaa wa ilayhin-nushoor",
                               @"dua:translation" : @"Praise be to Allah who gave us life after having given us death, unto Him is [our] final return (Bukhari, Muslim).",
                               @"dua:title" : @"Waking Up",
-                              @"searchKeys":@"Waking up, morning, sleep, bed"
+                              @"searchKeys":@"Waking up, morning, sleep, bed, room"
                               },
                           
                           @{
@@ -66,7 +68,7 @@
                               @"dua:transliteration" : @"Alhumdu lillahi Allahumma kama anta hasanta khalqi fahassin khuluqi",
                               @"dua:translation" : @"Praise be to Allah, Oh Allah, as you have given me a good physical form, so favor me with good character (Ibn al-Sunni).",
                               @"dua:title" : @"When looking in the mirror",
-                              @"searchKeys":@"mirror looking look "}
+                              @"searchKeys":@"mirror looking look room bedroom "}
                        
                           ]
                 },
@@ -159,17 +161,17 @@
                             @"dua:title" : @"",
                             @"searchKeys":@""},
                         @{
-                            @"dua:arabic" : @"",
-                            @"dua:transliteration" : @"",
-                            @"dua:translation" : @"",
-                            @"dua:title" : @"",
-                            @"searchKeys":@""},
+                            @"dua:arabic" : @"رَبِّ لَا تَذَرۡنِى فَرۡدً۬ا وَأَنتَ خَيۡرُ ٱلۡوَٲرِثِينَ",
+                            @"dua:transliteration" : @"rabbi la tadharnee fardan waanta khayru alwaritheen",
+                            @"dua:translation" : @"O my Lord! Leave me not without offspring; You are the best of inheritors (Qur'an 21:89)",
+                            @"dua:title" : @"Supplication to have children",
+                            @"searchKeys":@"Children family child kid birth"},
                         @{
-                            @"dua:arabic" : @"",
-                            @"dua:transliteration" : @"",
-                            @"dua:translation" : @"",
-                            @"dua:title" : @"",
-                            @"searchKeys":@""}
+                            @"dua:arabic" : @" رَبَّنَا هَبۡ لَنَا مِنۡ أَزۡوَٲجِنَا وَذُرِّيَّـٰتِنَا قُرَّةَ أَعۡيُنٍ۬ وَٱجۡعَلۡنَا لِلۡمُتَّقِينَ إِمَامًا",
+                            @"dua:transliteration" : @"Rabbanā hab lanā min azwājinā wa dhurriyyātinā qurrata a'yun(iw), wa'jalnā li'l-muttaqīna imāman",
+                            @"dua:translation" : @"Our Lord! Grant us spouses and offspring that will be the comfort of our eyes, and give us [the grace] to leave the righteous (Qur'ān 25:74)",
+                            @"dua:title" : @"Supplication to have a blessed family",
+                            @"searchKeys":@"family blessed children spouse wife husband bless"}
 
 
 ]},
@@ -257,11 +259,11 @@
                             @"dua:translation" : @"We now return [from our journey] repenting [to Allah], worshipping [Him], and praising our Lord[Allah] (Bukhari).",
                             @"dua:title" : @"When returning home from journey",
                             @"searchKeys":@"return returning journey home travel traveling"},
+#pragma TODO
                         @{
-                            @"dua:arabic" : @"",
-                            @"dua:transliteration" : @"",
+                            @"dua:arabic" : @"للَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلِجِ وَخَيْرَ الْمَخْرَجِ بِسْمِ اللهِ وَلَجْنَا، وَ بِسْمِ اللهِ خَرَجْنَا، وَعَلَى رَبِّنَا تَوَكَّلْنَا",
+                            @"dua:transliteration" : @"Allāhumma innī as'aluka khayra 'l-mawliji wa khayra 'l-makhraj(i), bi",
                             @"dua:translation" : @"",
-                            @"dua:title" : @"When entering home",
                             @"searchKeys":@""},
                         @{
                             @"dua:arabic" : @"",
