@@ -154,12 +154,16 @@
 ]},
               @{@"category":@"Family",@"image":@"family",
                 @"duas":@[
-                        @{
-                            @"dua:arabic" : @"",
-                            @"dua:transliteration" : @"",
-                            @"dua:translation" : @"",
-                            @"dua:title" : @"",
-                            @"searchKeys":@""},
+                          @{
+                        @"dua:arabic" : @"اللهم إِنِّىٓ أُعِيذُهَا بِكَ وَذُرِّيَّتَهَا مِنَ ٱلشَّيۡطَـٰنِ ٱلرَّجِيمِ",
+                        @"dua:transliteration" : @"Allāhumma inni u-’idhuhā [hū] bika wa dhurriyyataha [hū] Mina ‘sh-shayţāni ‘r-rajīm",
+                        @"dua:translation" : @"O Allah, I put her [him], and her [his] progeny under Your protection from Satan, the accursed (Quran 3:36)",
+                        @"dua:arabic2" : @"أللهُمَّ اجْعَلهُ (هَا) بَرًّا تَقِيًّا, و أنْبِتْهُ (ها) في الأِسلامِ نَباتًا حَسَنا",
+                        @"dua:transliteration2" : @"Allāhumma j`alhu [hā] barran taqiyyaw wa ambit-hu [hā] fî `I-Islami nabatan hasanan",
+                        @"dua:translation2" : @"O Allah, make him [her] obedient and god fearing, and give him [her] and excellent upbringing in Islam.",
+                        @"dua:title" : @"When a child is born",
+                        @"searchKeys":@"Child, birth, infant baby kid pregnant family"
+                        },
                         @{
                             @"dua:arabic" : @"رَبِّ لَا تَذَرۡنِى فَرۡدً۬ا وَأَنتَ خَيۡرُ ٱلۡوَٲرِثِينَ",
                             @"dua:transliteration" : @"rabbi la tadharnee fardan waanta khayru alwaritheen",
@@ -259,28 +263,98 @@
                             @"dua:translation" : @"We now return [from our journey] repenting [to Allah], worshipping [Him], and praising our Lord[Allah] (Bukhari).",
                             @"dua:title" : @"When returning home from journey",
                             @"searchKeys":@"return returning journey home travel traveling"},
-#pragma TODO
                         @{
                             @"dua:arabic" : @"للَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلِجِ وَخَيْرَ الْمَخْرَجِ بِسْمِ اللهِ وَلَجْنَا، وَ بِسْمِ اللهِ خَرَجْنَا، وَعَلَى رَبِّنَا تَوَكَّلْنَا",
-                            @"dua:transliteration" : @"Allāhumma innī as'aluka khayra 'l-mawliji wa khayra 'l-makhraj(i), bi",
-                            @"dua:translation" : @"",
-                            @"searchKeys":@""},
+                            @"dua:transliteration" : @"Allāhumma innī as'aluka khayra 'l-mawliji wa khayra 'l-makhraj(i), bismi'Llāhi walajnā wa bismi 'Llāhi kharajnā, wa 'ala 'Llāhi Rabbinā tawakkalnā",
+                            @"dua:translation" : @"O Allah, I beg of You the blessing of entering and leaving. In Allah's name we enter and in Allah's name we leave, and in Allah, our Lord, we trust (Abu Dawud).",
+                            @"dua:title" : @"While entering the home",
+                            @"searchKeys":@"enter come home house reach arrive"},
                         @{
-                            @"dua:arabic" : @"",
-                            @"dua:transliteration" : @"",
-                            @"dua:translation" : @"",
+                            @"dua:arabic" : @"أسْتَودِعُ اللهُ دِينَكَ وَ أمَانَتَكَ وَ خَوَاتِيمَ عَمَلِك",
+                            @"dua:transliteration" : @"Astawdi-u Llahu dīnaka wa amānataka wa khawātīmi ‘amalik(a)",
+                            @"dua:translation" : @"I entrust Allah with your religion, your belongings and the result of your deeds (Tirmidhi)",
                             @"dua:title" : @"When bidding farewell to someone",
-                            @"searchKeys":@""}
+                            @"searchKeys":@"Leaving, farewell, bye, goodbye, travel"}
 
 ]},
               @{@"category":@"Marriage",@"image":@"marriage",
-                @"duas":@[]},
+                @"duas":@[@{
+                              @"dua:arabic" : @"بارَكَ اَللهُ لَكَ وَ بارَكَ عَلَيْكَ وَ جَمَعَ بَيْنَكُما فِي خَيْرٍ",
+                              @"dua:transliteration" : @"Bāraka `Llāhu lak(a) wa bāraka ‘alayk(a) wa jama-’a baynakumā fī khayr(in)",
+                              @"dua:translation" : @"May Allah bless you and shower His blessings upon you and bring you together in goodness (Tirmidhi)",
+                              @"dua:title" : @"What to say to a newly-wed couple",
+                              @"searchKeys":@"Marriage, newly-wed, wife bride husband wedding"},
+                          @{
+                              @"dua:arabic" : @"اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا ، وَخَيْرَ مَا جَبَلْتَهَا عَلَيْهِ ، وَأَعُوذُ بِكَ مِنْ شَرِّهَا ، وَشَرِّ مَا جَبَلْتَهَا عَلَيْهِ",
+                              @"dua:transliteration" : @"Allaahumma innee as’aluka khayrahaa, wa khayra maa jabaltahaa ‛alayh, wa a‛oodhu bika min sharrihaa, wa sharri maa jabaltahaa ‛alayh",
+                              @"dua:translation" : @"O Allah, I ask You for the goodness within her and the goodness that you have made her inclined towards, and I seek refuge with You from the evil within her and the evil that you have made her inclined towards. (Tirmidhi, Malik)",
+                              @"dua:title" : @"When first meeting one's bride",
+                              @"searchKeys":@"Marriage wife marry bride meeting, husband newly-wed, wedding"},
+                          @{
+                              @"dua:arabic" : @"بِسْمِ اللهِ اَللهُمَّ جَنِّبْنا اَلشَّيْطَانَ وَ جَنِّبِ الشَّيْطَانَ مَا رَزَقْتَنا",
+                              @"dua:transliteration" : @"Bismi `Llahi Allāhumma jannibna `sh-shaytāna wa jannibi `sh-shayţāna mā razaqtanā",
+                              @"dua:translation" : @"In the name of Allah. O Allah, protect us from Satan and keep Satan away from the children You grant us (Bukhari)",
+                              @"dua:title" : @"At the commencement of sexual intercourse",
+                              @"searchKeys":@"Sexual Intercourse, sex, marriage, Protection for child, wife, husband bride wedding"}]},
               @{@"category":@"Health",@"image":@"health",
-                @"duas":@[]},
+                @"duas":@[@{
+                              @"dua:arabic" : @"أعُوْذُ بِعِزَّةِ اللهِ وَ قُدْرَتِهِ مِنْ شَرِّ ما أجِدُ أحَاذِرُ",
+                              @"dua:transliteration" : @"A-u’ūdhu bi’zzati `Llāhi wa qudratihi min sharri mā ajidu wa uhādhir(u)",
+                              @"dua:translation" : @"I seek refuge in the might and power of Allah, from the evil of the the pain I feel and fear\nPlace the right hand on the affected area and recite Bismi `Llahi thrice, thereafter recite the above-mentioned dua seven times (Muslim).",
+                              @"dua:title" : @"When feeling pain in the body",
+                              @"searchKeys":@"Pain, Physical Pain, protection from harm, body"},
+                          @{
+                              @"dua:arabic" : @"اَللهُمَّ رَبِّ النَّاسِّ, أَذْهِبِ البَّأْسَ, وَ اشْفِ اَنْتَ الشَّافِي,لا شِفَاءً اِلا شِفَاؤُك, شِفَاءً لا يُغَادِرُ سَقَمًا",
+                              @"dua:transliteration" : @"Allahumma rabba `n-nas(i), adhibi `l-b`asa wa `shfi Anata `sh-Shāfī, lā shifā`a illā shifā`uk(a), shifā`al la yughādiru saqaman",
+                              @"dua:translation" : @"O Allah, Lord of mankind, remove all harm, and cure, as You are the one who cures. There is no cure but Your cure: a cure that leaves no illness (Bukhari)",
+                              @"dua:title" : @"When afflicted by an illness or disease",
+                              @"searchKeys":@"Sickness, Disease, Illness, Cure, sick , hospital , health"},
+                          @{
+                              @"dua:arabic" : @"لَا بَأْسَ طَهُورٌ إِنْ شَاءَ اللهُ",
+                              @"dua:transliteration" : @"laa ba’sa ṭahoorun in shaa’-allaah",
+                              @"dua:translation" : @"O Allah, Lord of mankind, remove all harm, and cure, as You are the one Who cures. There is no cure but Your cure: a cure that leaves no illness (Bukhari).",
+                              @"dua:title" : @"When visiting a sick person",
+                              @"searchKeys":@"sick visting health person doctor hospital"}]},
+              
+              
               @{@"category":@"Difficulty",@"image":@"difficulty",
-                @"duas":@[]},
+                @"duas":@[
+                        @{
+                            @"dua:arabic" : @"اللَّهُمَّ إِنَّا نَجْعَلُكَ فِي نُحُورِهِمْ وَنَعُوذُ بِكَ مِنْ شُرُورِهِمْ",
+                            @"dua:transliteration" : @"Allahumma innā naj/aluka fi nuhūrihim, wa na-'udhu bika min shururihim",
+                            @"dua:translation" : @"O Allah, we place You before them and see Your protection against their evil (Abu Dawud)",
+                            @"dua:title" : @"When afraid of a group or nation",
+                            @"searchKeys":@"fear enemy difficulty trial nation "},
+                        @{
+                            @"dua:arabic" : @"حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
+                            @"dua:transliteration" : @"Hasbunallahu wa ni`mal Wakil",
+                            @"dua:translation" : @"Allah (Alone) is Sufficient for us, and He is the Best Disposer of affairs (for us) (Quran 3:173).",
+                            @"dua:title" : @"When feeling helpless regarding a matter",
+                            @"searchKeys":@"helpless anxious anxiety trouble difficulty resolve"}]},
+              
+              
               @{@"category":@"Death",@"image":@"death",
-                @"duas":@[]},
+                @"duas":@[@{
+                              /////////////
+                              //TODO SAAD// supplication for a deceased child pg49
+                              /////////////
+                              @"dua:arabic" : @"",
+                              @"dua:transliteration" : @"",
+                              @"dua:translation" : @"",
+                              @"dua:title" : @"",
+                              @"searchKeys":@""},
+                          @{
+                              @"dua:arabic" : @"اللهُـمِّ اغْفِـرْ لِحَيِّـنا وَمَيِّتِـنا وَشـاهِدِنا ، وَغائِبِـنا ، وَصَغيـرِنا وَكَبيـرِنا ، وَذَكَـرِنا وَأُنْثـانا. اللهُـمِّ مَنْ أَحْيَيْـتَهُ مِنّا فَأَحْيِـهِ عَلى الإِسْلام ،وَمَنْ تَوَفَّـيْتَهُ مِنّا فَتَوَفَّـهُ عَلى الإِيـمان",
+                              @"dua:transliteration" : @"Allaahum-maghfir lihayyinaa, wa mayyitinaa, wa shaahidinaa, wa ghaa'ibinaa, wa sagheerinaa wa kabeerinaa, wa thakarinaa wa 'unthaanaa. Allaahumma man 'ahyaytahu minnaa fa'ahyihi 'alal-'Islaami, wa man tawaffaytahu minnaa fatawaffahu 'alal-'eemaan",
+                              @"dua:translation" : @"O Allah forgive our living and our dead, those who are with us and those who are absent, our young and our old, our menfolk and our womenfolk. O Allah, whomever you give life from among us give him life in Islam, and whomever you take way from us take him away in Faith. (Tirmidhi)",
+                              @"dua:title" : @"Supplication for a deceased male or female adult",
+                              @"searchKeys":@"death grave burial dead jazazah "},
+                          @{
+                              @"dua:arabic" : @"السَّلامُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ وَالْمُسْلِمِينَ ، وَإِنَّا إِنْ شَاءَ اللهُ بِكُمْ لَلَاحِقُونَ ، نَسْأَلُ اللهَ لَنَا وَلَكُمُ الْعَافِيَةَ",
+                              @"dua:transliteration" : @"as-salaamu ‛alaykum ahl-ad-diyaari mi-nal-mu’mineena wal-muslimeena, wa in-naa in shaa’-allaahu la-laaḥiqoona, nas’al-ullaaha lanaa wa-lakumul-‛aafiyah",
+                              @"dua:translation" : @"Peace be upon you all, O inhabitants of the dwellings (i.e. the graves), amongst the believers and the Muslims. Indeed we are, Allah willing, soon to follow (to die also), we ask Allah for well-being for us and for you (Muslim).",
+                              @"dua:title" : @"When visiting the cemetery",
+                              @"searchKeys":@"grave graveyard dead death visiting janazah burial"}]},
               @{@"category":@"Miscellaneous",@"image":@"miscellaneous",
                 @"duas":@[]}
               ];

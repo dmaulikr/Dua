@@ -37,7 +37,7 @@
     // Create a custom button with the image
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightButton setImage:image forState:UIControlStateNormal];
-    rightButton.frame = CGRectMake(0, 0, 35, 35);
+    rightButton.frame = CGRectMake(0, 0, 20, 20);
     // Add the target
     [rightButton addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
     

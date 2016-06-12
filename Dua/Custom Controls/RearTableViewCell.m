@@ -32,6 +32,7 @@
 - (void)initializeCellWithTitle:(NSString *)title withImageNamed:(NSString *)imageName {
     
     [self initializeCellWithTitle:title];
+    self.image.contentMode = UIViewContentModeScaleAspectFit;
     self.image.image = [UIImage imageNamed:imageName];
 }
 

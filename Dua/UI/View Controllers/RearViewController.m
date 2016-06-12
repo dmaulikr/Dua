@@ -76,11 +76,11 @@
             [cell initializeCellWithTitle:@"Search" withImageNamed:@"search"];
             break;
         case 1:
-            [cell initializeCellWithTitle:@"Favorites"];
+            [cell initializeCellWithTitle:@"Favorites" withImageNamed:@"icon_favorites"];
             break;
 
         case 2:
-            [cell initializeCellWithTitle:@"About"];
+            [cell initializeCellWithTitle:@"About" withImageNamed:@"info"];
             break;
         default:
             break;

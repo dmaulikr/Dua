@@ -367,7 +367,6 @@
 				TargetAttributes = {
 					9CCEEB401BFBEF1400E63A55 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 4FCRR969NA;
 					};
 					9CCEEB591BFBEF1400E63A55 = {
 						CreatedOnToolsVersion = 7.1;
@@ -653,7 +652,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.Dua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7c6e9c76-b17b-4b90-87f7-a1a66b32541a";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -664,13 +663,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Dua/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.Dua;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7c6e9c76-b17b-4b90-87f7-a1a66b32541a";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

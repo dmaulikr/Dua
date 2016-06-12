@@ -23,7 +23,7 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithRed:39.0/255.0 green:43.0/255.0 blue:46.0/255.0 alpha:1.0f];
+    self.view.backgroundColor = [UIColor blackColor];//[UIColor colorWithRed:39.0/255.0 green:43.0/255.0 blue:46.0/255.0 alpha:1.0f];
     [self navBarWithWhiteBackButtonAndTitle:@"About"];
     self.aboutLabel.numberOfLines = 0;
     self.aboutLabel.textAlignment = NSTextAlignmentCenter;
