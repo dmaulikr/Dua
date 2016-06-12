@@ -51,7 +51,7 @@
                                                                                NSKernAttributeName: @(2.0f)}];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 1)];
     
-    [Answers logCustomEventWithName:self.dua.title
+    [Answers logCustomEventWithName:[NSString stringWithFormat:@"Seen:%@", self.dua.title]
                    customAttributes:@{}];
     
     
@@ -272,6 +272,8 @@
         [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:mutArray];
 
         [self.favoriteButton setImage:[UIImage imageNamed:@"icon_favoritesFilled"] forState:UIControlStateNormal];
+        [Answers logCustomEventWithName:[NSString stringWithFormat:@"Fav:%@", self.dua.title]
+                       customAttributes:@{}];
     }
     else {
         
