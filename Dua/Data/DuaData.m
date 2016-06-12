@@ -13,7 +13,45 @@
 + (NSArray *)duas{
     return  @[
               @{@"category":@"Ramadan 🕋",@"image":@"Ramadan",
-                @"duas":@[]},
+                @"duas":@[
+                        @{
+                            @"dua:arabic" : @"وَبِصَوْمِ غَدٍ نَوَيْتُ مِنْ شَهْرِ رَمَضَانَ",
+                            @"dua:transliteration" : @"Wa bi-sawmi ghadin nawaytu min shahri ramadan",
+                            @"dua:translation" : @"Wa bi-sawmi ghadin nawaytu min shahri ramadan (Abu Dawud)",
+                            @"dua:title" : @"When beginning the fast",
+                            @"searchKeys":@"fast fating ramadan begin"},
+                        @{
+                            @"dua:arabic" : @"اللَّهُمَّ اِنِّى لَكَ صُمْتُ وَبِكَ امنْتُ [وَعَلَيْكَ تَوَكَّلْتُ] وَعَلَى رِزْقِكَ اَفْطَرْتُ ",
+                            @"dua:transliteration" : @"Allahumma Inni laka sumtu wa bika amantu [wa alayka tawakkalto] wa ‘ala rizqika aftartu",
+                            @"dua:translation" : @"O Allah! I fasted for You and I believe in You [and I put my trust in You] and I break my fast with Your sustenance.",
+                            @"dua:title" : @"When breaking the fast",
+                            @"searchKeys":@"breaking fast eat ramadan"},
+                        @{
+                            @"dua:arabic" : @"يَا حَيُّ يَا قَيُّوْمُ بِرَحْمَتِكَ أَسْتَغِيْث",
+                            @"dua:transliteration" : @"Ya Hayyu ya Qayyoomu, bi raHmatika astagheeth[u]",
+                            @"dua:translation" : @" Oh Living, oh Sustainer, in your mercy I plead for rescue (Tirmidhi).",
+                            @"dua:title" : @"First ten days of Ramadan",
+                            @"searchKeys":@"Ramadan first ten days"},
+                        @{
+                            @"dua:arabic" : @"",
+                            @"dua:transliteration" : @"Astaghfirullah Rabbi Min Kulli Zambiyon Wa Atoobu ilaih",
+                            @"dua:translation" : @"I ask forgiveness of my sins from Allah who is my Lord and I turn towards Him.",
+                            @"dua:title" : @"Second ten days of Ramadan",
+                            @"searchKeys":@"ramadan second ten days"},
+
+                        @{
+                            @"dua:arabic" : @"اَللَّهُمَّ أَجِرْنِي مِنَ النَّارِ",
+                            @"dua:transliteration" : @"Allahuma Ajirni minan naar",
+                            @"dua:translation" : @"O Allah, save me from the fire (Tirmidhi)",
+                            @"dua:title" : @"Last ten days of Ramadan",
+                            @"searchKeys":@"ramadan last ten days"},
+                        @{
+                            @"dua:arabic" : @"اللَّهُمَّ إِنَّكَ عُفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
+                            @"dua:transliteration" : @"Allaahumma Innaka ‛afu-wun tuḥibul ‛afwa fa‛afu ‛anni",
+                            @"dua:translation" : @"Aisha (may Allah be pleased with her), said: I asked the Messenger of Allah: O Messenger of Allah, if I know what night is the night of Qadr, what should I say during it? He said, Say: O Allah, You are pardoning and You love to pardon, so pardon me.",
+                            @"dua:title" : @"Laylatul Qadr (Night of power)",
+                            @"searchKeys":@"ramadan night of power Laylatul Qadr"}]},
+              
               @{@"category":@"Bedroom",@"image":@"bedroom",
                 @"duas":@[@{
                               @"dua:arabic" : @"الحَمْدُ لِلهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
@@ -330,19 +368,45 @@
                             @"dua:transliteration" : @"Hasbunallahu wa ni`mal Wakil",
                             @"dua:translation" : @"Allah (Alone) is Sufficient for us, and He is the Best Disposer of affairs (for us) (Quran 3:173).",
                             @"dua:title" : @"When feeling helpless regarding a matter",
-                            @"searchKeys":@"helpless anxious anxiety trouble difficulty resolve"}]},
+                            @"searchKeys":@"helpless anxious anxiety trouble difficulty resolve"},
+                        @{
+                            @"dua:arabic" : @"لَا إلَهَ إِلَّا اللَّهُ الْعَظـيمُ الْحَلِـيمْ، لَا إِلَهَ إِلَّا اللَّهُ رَبُّ العَـرْشِ العَظِيـمِ، لَا إِلَـهَ إِلَّا اللَّهْ رَبُّ السَّمَـوّاتِ ورّبُّ الأَرْضِ ورَبُّ العَرْشِ الكَـريم",
+                            @"dua:transliteration" : @"La ilaha illal-lahul-Azeemul-haleem, la ilaha illal-lahu rabbul-Arshil-Azeem, la ilaha illal-lahu rabbus-samawati warabbul-ardi warabbul-Arshil-kareem",
+                            @"dua:translation" : @"There is no god but Allah, th August, the Enduring. There is no god but Allah, the Lord of the Great Throne. There is no god but Allah, the Lord of the Heavens and Earth and the Lord of the Throne of Honor (Bukhari, Muslim).",
+                            @"dua:title" : @"When faced with grief or sorrow",
+                            @"searchKeys":@"difficulty hardship difficult hard grief sorrow worry pain anxiety"},
+                        @{
+                            @"dua:arabic" : @"الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي مِمَّا ابْتَلَاكَ بِهِ وَفَضَّلَنِي عَلَى كَثِيرٍ مِمَّنْ خَلَقَ تَفْضِيلَاً",
+                            @"dua:transliteration" : @"Al-hamdu li 'Llāhi 'lladhi 'āfāni mimma 'btalāka bih(ī), wa faddalanī 'alā kathirim mimman khalaqa tafdilā(n)",
+                            @"dua:translation" : @"Praise be to Allah who has granted me safety from the difficulty you are in and has favored me over a great part of His creation (Tirmidhi).",
+                            @"dua:title" : @"When seeing someone in difficulty",
+                            @"searchKeys":@"difficulty hardship difficult hard grief sorrow worry pain anxiety seeing"},
+                        @{
+                            @"dua:arabic" : @"الْحَمْدُ لِلَّهِ عَلَى كُلِّ حَالٍ",
+                            @"dua:transliteration" : @"Alhamdulillah ‘alaa kuli haal ",
+                            @"dua:translation" : @"Praise be to Allah, in every state (Mustadrak).",
+                            @"dua:title" : @"When something bad happens",
+                            @"searchKeys":@"difficulty hardship difficult hard grief sorrow worry pain anxiety seeing bad occurs occurance"},
+                        @{
+                            @"dua:arabic" : @"اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا ، وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلًا",
+                            @"dua:transliteration" : @"allaahumma laa sahla illaa maa ja‛altahu sahlan, wa anta taj‛al-ul-ḥazna idhaa shi’ta sahlan",
+                            @"dua:translation" : @"O Allah, an easy task is only that which You make easy and You make the difficult easy, when You wish (Ibn al-Sunni).",
+                            @"dua:title" : @"When confronted with a difficult situation or task",
+                            @"searchKeys":@"difficulty hardship difficult hard grief sorrow worry pain anxiety seeing confronted task job school ease easy"}]},
               
               
               @{@"category":@"Death",@"image":@"death",
-                @"duas":@[@{
-                              /////////////
-                              //TODO SAAD// supplication for a deceased child pg49
-                              /////////////
-                              @"dua:arabic" : @"",
-                              @"dua:transliteration" : @"",
-                              @"dua:translation" : @"",
-                              @"dua:title" : @"",
-                              @"searchKeys":@""},
+                @"duas":@[
+                        
+//                        @{
+//                              /////////////
+//                              //TODO SAAD// supplication for a deceased child pg49
+//                              /////////////
+//                              @"dua:arabic" : @"",
+//                              @"dua:transliteration" : @"",
+//                              @"dua:translation" : @"",
+//                              @"dua:title" : @"",
+//                              @"searchKeys":@""},
                           @{
                               @"dua:arabic" : @"اللهُـمِّ اغْفِـرْ لِحَيِّـنا وَمَيِّتِـنا وَشـاهِدِنا ، وَغائِبِـنا ، وَصَغيـرِنا وَكَبيـرِنا ، وَذَكَـرِنا وَأُنْثـانا. اللهُـمِّ مَنْ أَحْيَيْـتَهُ مِنّا فَأَحْيِـهِ عَلى الإِسْلام ،وَمَنْ تَوَفَّـيْتَهُ مِنّا فَتَوَفَّـهُ عَلى الإِيـمان",
                               @"dua:transliteration" : @"Allaahum-maghfir lihayyinaa, wa mayyitinaa, wa shaahidinaa, wa ghaa'ibinaa, wa sagheerinaa wa kabeerinaa, wa thakarinaa wa 'unthaanaa. Allaahumma man 'ahyaytahu minnaa fa'ahyihi 'alal-'Islaami, wa man tawaffaytahu minnaa fatawaffahu 'alal-'eemaan",
@@ -356,7 +420,44 @@
                               @"dua:title" : @"When visiting the cemetery",
                               @"searchKeys":@"grave graveyard dead death visiting janazah burial"}]},
               @{@"category":@"Miscellaneous",@"image":@"miscellaneous",
-                @"duas":@[]}
+                @"duas":@[@{
+                              @"dua:arabic" : @"بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+                              @"dua:transliteration" : @"Bismi 'Llahi 'lladhi lā yadurru ma-'a 'smihi shay'un fi 'l-ardi wa lā fi 's-samāi wa Huwa 's-Sami-'ul 'Alim(u)",
+                              @"dua:translation" : @"In the name of Allah by whose name nothing on earth and nothing in heaven can cause harm. He is All-Hearing, All-Knowing\nWhoever reads this du'a thrice in the morning or evening, nothing will harm him till the night or morning (Muslim, Abu Dawud, Tirmidhi)",
+                              @"dua:title" : @"Prayer for the morning and evening",
+                              @"searchKeys":@"dua prayer morning night evening day daily"},
+                          @{
+                              @"dua:arabic" : @"الْحَمْدُ للهِ",
+                              @"dua:transliteration" : @"alḥamdu lillaah",
+                              @"dua:translation" : @"Praise be to Allah",
+                              @"dua:title" : @"When sneezing",
+                              @"searchKeys":@"sneeze allergies sneezing sick"},
+                          @{
+                              @"dua:arabic" : @"اَلْحَمْدُ لِلّٰهِ الَّذِيْ بِنِعْمَتِهِ تَتِمُّ الصّالِحَاتُ",
+                              @"dua:transliteration" : @"Alhamdu lil-laahil-lathee bini’amtihi tatimmus-saalihaat",
+                              @"dua:translation" : @"Praise be to Allah, by whose grace all good things are perfected (Mustadrak)",
+                              @"dua:title" : @"When something pleasing occurs",
+                              @"searchKeys":@"please good happens happy"},
+                          @{
+                              @"dua:arabic" : @"أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+                              @"dua:transliteration" : @"Aaoozu Billahe Minashshaitan Nirrajeem",
+                              @"dua:translation" : @"I seek refuge in Allah from Satan, the accursed (Bukhari, Muslim)",
+                              @"dua:title" : @"When one becomes angry",
+                              @"searchKeys":@"anger angry sad start"},
+                          @{
+                              @"dua:arabic" : @"سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةٌ مِنْ خِيفَتِهِ",
+                              @"dua:transliteration" : @"SubHanalladhii yusabbiHur ra’du bi hamdihi wal malaa-ikatu min kheefatihi",
+                              @"dua:translation" : @"Exalted is He Whom thunder glorifies with praises and so do the angels out of awe for Him (Malik)",
+                              @"dua:title" : @"When hearing thunder",
+                              @"searchKeys":@"thunder storm clouds nature land sky"},
+                          @{
+                              @"dua:arabic" : @"أعوذُ بِٱللَّهِ مِنَ ٱلشَّيۡطَٰنِ ٱلرَّجِيمِ آمَنْتُ بِاللهِ",
+                              @"dua:transliteration" : @"A-'udhu bi 'Llāhi mia 'sh-shaytani 'r-rajim(i) Āmantu bi'Llah(i)",
+                              @"dua:translation" : @"I seek refuge in ALlah from Satan the accursed. I believe in Allah (Muslim)",
+                              @"dua:title" : @"When Satan places doubts regarding one's faith",
+                              @"searchKeys":@"satan doubt faith test"},
+                          
+]}
               ];
 }
 

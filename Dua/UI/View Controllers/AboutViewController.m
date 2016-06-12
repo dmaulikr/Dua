@@ -33,7 +33,7 @@
                                                                                NSKernAttributeName: @(2.0f)}];
     self.disclosureLabel.numberOfLines = 0;
     self.disclosureLabel.textAlignment = NSTextAlignmentCenter;
-    self.disclosureLabel.attributedText = [[NSAttributedString alloc]initWithString:@"Made with 💓 by Sameer, Saad, and Sami\n🙏 for us\nVersion 1.0"
+    self.disclosureLabel.attributedText = [[NSAttributedString alloc]initWithString:@"Made with 💓 by SSS\n🙏 for us\nVersion 1.0"
                                                                     attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                  NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:10.0],
                                                                                  NSKernAttributeName: @(2.0f)}];
