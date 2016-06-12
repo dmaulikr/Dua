@@ -103,8 +103,13 @@
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
-    [duasArray insertObject: [duasArray objectAtIndex:sourceIndexPath.row] atIndex:destinationIndexPath.row];
-    [duasArray removeObjectAtIndex:(sourceIndexPath.row + 1)];
+//    [duasArray insertObject: [duasArray objectAtIndex:sourceIndexPath.row] atIndex:destinationIndexPath.row];
+//    [duasArray removeObjectAtIndex:(sourceIndexPath.row + 1)];
+    id obj = [duasArray objectAtIndex:sourceIndexPath.row] ;
+    [duasArray removeObjectAtIndex:sourceIndexPath.row];
+    [duasArray insertObject:obj atIndex:destinationIndexPath.row];
+    
+
     [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:duasArray];
     [self.tableView reloadData];
 
@@ -113,12 +118,17 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
 
-        [self.tableView beginUpdates];
-        [duasArray removeObjectAtIndex:indexPath.row];
-        
+        if (duasArray.count > 1) {
+            [duasArray removeObjectAtIndex:indexPath.row];
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }
+        else {
+            [self.tableView beginUpdates];
+            [duasArray removeObjectAtIndex:indexPath.row];
+            [self.tableView endUpdates];
+            [self.tableView reloadData];
+        }
         [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:duasArray];
-        [self.tableView endUpdates];
-        [self.tableView reloadData];
     }
 }
 
