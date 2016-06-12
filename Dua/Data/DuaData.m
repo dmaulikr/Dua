@@ -12,7 +12,7 @@
 
 + (NSArray *)duas{
     return  @[
-              @{@"category":@"Ramadan",@"image":@"Ramadan",
+              @{@"category":@"Ramadan 🕋",@"image":@"Ramadan",
                 @"duas":@[]},
               @{@"category":@"Bedroom",@"image":@"bedroom",
                 @"duas":@[@{

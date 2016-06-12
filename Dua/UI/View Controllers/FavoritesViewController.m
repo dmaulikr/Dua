@@ -136,7 +136,7 @@
     }
     else {
         NoFavCell *cell = [tableView dequeueReusableCellWithIdentifier:@"favCell"];
-        [cell initializeCellWithTitle:@"Looks like you have no favorites yet. Add any Dua to your favorites for quick access by pressing the star symbol!"];
+        [cell initializeCellWithTitle:@"Looks like you have no favorites added. Add a Dua to your favorites for quick access!"];
         self.navigationItem.rightBarButtonItem = nil;
         [self setEditing:NO animated:YES];
         return cell;
