@@ -367,6 +367,7 @@
 				TargetAttributes = {
 					9CCEEB401BFBEF1400E63A55 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = FKZ3F49442;
 					};
 					9CCEEB591BFBEF1400E63A55 = {
 						CreatedOnToolsVersion = 7.1;
@@ -645,13 +646,13 @@
 			baseConfigurationReference = D6A2E68FE86A8F6AF2E3CB49 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sameer Siddiqui (6N8V8R35U8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = Dua/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.Dua;
+				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.dailyduas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -663,13 +664,13 @@
 			baseConfigurationReference = 004B1DB5F2B06C43E6549B51 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sameer Siddiqui (97YYL2TJ84)";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Sameer Siddiqui (FKZ3F49442)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sameer Siddiqui (FKZ3F49442)";
 				INFOPLIST_FILE = Dua/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.Dua;
+				PRODUCT_BUNDLE_IDENTIFIER = com.siddiqui.dailyduas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
