@@ -27,7 +27,7 @@
     [self navBarWithWhiteBackButtonAndTitle:@"About"];
     self.aboutLabel.numberOfLines = 0;
     self.aboutLabel.textAlignment = NSTextAlignmentCenter;
-    self.aboutLabel.attributedText = [[NSAttributedString alloc]initWithString:@"Hand picked Dua's from reputable major sources to incorporate into one's daily life."
+    self.aboutLabel.attributedText = [[NSAttributedString alloc]initWithString:@"Hand picked Duas from reputable sources to incorporate into one's daily life."
                                                                   attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:22.0],
                                                                                NSKernAttributeName: @(2.0f)}];

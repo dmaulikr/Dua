@@ -33,7 +33,7 @@
                             @"dua:title" : @"First ten days of Ramadan",
                             @"searchKeys":@"Ramadan first ten days"},
                         @{
-                            @"dua:arabic" : @"",
+                            @"dua:arabic" : @"أَسْتَغْفِرُ اللهَ رَبِّي مِنْ كُلِّ ذَنْبٍ وَ أَتُوْبُ إِلَيْهِ",
                             @"dua:transliteration" : @"Astaghfirullah Rabbi Min Kulli Zambiyon Wa Atoobu ilaih",
                             @"dua:translation" : @"I ask forgiveness of my sins from Allah who is my Lord and I turn towards Him.",
                             @"dua:title" : @"Second ten days of Ramadan",
@@ -299,7 +299,7 @@
                             @"dua:arabic" : @"آيِبُونَ تَائِبُونَ عَابِدُونَ لِرَبِّنَا حَامِدُونَ",
                             @"dua:transliteration" : @"aayiboona taa’iboona ‛aabidoona li rabbinaa ḥaamidoon",
                             @"dua:translation" : @"We now return [from our journey] repenting [to Allah], worshipping [Him], and praising our Lord[Allah] (Bukhari).",
-                            @"dua:title" : @"When returning home from journey",
+                            @"dua:title" : @"When returning home from a journey",
                             @"searchKeys":@"return returning journey home travel traveling"},
                         @{
                             @"dua:arabic" : @"للَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلِجِ وَخَيْرَ الْمَخْرَجِ بِسْمِ اللهِ وَلَجْنَا، وَ بِسْمِ اللهِ خَرَجْنَا، وَعَلَى رَبِّنَا تَوَكَّلْنَا",
