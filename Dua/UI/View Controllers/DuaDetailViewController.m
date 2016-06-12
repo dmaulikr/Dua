@@ -183,7 +183,10 @@
     [cell setBackgroundColor:[UIColor clearColor]];
     if (self.dua.arabic2 == nil) {
         [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:self.dua.transliteration withFontSize:scale];
-        
+        cell.preservesSuperviewLayoutMargins = false;
+        cell.separatorInset = UIEdgeInsetsZero;
+        cell.layoutMargins = UIEdgeInsetsZero;
+
         return cell;
     }
     else {
@@ -191,12 +194,20 @@
             case 0:
             {
                 [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:self.dua.transliteration withFontSize:scale];
+                cell.preservesSuperviewLayoutMargins = false;
+                cell.separatorInset = UIEdgeInsetsZero;
+                cell.layoutMargins = UIEdgeInsetsZero;
+
                 return cell;
             }
                 break;
             case 1:
             {
                 [cell initializeCellWithArabic:self.dua.arabic2 withTranslation:self.dua.translation2 andTransliteration:self.dua.transliteration2 withFontSize:scale];
+                cell.preservesSuperviewLayoutMargins = false;
+                cell.separatorInset = UIEdgeInsetsZero;
+                cell.layoutMargins = UIEdgeInsetsZero;
+
                 return cell;
             }
                 break;
@@ -328,6 +339,24 @@
 @end
 @implementation DuaDetailCell
 
+-(void)awakeFromNib {
+    [super awakeFromNib];
+//    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, self.frame.size.height - 3, self.frame.size.width, 3)];
+//    line.backgroundColor = [UIColor colorWithRed:39.0/255.0 green:43.0/255.0 blue:46.0/255.0 alpha:1.0f];
+//    [self addSubview:line];
+}
+- (void)drawRect:(CGRect)rect{
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    
+//    [[UIColor darkGrayColor] setStroke];
+//    
+//    CGContextSetLineWidth(context, 1);
+//    CGContextBeginPath(context);
+//    CGContextMoveToPoint(context, 0, 0.5);
+//    CGContextAddLineToPoint(context, CGRectGetMaxX(rect), 0.5);
+//    
+//    CGContextStrokePath(context);
+}
 - (void)initializeCellWithArabic:(NSString *)arabic withTranslation:(NSString *)translation andTransliteration:(NSString *)transliteration withFontSize:(CGFloat)size{
     self.backgroundColor = [UIColor clearColor];
     UIView *bgColorView = [[UIView alloc] init];
@@ -376,9 +405,7 @@
 -(void)layoutSubviews {
     [super layoutSubviews];
     
-    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, self.frame.size.height - 3, self.frame.size.width, 3)];
-    line.backgroundColor = [UIColor colorWithRed:39.0/255.0 green:43.0/255.0 blue:46.0/255.0 alpha:1.0f];
-    [self addSubview:line];
+    
 }
 
 @end

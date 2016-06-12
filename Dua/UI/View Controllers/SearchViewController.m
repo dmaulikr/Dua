@@ -51,21 +51,23 @@
     [self.searchBar setTintColor:[UIColor whiteColor]];
     self.searchBar.keyboardAppearance = UIKeyboardAppearanceDark;
     
+    CGFloat myWidth = 26.0f;
+    CGFloat myHeight = 30.0f;
+    UIButton *myButton = [[UIButton alloc] initWithFrame:CGRectMake(0.0f, 0.0f, myWidth, myHeight)];
+    [myButton setImage:[UIImage imageNamed:@"x"] forState:UIControlStateNormal];
+    [myButton setImage:[UIImage imageNamed:@"x"] forState:UIControlStateHighlighted];
+    myButton.imageEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
+    [myButton addTarget:self action:@selector(doClear:) forControlEvents:UIControlEventTouchUpInside];
+    self.searchBar.rightView = myButton;
+    self.searchBar.rightViewMode = UITextFieldViewModeWhileEditing;
+
+    
     UITapGestureRecognizer *tapper = [[UITapGestureRecognizer alloc]
               initWithTarget:self action:@selector(handleSingleTap:)];
     tapper.cancelsTouchesInView = NO;
     [self.view addGestureRecognizer:tapper];
  
     
-}
-
--(void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-  
-}
-- (void)handleSingleTap:(UITapGestureRecognizer *) sender
-{
-    [self.view endEditing:YES];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -81,9 +83,16 @@
                 forControlEvents:UIControlEventEditingChanged];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)doClear:(id)sender {
+    self.searchBar.text = @"";
+    [self.searchBar becomeFirstResponder];
+    self.searchResultArray = @[@""];
+    [self.tableView reloadData];
+}
+
+
+- (void)handleSingleTap:(UITapGestureRecognizer *) sender {
+    [self.view endEditing:YES];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -106,8 +115,7 @@
     return YES;
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     if (range.length > 0)
     {
         // We're deleting
