@@ -17,14 +17,14 @@
                         @{
                             @"dua:arabic" : @"وَبِصَوْمِ غَدٍ نَوَيْتُ مِنْ شَهْرِ رَمَضَانَ",
                             @"dua:transliteration" : @"Wa bi-sawmi ghadin nawaytu min shahri ramadan",
-                            @"dua:translation" : @"Wa bi-sawmi ghadin nawaytu min shahri ramadan (Abu Dawud)",
-                            @"dua:title" : @"When beginning the fast",
+                            @"dua:translation" : @"I intend to keep the fast for tomorrow in the month of Ramadan (Abu Dawud)",
+                            @"dua:title" : @"Beginning the fast",
                             @"searchKeys":@"fast fating ramadan begin"},
                         @{
                             @"dua:arabic" : @"اللَّهُمَّ اِنِّى لَكَ صُمْتُ وَبِكَ امنْتُ [وَعَلَيْكَ تَوَكَّلْتُ] وَعَلَى رِزْقِكَ اَفْطَرْتُ ",
                             @"dua:transliteration" : @"Allahumma Inni laka sumtu wa bika amantu [wa alayka tawakkalto] wa ‘ala rizqika aftartu",
                             @"dua:translation" : @"O Allah! I fasted for You and I believe in You [and I put my trust in You] and I break my fast with Your sustenance.",
-                            @"dua:title" : @"When breaking the fast",
+                            @"dua:title" : @"Breaking the fast",
                             @"searchKeys":@"breaking fast eat ramadan"},
                         @{
                             @"dua:arabic" : @"يَا حَيُّ يَا قَيُّوْمُ بِرَحْمَتِكَ أَسْتَغِيْث",
@@ -46,7 +46,7 @@
                             @"dua:title" : @"Last ten days of Ramadan",
                             @"searchKeys":@"ramadan last ten days"},
                         @{
-                            @"dua:arabic" : @"اللَّهُمَّ إِنَّكَ عُفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
+                            @"dua:arabic" : @"اللَّهُمَّ إِنَّكَ عفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
                             @"dua:transliteration" : @"Allaahumma Innaka ‛afu-wun tuḥibul ‛afwa fa‛afu ‛anni",
                             @"dua:translation" : @"Aisha (may Allah be pleased with her), said: I asked the Messenger of Allah: O Messenger of Allah, if I know what night is the night of Qadr, what should I say during it? He said, Say: O Allah, You are pardoning and You love to pardon, so pardon me.",
                             @"dua:title" : @"Laylatul Qadr (Night of power)",
