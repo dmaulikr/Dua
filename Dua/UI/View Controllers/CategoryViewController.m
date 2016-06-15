@@ -11,6 +11,8 @@
 #import "DuaData.h"
 #import "DuaDetailViewController.h"
 #import <AMWaveTransition.h>
+#import <Crashlytics/Crashlytics.h>
+
 
 @interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, AMWaveTransitioning>
 
@@ -81,7 +83,8 @@ const static CGFloat kTableCutAway = 50.0f;
     self.tableView.delegate = (id)self;
     self.tableView.dataSource = (id)self;
 
-    
+    [Answers logCustomEventWithName:[NSString stringWithFormat:@"Cat:%@", self.title]
+                   customAttributes:@{}];
 }
 
 - (NSArray*)visibleCells {
