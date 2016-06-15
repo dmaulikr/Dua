@@ -221,7 +221,7 @@
                 @"duas":@[@{
                               @"dua:arabic" : @"سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ",
                               @"dua:transliteration" : @"subḥaanak-allaahumma wa bi ḥamdika, ash-hadu an laa ilaaha illaa anta, astaghfiruka wa atoobu ilayk",
-                              @"dua:translation" : @"Exalted are you, O Allah, by Your praise: I bear witness that there is no god but You. I seek forgiveness from You and I repent to you\nVirtue - Whoever recites this dua will hav all the sins commited by him in the gathering forgiven (Tirmidhi, Mustadrak).",
+                              @"dua:translation" : @"Exalted are you, O Allah, by Your praise: I bear witness that there is no god but You. I seek forgiveness from You and I repent to you\nVirtue - Whoever recites this dua will have all the sins commited by him in the gathering forgiven (Tirmidhi, Mustadrak).",
                               @"dua:title" : @"At the end of a gathering",
                               @"searchKeys":@"social gathering ending end friends"},
                           @{
@@ -232,7 +232,7 @@
                               @"searchKeys":@"thanking people friends social"},
                           @{
                               @"dua:arabic" : @"أَضْحَكَ اللَّهُ سِنَّكَ",
-                              @"dua:transliteration" : @"",
+                              @"dua:transliteration" : @"Adhaka 'Llāhu sinnak(a)",
                               @"dua:translation" : @"May Allah fill your life with laughter (Bukhāri, Abū Dawūd).",
                               @"dua:title" : @"When seeing a muslim happy",
                               @"searchKeys":@"seeing muslim happy when social friends friend"}
