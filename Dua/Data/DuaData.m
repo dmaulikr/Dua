@@ -165,7 +165,7 @@
                           @{
                               @"dua:arabic" : @"للَّهمَّ إِنِّي أَسْأَلُكَ بِرَحْمَتِكَ الَّتِي وَسِعَتْ كُلَّ شَيء،ٍ أَنْ تَغْفِرَ لِي",
                               @"dua:transliteration" : @"Allahumma innee as'aluka bi-rahmatikal-latee wasi'ath kulla shai'in an taghfira lee.",
-                              @"dua:translation" : @"O Allah, Verily I ask You, bu Your mercy which encompasses everything , to forgive me (Ign Mãja)",
+                              @"dua:translation" : @"O Allah, Verily I ask You, by Your mercy which encompasses everything, to forgive me (Ibn Mãja)",
                               @"dua:arabic2" : @"اللَّهُمَّ لَكَ صُمْتُ وَعَلَى رِزْقِكَ اَفْطَرْتُ",
                               @"dua:transliteration2" : @"Allāhumma laka sumtu wa 'ala rizqika aftart(u)",
                               @"dua:translation2" : @"O Allah, for You have I fasted, and by what [food] You have blessed me with have I broken it (Abū Dāwūd in his Marāsīl)",
