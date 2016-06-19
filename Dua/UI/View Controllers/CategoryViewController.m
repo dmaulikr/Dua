@@ -12,6 +12,7 @@
 #import "DuaDetailViewController.h"
 #import <AMWaveTransition.h>
 #import <Crashlytics/Crashlytics.h>
+#import <Google/Analytics.h>
 
 
 @interface CategoryViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, AMWaveTransitioning>
@@ -85,6 +86,10 @@ const static CGFloat kTableCutAway = 50.0f;
 
     [Answers logCustomEventWithName:[NSString stringWithFormat:@"Cat:%@", self.title]
                    customAttributes:@{}];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:@"Category" value:self.title];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 }
 
 - (NSArray*)visibleCells {

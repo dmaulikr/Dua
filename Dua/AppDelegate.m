@@ -11,6 +11,7 @@
 #import "RearViewController.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import <Google/Analytics.h>
 
 
 @interface AppDelegate () <SWRevealViewControllerDelegate>
@@ -64,6 +65,12 @@
     [self.window makeKeyAndVisible];
     
     [Fabric with:@[[Crashlytics class]]];
+    
+    // Configure tracker from GoogleService-Info.plist.
+    NSError *configureError;
+    [[GGLContext sharedInstance] configureWithError:&configureError];
+    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
+
     
     
     return YES;

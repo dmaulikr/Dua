@@ -12,6 +12,8 @@
 #import "FavoriteModel.h"
 #import <Crashlytics/Crashlytics.h>
 #import <AMWaveTransition.h>
+#import <Google/Analytics.h>
+
 
 
 @interface DuaDetailViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, AMWaveTransitioning>
@@ -53,6 +55,11 @@
     
     [Answers logCustomEventWithName:[NSString stringWithFormat:@"Seen:%@", self.dua.title]
                    customAttributes:@{}];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:self.title];
+    [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+    
     
     
     UIPinchGestureRecognizer *gesture = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinchDetected:)];
@@ -274,6 +281,10 @@
         [self.favoriteButton setImage:[UIImage imageNamed:@"icon_favoritesFilled"] forState:UIControlStateNormal];
         [Answers logCustomEventWithName:[NSString stringWithFormat:@"Fav:%@", self.dua.title]
                        customAttributes:@{}];
+        id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+        [tracker set:@"Favorite" value:self.title];
+        [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+
     }
     else {
         
