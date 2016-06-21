@@ -211,7 +211,7 @@
                         @{
                             @"dua:arabic" : @" رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّـٰتِنَا قُرَّةَ أَعْيُنٍ۬ وَٱجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",
                             @"dua:transliteration" : @"Rabbanā hab lanā min azwājinā wa dhurriyyātinā qurrata a'yun(iw), wa'jalnā li'l-muttaqīna imāman",
-                            @"dua:translation" : @"Our Lord! Grant us spouses and offspring that will be the comfort of our eyes, and give us [the grace] to leave the righteous (Qur'ān 25:74)",
+                            @"dua:translation" : @"Our Lord! Grant us spouses and offspring that will be the comfort of our eyes, and give us [the grace] to lead the righteous (Qur'ān 25:74)",
                             @"dua:title" : @"Supplication to have a blessed family",
                             @"searchKeys":@"family blessed children spouse wife husband bless"}
 
