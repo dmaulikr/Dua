@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupViewController">
+            <connections>
+                <outlet property="noButton" destination="KIg-Jd-yL7" id="KBZ-nT-wrz"/>
+                <outlet property="ratingsView" destination="lPI-q9-Kwt" id="WXP-6g-QFf"/>
+                <outlet property="reviewButton" destination="2ZT-HO-Wis" id="lKX-sS-QeY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+        </view>
+        <view contentMode="scaleToFill" id="lPI-q9-Kwt">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="307"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="WHl-VT-UOS">
+                    <rect key="frame" x="20" y="16" width="355" height="117"/>
+                    <string key="text">Asalam'alaykum
+We really hope you've been benefiting from our app. If so, please leave a review so that others can find, and benefit from our app also.
+</string>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZT-HO-Wis">
+                    <rect key="frame" x="20" y="141" width="355" height="47"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="jhs-Ln-T8f"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                    <state key="normal" title="Review Now">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="reviewPressed:" destination="-1" eventType="touchUpInside" id="KKc-LA-QHn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KIg-Jd-yL7">
+                    <rect key="frame" x="20" y="211" width="355" height="47"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="zPo-oT-Nk0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                    <state key="normal" title="No Thanks">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="noPressed:" destination="-1" eventType="touchUpInside" id="1Qm-ce-i4Q"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="KIg-Jd-yL7" firstAttribute="leading" secondItem="lPI-q9-Kwt" secondAttribute="leading" constant="20" id="4Lg-9v-LbX"/>
+                <constraint firstItem="2ZT-HO-Wis" firstAttribute="top" secondItem="WHl-VT-UOS" secondAttribute="bottom" constant="8" id="EQL-iw-30R"/>
+                <constraint firstItem="WHl-VT-UOS" firstAttribute="top" secondItem="lPI-q9-Kwt" secondAttribute="top" constant="16" id="EQv-Ac-uKb"/>
+                <constraint firstItem="KIg-Jd-yL7" firstAttribute="top" secondItem="2ZT-HO-Wis" secondAttribute="bottom" constant="23" id="HQq-vo-F1z"/>
+                <constraint firstItem="2ZT-HO-Wis" firstAttribute="leading" secondItem="lPI-q9-Kwt" secondAttribute="leading" constant="20" id="Iaw-Ek-YMC"/>
+                <constraint firstAttribute="trailing" secondItem="2ZT-HO-Wis" secondAttribute="trailing" constant="20" id="KQx-V8-g9P"/>
+                <constraint firstAttribute="trailing" secondItem="KIg-Jd-yL7" secondAttribute="trailing" constant="20" id="MeO-Jg-Mqr"/>
+                <constraint firstItem="WHl-VT-UOS" firstAttribute="leading" secondItem="lPI-q9-Kwt" secondAttribute="leading" constant="20" id="elj-6c-0PE"/>
+                <constraint firstAttribute="trailing" secondItem="WHl-VT-UOS" secondAttribute="trailing" constant="20" id="oXM-NV-VA9"/>
+                <constraint firstItem="WHl-VT-UOS" firstAttribute="centerX" secondItem="lPI-q9-Kwt" secondAttribute="centerX" id="ygN-Fx-P9h"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="1053.5" y="648.5"/>
+        </view>
+    </objects>
+</document>

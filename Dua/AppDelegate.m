@@ -12,6 +12,8 @@
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #import <Google/Analytics.h>
+#import "UIViewController+displayPopup.h"
+
 
 
 @interface AppDelegate () <SWRevealViewControllerDelegate>
@@ -50,13 +52,7 @@
     SWRevealViewController *revealController = [[SWRevealViewController alloc] initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
     revealController.delegate = self;
     revealController.rearViewRevealWidth = 215;
-//    revealController.rearViewRevealDisplacement = 200.0f;
-//    [revealController panGestureRecognizer];
-//    [revealController tapGestureRecognizer];
 
-    
-//    revealController.bounceBackOnOverdraw=YES;
-    //revealController.stableDragOnOverdraw=YES;
     
     self.viewController = revealController;
     frontViewController.revealViewController = revealController;
@@ -76,6 +72,7 @@
     return YES;
 }
 
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -92,6 +89,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [self countOpen];
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -108,6 +107,49 @@
     
     return nil;
 }
+
+- (void)countOpen {
+    int _count= 0;
+    _count=  [[[NSUserDefaults standardUserDefaults] objectForKey:@"AppCount"] intValue];
+    UIViewController *currentVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+
+    if (_count == 9) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [currentVC displayRatingsPopup];
+        });
+    }
+    if (_count == 25 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Reviewed"] isEqualToString:@"NO"] ) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [currentVC displayRatingsPopup];
+        });
+    }
+    if (_count == 50 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Reviewed"] isEqualToString:@"NO"] ) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [currentVC displayRatingsPopup];
+        });
+    }
+    if (_count == 100 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Reviewed"] isEqualToString:@"NO"] ) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [currentVC displayRatingsPopup];
+        });
+    }
+    if (_count == 200 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Reviewed"] isEqualToString:@"NO"] ) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [currentVC displayRatingsPopup];
+        });
+    }
+    if (_count == 400 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Reviewed"] isEqualToString:@"NO"] ) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [currentVC displayRatingsPopup];
+        });
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%d",_count+1] forKey:@"AppCount"];
+    
+    
+
+}
+
 
 
 @end

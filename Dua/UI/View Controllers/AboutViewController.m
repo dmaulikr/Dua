@@ -39,7 +39,7 @@
 
     self.disclosureLabel.numberOfLines = 0;
     self.disclosureLabel.textAlignment = NSTextAlignmentCenter;
-    self.disclosureLabel.attributedText = [[NSAttributedString alloc]initWithString:@"Made with 💓\n🙏 for us\nVersion 1.21"
+    self.disclosureLabel.attributedText = [[NSAttributedString alloc]initWithString:@"Made with 💓\n🙏 for us\nVersion 1.22"
                                                                     attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                  NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:10.0],
                                                                                  NSKernAttributeName: @(2.0f)}];

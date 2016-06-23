@@ -13,6 +13,9 @@
 		9C4126621C091CB300D139D5 /* QuranFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4126611C09197800D139D5 /* QuranFont.ttf */; };
 		9C4126641C091DA900D139D5 /* QuranFont1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4126631C091D8000D139D5 /* QuranFont1.ttf */; };
 		9CC4F9FE1D15D39E00127A4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CC4F9FD1D15D39E00127A4D /* GoogleService-Info.plist */; };
+		9CC4FA071D1C3D9400127A4D /* PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4FA051D1C3D9400127A4D /* PopupViewController.m */; };
+		9CC4FA081D1C3D9400127A4D /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC4FA061D1C3D9400127A4D /* PopupViewController.xib */; };
+		9CC4FA0B1D1C41F500127A4D /* UIViewController+displayPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC4FA0A1D1C41F500127A4D /* UIViewController+displayPopup.m */; };
 		9CCEEB461BFBEF1400E63A55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB451BFBEF1400E63A55 /* main.m */; };
 		9CCEEB491BFBEF1400E63A55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CCEEB481BFBEF1400E63A55 /* AppDelegate.m */; };
 		9CCEEB511BFBEF1400E63A55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CCEEB501BFBEF1400E63A55 /* Assets.xcassets */; };
@@ -64,6 +67,11 @@
 		9C4126611C09197800D139D5 /* QuranFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuranFont.ttf; sourceTree = "<group>"; };
 		9C4126631C091D8000D139D5 /* QuranFont1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuranFont1.ttf; sourceTree = "<group>"; };
 		9CC4F9FD1D15D39E00127A4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9CC4FA041D1C3D9400127A4D /* PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupViewController.h; sourceTree = "<group>"; };
+		9CC4FA051D1C3D9400127A4D /* PopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupViewController.m; sourceTree = "<group>"; };
+		9CC4FA061D1C3D9400127A4D /* PopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupViewController.xib; sourceTree = "<group>"; };
+		9CC4FA091D1C41F500127A4D /* UIViewController+displayPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+displayPopup.h"; sourceTree = "<group>"; };
+		9CC4FA0A1D1C41F500127A4D /* UIViewController+displayPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+displayPopup.m"; sourceTree = "<group>"; };
 		9CCEEB411BFBEF1400E63A55 /* Dua.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dua.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCEEB451BFBEF1400E63A55 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CCEEB471BFBEF1400E63A55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -282,6 +290,8 @@
 				9CCEEBA01BFCFB5E00E63A55 /* UIImage+Scale.m */,
 				9CE9E9211BFDB72500FEC901 /* UIImage+ImageEffects.h */,
 				9CE9E9221BFDB72500FEC901 /* UIImage+ImageEffects.m */,
+				9CC4FA091D1C41F500127A4D /* UIViewController+displayPopup.h */,
+				9CC4FA0A1D1C41F500127A4D /* UIViewController+displayPopup.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -295,6 +305,9 @@
 				9CE9E9181BFD31CB00FEC901 /* RearTableViewCell.m */,
 				9C33E7731D078F35000798AF /* ImageDownloader.h */,
 				9C33E7741D078F35000798AF /* ImageDownloader.m */,
+				9CC4FA041D1C3D9400127A4D /* PopupViewController.h */,
+				9CC4FA051D1C3D9400127A4D /* PopupViewController.m */,
+				9CC4FA061D1C3D9400127A4D /* PopupViewController.xib */,
 			);
 			path = "Custom Controls";
 			sourceTree = "<group>";
@@ -410,6 +423,7 @@
 				9C4126641C091DA900D139D5 /* QuranFont1.ttf in Resources */,
 				9C4126621C091CB300D139D5 /* QuranFont.ttf in Resources */,
 				9CCEEB541BFBEF1400E63A55 /* LaunchScreen.storyboard in Resources */,
+				9CC4FA081D1C3D9400127A4D /* PopupViewController.xib in Resources */,
 				9CCEEB831BFBF08C00E63A55 /* Dashboard.storyboard in Resources */,
 				9CCEEB8B1BFBF3FC00E63A55 /* Podfile in Resources */,
 				9CCEEB511BFBEF1400E63A55 /* Assets.xcassets in Resources */,
@@ -499,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC4FA0B1D1C41F500127A4D /* UIViewController+displayPopup.m in Sources */,
 				9C33E7961D0CAF15000798AF /* AboutViewController.m in Sources */,
 				9CCEEB9E1BFCF42500E63A55 /* UIViewController+Navigation.m in Sources */,
 				9CCEEB9A1BFCF39000E63A55 /* SWRevealViewController.m in Sources */,
@@ -512,6 +527,7 @@
 				9CCEEB491BFBEF1400E63A55 /* AppDelegate.m in Sources */,
 				9CCEEB811BFBF07C00E63A55 /* DashboardViewController.m in Sources */,
 				9CE9E9231BFDB72500FEC901 /* UIImage+ImageEffects.m in Sources */,
+				9CC4FA071D1C3D9400127A4D /* PopupViewController.m in Sources */,
 				9CCEEB951BFC5D8E00E63A55 /* CategoryViewController.m in Sources */,
 				9CCEEB461BFBEF1400E63A55 /* main.m in Sources */,
 				9C33E7751D078F35000798AF /* ImageDownloader.m in Sources */,
@@ -650,8 +666,8 @@
 			baseConfigurationReference = D6A2E68FE86A8F6AF2E3CB49 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = Dua/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -668,7 +684,7 @@
 			baseConfigurationReference = 004B1DB5F2B06C43E6549B51 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Sameer Siddiqui (FKZ3F49442)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sameer Siddiqui (FKZ3F49442)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
