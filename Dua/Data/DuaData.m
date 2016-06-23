@@ -46,7 +46,7 @@
                             @"dua:title" : @"Last ten days of Ramadan",
                             @"searchKeys":@"ramadan last ten days"},
                         @{
-                            @"dua:arabic" : @"اللّٰهُمَّ إِنَّكَ عفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
+                            @"dua:arabic" : @"اللّٰهُمَّ إِنَّكَ عفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
                             @"dua:transliteration" : @"Allaahumma Innaka ‛afu-wun tuḥibul ‛afwa fa‛afu ‛anni",
                             @"dua:translation" : @"Aisha (may Allah be pleased with her), said: I asked the Messenger of Allah: O Messenger of Allah, if I know what night is the night of Qadr, what should I say during it? He said, Say: O Allah, You are pardoning and You love to pardon, so pardon me.",
                             @"dua:title" : @"Laylatul Qadr (Night of power)",
@@ -54,7 +54,7 @@
               
               @{@"category":@"Bedroom",@"image":@"bedroom",
                 @"duas":@[@{
-                              @"dua:arabic" : @"اَلْحَمْدُ لِلهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
+                             @"dua:arabic" : @"اَلْحَمْدُ لِلهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ",
                               @"dua:transliteration" : @"alḥamdu lillaahil-ladhee aḥyaanaa ba‛da maa amaatanaa wa ilayhin-nushoor",
                               @"dua:translation" : @"Praise be to Allah who gave us life after having given us death, unto Him is [our] final return (Bukhari, Muslim).",
                               @"dua:title" : @"Waking Up",
@@ -62,8 +62,8 @@
                               },
                           
                           @{
-                              @"dua:arabic" : @"بِإِسْمِكَ اللّٰهُمَّ أَمُوتُ وَأَحْيَا",
-                              @"dua:arabic2": @"اَللّٰهُمَّ أَسْلَمْتُ نَفْسِيْ إِلَيْكَ، وَوَجَّهْتُ وَجْهِي إِلَيْكَ، وَأَلْجَأْتُ ظَهْرِي إِلَيْكَ، وَفَوَّضْتُ أَمْرِي إِلَيْكَ، رَغْبَةً وَرَهْبَةً إِلَيْكَ، لَا مَلْجَأَ وَلَا مَنْجَا مِنْكَ إِلَّاإِلَيْكَ، آمَنْتُ بِكِتَابِكَ الَّذِي أَنْزَلْتَ، وَبِنَبِيِّكَ الَّذِي أَرْسَلْتَ",
+                              @"dua:arabic" : @"بِإِسْمِكَ اللّٰهُمَّ أَمُوتُ وَأَحْيَا",
+                              @"dua:arabic2": @"اَللّٰهُمَّ أَسْلَمْتُ نَفْسِيْ إِلَيْكَ، وَوَجَّهْتُ وَجْهِي إِلَيْكَ، وَأَلْجَأْتُ ظَهْرِي إِلَيْكَ، وَفَوَّضْتُ أَمْرِي إِلَيْكَ، رَغْبَةً وَرَهْبَةً إِلَيْكَ، لَا مَلْجَأَ وَلَا مَنْجَا مِنْكَ إِلَّاإِلَيْكَ، آمَنْتُ بِكِتَابِكَ الَّذِي أَنْزَلْتَ، وَبِنَبِيِّكَ الَّذِي أَرْسَلْتَ",
                               @"dua:transliteration" : @"bismika-l-laahumma amoo-tu wa aḥyaa",
                               @"dua:transliteration2" : @"allaahumma aslamtu nafsee ilayk, wa waj-jahtu wajhiya ilayka wa ’alja’tu ẓahree ilayk, wa fawwaḍtu amree ilayk, ragh-batan warah-batan ilayk, laa malja’a wa laa manja minka il-laa ilayk, aamantu bi-kitaa-bika-l-ladhee anzalt, wa bi-nabiyyik-alladhee arsalta",
                               @"dua:translation" : @"In Your name O Allah, I die and live. (Bukhari)",
@@ -72,7 +72,7 @@
                               @"searchKeys":@"sleep, bed, night"},
                           
                           @{
-                              @"dua:arabic" : @"أَعُوْذُ بِكَلِمَاتِ اللهِ التَّامَّةِ مِنْ غَضَبِهِ وَعِقَابِهِ ، وَشَرِّ عِبَادِهِ وَمِنْ هَمَزَاتِ الشَّيَاطِينِ وَأَنْ يَّحْضُرُونِ",
+                              @"dua:arabic" : @"أَعُوْذُ بِكَلِمَاتِ اللهِ التَّامَّةِ مِنْ غَضَبِهِ وَعِقَابِهِ ، وَشَرِّ عِبَادِهِ وَمِنْ هَمَزَاتِ الشَّيَاطِينِ وَأَنْ يَّحْضُرُونِ",
                               @"dua:transliteration" : @"A’oothu Bikalimatil-lahittiammati min Ghadabihi wa’iqabihi-washarri-‘ibadihi Wamin Hamazatish-shayateen wa’an Yahdoroon",
                               @"dua:translation" : @"I seek refuge in the perfect words of Allah against His wrath and the evil of His servants and the evil promptings of devils and against their presence (Tirmidhi, Malik).",
                               @"dua:title" : @"After a frightening dream or disturbance",
@@ -84,13 +84,13 @@
                               @"dua:title" : @"When unable to sleep at night",
                               @"searchKeys":@"sleep night bed"},
                           @{
-                              @"dua:arabic" : @"اَلْحَمْدُ لِلهِ الَّذِي كَسَانِي هَذَا الثَّوْبَ وَرَزَقَنِيْهِ مِنْ غَيْرِ حَوْلٍ مِّنِّي وَلَا قُوَّةٍ",
+                              @"dua:arabic" : @"اَلْحَمْدُ لِلهِ الَّذِي كَسَانِي هَذَا الثَّوْبَ وَرَزَقَنِيْهِ مِنْ غَيْرِ حَوْلٍ مِّنِّي وَلَا قُوَّةٍ",
                               @"dua:transliteration" : @"alḥamdu lillaahil-ladhee kasaanee haadhath-thawba wa razaqaneehi min ghayri ḥawlin minnee wa laa quwwah",
                               @"dua:translation" : @"Praise be to Allah who clothed me in this garment and gave it to me without any strength and ability on my part (Abu Dawud, Tirmidhi).",
                               @"dua:title" : @"When putting on an article of clothing",
                               @"searchKeys":@"cloth clothes clothing putting article on"},
                           @{
-                              @"dua:arabic" : @"اَللّٰهُمَّ لَكَ الْحَمْدُ أَنْتَ كَسَوْتَنِيهِ ، أَسْأَلُكَ مِنْ خَيْرِهِ وَخَيْرِ مَا صُنِعَ لَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا صُنِعَ لَهُ",
+                              @"dua:arabic" : @"اَللّٰهُمَّ لَكَ الْحَمْدُ أَنْتَ كَسَوْتَنِيهِ ، أَسْأَلُكَ مِنْ خَيْرِهِ وَخَيْرِ مَا صُنِعَ لَهُ ، وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا صُنِعَ لَهُ",
                               @"dua:transliteration" : @"allaahumma lakal-ḥamdu anta kasawtaneehi, as’aluka min khayrihi wa khayri maa ṣuni‛a lahu, wa ’a‛oodhu bika min sharrihi wa sharri maa ṣuni‛a lah",
                               @"dua:translation" : @"Praise be to Allah who clothed me in this garment and gave it to me without any strength and ability on my part (Tirmidhi).",
                               @"dua:title" : @"When putting on new clothing",
@@ -102,7 +102,7 @@
                               @"dua:title" : @"Before removing clothing",
                               @"searchKeys":@"cloth clothes clothing putting article on removing before"},
                           @{
-                              @"dua:arabic" : @"اَلْحَمْدُ لِلَّهِ , اَللّٰهُمَّ كَمَا أَنْتَ حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",
+                              @"dua:arabic" : @"اَلْحَمْدُ لِلهِ , اَللّٰهُمَّ كَمَا أَنْتَ حَسَّنْتَ خَلْقِي فَحَسِّنْ خُلُقِي",
                               @"dua:transliteration" : @"Alhumdu lillahi Allahumma kama anta hasanta khalqi fahassin khuluqi",
                               @"dua:translation" : @"Praise be to Allah, Oh Allah, as you have given me a good physical form, so favor me with good character (Ibn al-Sunni).",
                               @"dua:title" : @"When looking in the mirror",
@@ -112,7 +112,7 @@
                 },
               @{@"category":@"Bathroom",@"image":@"bathroom",
                 @"duas":@[@{
-                              @"dua:arabic" : @"اَللّٰهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",
+                              @"dua:arabic" : @"اَللّٰهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ",
                               @"dua:transliteration" : @"allaahumma innee a‛oodhu bika minal-khubuthi wal-khabaa’ith",
                               @"dua:translation" : @"Oh Allah, I seek Your protection from male and female demons (Muslim).",
                               @"dua:title" : @"Before entering the bathroom",
@@ -148,7 +148,7 @@
                               @"dua:title" : @"Before meal",
                               @"searchKeys":@"before eating food meal dinner lunch breakfast"},
                           @{
-                              @"dua:arabic2" : @"اَلْحَمْدُ لِلهِ الَّذِي أَطْعَمَنِي هٰذَا الطَّعَامَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِّنِّي وَلَا قُوَّةٍ",
+                              @"dua:arabic2" : @"اَلْحَمْدُ لِلهِ الَّذِي أَطْعَمَنِي هٰذَا الطَّعَامَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِّنِّي وَلَا قُوَّةٍ",
                               @"dua:transliteration2" : @"alḥamdu lillaahil-ladhee aṭ‛amanee haadhaa aṭ‛aama wa razaqaneehi min ghayri ḥawlin minnee wa laa quwwah",
                               @"dua:translation2" : @"Praise be to Allah who fed me this food and bestowed it upon me without any strength and ability on my part. (Abū Dāwūd, Tirmidhī)",
                               @"dua:arabic" : @"اَلْحَمْدُ لِلهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مِنَ الْمُسْلِمِينَ",
@@ -157,7 +157,7 @@
                               @"dua:title" : @"After meal",
                               @"searchKeys":@"after eating food meal dinner lunch breakfast"},
                           @{
-                              @"dua:arabic" : @"بِسْمِ اللهِ فِي أَوَّلِهِ وَآخِرِهِ",
+                              @"dua:arabic" : @"بِسْمِ اللهِ فِي أَوَّلِهِ وَآخِرِهِ",
                               @"dua:transliteration" : @"bismillaahi fee awwalihi wa aakhirihi",
                               @"dua:translation" : @"In the name of Allah, at the beginning of it [the meal] and at the end of it (Abū Dāwūd).",
                               @"dua:title" : @"If one forgets supplication prior to meal",
@@ -178,7 +178,7 @@
                               @"dua:title" : @"Dining at someone's house",
                               @"searchKeys":@"dining eat food eating dinner"},
                           @{
-                              @"dua:arabic" : @"اَللّٰهُمَّ بَارِكْ لَنَا فِيهِ وَزِدْنَا مِنْهُ",
+                              @"dua:arabic" : @"اَللّٰهُمَّ بَارِكْ لَنَا فِيهِ وَزِدْنَا مِنْهُ",
                               @"dua:transliteration" : @"allaahumma baarik lanaa feehi wa zidnaa minh",
                               @"dua:translation" : @"O Allah, bless us by it, and increase us in it (Tirmidhi).",
                               @"dua:title" : @"After drinking milk",
@@ -219,7 +219,7 @@
 ]},
               @{@"category":@"Social",@"image":@"social",
                 @"duas":@[@{
-                              @"dua:arabic" : @"سُبْحَانَكَ اللّٰهُمَّ وَبِحَمْدِكَ ، أَشْهَدُ أَنْ لَّا إِلٰهَ إِلَّا أَنْتَ ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ",
+                              @"dua:arabic" : @"سُبْحَانَكَ اللّٰهُمَّ وَبِحَمْدِكَ ، أَشْهَدُ أَنْ لَّا إِلٰهَ إِلَّا أَنْتَ ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ",
                               @"dua:transliteration" : @"subḥaanak-allaahumma wa bi ḥamdika, ash-hadu an laa ilaaha illaa anta, astaghfiruka wa atoobu ilayk",
                               @"dua:translation" : @"Exalted are you, O Allah, by Your praise: I bear witness that there is no god but You. I seek forgiveness from You and I repent to you\nVirtue - Whoever recites this dua will have all the sins committed by him in the gathering forgiven (Tirmidhi, Mustadrak).",
                               @"dua:title" : @"At the end of a gathering",
@@ -241,14 +241,14 @@
 ]},
               @{@"category":@"Business",@"image":@"business",
                 @"duas":@[  @{
-                                @"dua:arabic" : @"لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ ، يُحْيِي وَيُمِيتُ وَهُوَ حَيٌّ لَا يَمُوتُ ، بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+                                @"dua:arabic" : @"لَا إِلٰهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ ، يُحْيِي وَيُمِيتُ وَهُوَ حَيٌّ لَا يَمُوتُ ، بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
                                 @"dua:transliteration" : @"laa ilaaha ill-allaahu waḥdahu laa shareeka lah, lah-ul-mulku wa lahul-ḥamdu, yuḥyee wa yumeetu wa huwa ḥayun laa yamootu, bi yadi-hil-khayru, wa huwa ‛alaa kulli shay’in qadeer",
                                 @"dua:translation" : @"There is no god but Allah. He is one and has no partner. His is the Kingdom and to Him is all praise. He gives life and gives death. He is living, not subject to death. In His hand is goodness and He has power over all things.\nVirtue - Whoever recites this dua, Allah will reward him with a million good deeds, forgive a million of his sins, and raise his rank by a million degrees (Tirmidhī, Mustadrak).",
                                 @"dua:title" : @"When entering a market/shop",
                                 @"searchKeys":@"market store shop shopping buy buying finance business"
                                 },
                             @{
-                                @"dua:arabic" : @"اَللَٰهُمَّ اكْفِنِي بِحَلالِكَ عَنْ حَرَامِكَ ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ",
+                                @"dua:arabic" : @"اَللَٰهُمَّ اكْفِنِي بِحَلالِكَ عَنْ حَرَامِكَ ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ",
                                 @"dua:transliteration" : @"allaahummak-finee bi ḥalaalika ‛an ḥaraamika, wa aghninee bi faḍlika ‛amman siwaak",
                                 @"dua:translation" : @"O Allah suffice me with what You have made lawful in place of what You have made unlawful, and by Your grace free me of the need for anyone besides You (Tirmidhi).",
                                 @"dua:title" : @"When becoming frustrated about paying a debt",
@@ -258,19 +258,19 @@
               @{@"category":@"Masjid",@"image":@"mosque",
                 @"duas":@[
                         @{
-                            @"dua:arabic" : @"اَللّٰهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+                            @"dua:arabic" : @"اَللّٰهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
                             @"dua:transliteration" : @"allaahum-maf-taḥ lee abwaaba raḥmatik",
                             @"dua:translation" : @"O Allah, open for me the doors of Your mercy.\n\nBefore reciting this dua, one should send blessings and salutations upon the Messenger of Allah (Muslim).",
                             @"dua:title" : @"Upon entering the Masjid",
                             @"searchKeys":@"masjid mosque entering"},
                         @{
-                            @"dua:arabic" : @"اَللّٰهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ وَالصَّلَاةِ الْقَائِمَةِ آتِ مُحَمَّدًا الوَسِيْلَةَ وَالْفَضِيلَةَ وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَّه",
+                            @"dua:arabic" : @"اَللّٰهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ وَالصَّلَاةِ الْقَائِمَةِ آتِ مُحَمَّدًا الوَسِيْلَةَ وَالْفَضِيلَةَ وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَّه",
                             @"dua:transliteration" : @"allaahumma rabba haadhi-hid-da‛watit-taammah, waṣ-ṣalaatil-qaa’imah, aati muḥammadan-il-waseelata wal-faḍeelah, wab‛ath-hu maqaaman maḥmoodan-illadhee wa‛adtah",
                             @"dua:translation" : @"O Allah, Lord of this perfect call and established prayer, grant Muhammad a place near to You, an excellence and exalted degree, and raise him to the praiseworthy station that you have promised him. (Bukhārī)",
                             @"dua:title" : @"After the Adhan",
                             @"searchKeys":@"adhan azan masjid"},
                         @{
-                            @"dua:arabic" : @"اَللّٰهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
+                            @"dua:arabic" : @"اَللّٰهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
                             @"dua:transliteration" : @"allaa-hum-ma innee as’aluka min faḍ-lik",
                             @"dua:translation" : @"O Allah, I ask of You Your favor (Muslim).",
                             @"dua:title" : @"After exiting the masjid",
@@ -281,8 +281,8 @@
               @{@"category":@"Travel",@"image":@"travel",
                 @"duas":@[
                         @{
-                            @"dua:arabic" : @"  بِسْمِ اللهِ تَوَكَّلْتُ عَلَى اللهِ،َ اللّٰهُمَّ إنِّي أَعُوذُ بِكَ أَنْ أَضِلَّ أَوْ أُضَلَّ ، أَوْ أَزِلَّ أَوْ أُزَلَّ ، أَوْ أَظْلِمَ أَوْ أُظْلَمَ ، أَوْ أَجْهَلَ أَوْ يُجْهَلَ عَلَيَّ",
-                            @"dua:arabic2" : @"بِسْمِ اللهِ ، تَوَكَّلْتُ عَلَى اللهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ",
+                            @"dua:arabic" : @"  بِسْمِ اللهِ تَوَكَّلْتُ عَلَى اللهِ،َ اللّٰهُمَّ إنِّي أَعُوذُ بِكَ أَنْ أَضِلَّ أَوْ أُضَلَّ ، أَوْ أَزِلَّ أَوْ أُزَلَّ ، أَوْ أَظْلِمَ أَوْ أُظْلَمَ ، أَوْ أَجْهَلَ أَوْ يُجْهَلَ عَلَيَّ",
+                            @"dua:arabic2" : @"بِسْمِ اللهِ ، تَوَكَّلْتُ عَلَى اللهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ",
                             @"dua:transliteration" : @"allaahumma innee a‛oodhu bika an aḍilla aw uḍalla, aw azilla aw uzalla, aw aẓlima aw uẓlama, aw ajhala aw yujhala ‛alayy",
                             @"dua:translation" : @"In the name of Allah, I trust in Allah. O Allah I seek protection from misleading and being mislead, from causing someone to slip or slipping, from oppressing and oppression, and from promoting folly and being foolish (Abū Dawūd)",
                             @"dua:transliteration2" : @"bismillaah, tawakkaltu ‛alal-laah, wa laa ḥawla wa laa quwwata illaa billaah",
@@ -290,7 +290,7 @@
                             @"dua:title" : @"When leaving home",
                             @"searchKeys":@"dua leaving home house exit leave"},
                         @{
-                            @"dua:arabic" : @"بِسْمِ اللهِ الْحَمْدُ لِلهِ ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ ، الْحَمْدُ لِلهِ ، الْحَمْدُ لِلهِ ، الْحَمْدُ لِلهِ ، اللهُ أَكْبَرُ ، اللهُ أَكْبَرُ ، اللهُ أَكْبَرُ ، سُبْحَانَكَ اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي ، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
+                            @"dua:arabic" : @"بِسْمِ اللهِ الْحَمْدُ لِلهِ ، سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ ، الْحَمْدُ لِلهِ ، الْحَمْدُ لِلهِ ، الْحَمْدُ لِلهِ ، اللهُ أَكْبَرُ ، اللهُ أَكْبَرُ ، اللهُ أَكْبَرُ ، سُبْحَانَكَ اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي فَاغْفِرْ لِي ، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
                             @"dua:transliteration" : @"bismillaah al-ḥamdu lillaahi, subḥaan-alladhee sakhkhara lanaa haadhaa wa maa kunnaa lahu muqrineen, wa innaa ilaa rabbinaa la munqaliboon\nal-ḥamdu lillaah, al-ḥamdu lillaah, al-ḥamdu lillaah, allaahu akbar, allaahu akbar, allaahu akbar\nsubḥaanak-allaahumma innee ẓalamtu nafsee faghfir lee, fa innahu laa yaghfir-udh-dhunooba illaa ant ",
                             @"dua:translation" : @"Upon mounting the beast or the vehicle: 'In the name of Allah' and then say after mounting the beast, or having already settled in the vehicle: 'All praise is for Allah. How far from imperfections He is, the One Who has placed this (transport) at our service and we ourselves would not have been capable of that, and to our Lord is our final destiny. All praise is for Allah, All praise is for Allah, All praise is for Allah, Allah is the greatest, Allah is the greatest, Allah is the greatest. How far from imperfections You are, O Allah, verily I have wronged my soul, so forgive me, for surely none can forgive sins except You.'\nNote: The prophet of Allah (may the Peace and Blessing of Allah be upon him): Allah approves of his slave when he says: 'forgive me my sins', and would say: 'he knows that non forgives the sins but Me' (Abū Dawūd).",
                             @"dua:title" : @"When boarding a vehicle/mounting animal",
@@ -323,7 +323,7 @@
                               @"dua:title" : @"What to say to a newly-wed couple",
                               @"searchKeys":@"Marriage, newly-wed, wife bride husband wedding"},
                           @{
-                              @"dua:arabic" : @"اللّٰهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا ، وَخَيْرَ مَا جَبَلْتَهَا عَلَيْهِ ، وَأَعُوذُ بِكَ مِنْ شَرِّهَا ، وَشَرِّ مَا جَبَلْتَهَا عَلَيْهِ",
+                              @"dua:arabic" : @"اللّٰهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا ، وَخَيْرَ مَا جَبَلْتَهَا عَلَيْهِ ، وَأَعُوذُ بِكَ مِنْ شَرِّهَا ، وَشَرِّ مَا جَبَلْتَهَا عَلَيْهِ",
                               @"dua:transliteration" : @"Allaahumma innee as’aluka khayrahaa, wa khayra maa jabaltahaa ‛alayh, wa a‛oodhu bika min sharrihaa, wa sharri maa jabaltahaa ‛alayh",
                               @"dua:translation" : @"O Allah, I ask You for the goodness within her and the goodness that you have made her inclined towards, and I seek refuge with You from the evil within her and the evil that you have made her inclined towards. (Tirmidhi, Malik)",
                               @"dua:title" : @"When first meeting one's bride",
@@ -388,7 +388,7 @@
                             @"dua:title" : @"When something bad happens",
                             @"searchKeys":@"difficulty hardship difficult hard grief sorrow worry pain anxiety seeing bad occurs occurance"},
                         @{
-                            @"dua:arabic" : @"اَللّٰهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا ، وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلًا",
+                            @"dua:arabic" : @"اَللّٰهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا ، وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلًا",
                             @"dua:transliteration" : @"allaahumma laa sahla illaa maa ja‛altahu sahlan, wa anta taj‛al-ul-ḥazna idhaa shi’ta sahlan",
                             @"dua:translation" : @"O Allah, an easy task is only that which You make easy and You make the difficult easy, when You wish (Ibn al-Sunni).",
                             @"dua:title" : @"When confronted with a difficult situation or task",
@@ -445,13 +445,13 @@
                               @"dua:title" : @"When one becomes angry",
                               @"searchKeys":@"anger angry sad start"},
                           @{
-                              @"dua:arabic" : @"سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيفَتِهِ",
+                              @"dua:arabic" : @"سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيفَتِهِ",
                               @"dua:transliteration" : @"SubHanalladhii yusabbiHur ra’du bi hamdihi wal malaa-ikatu min kheefatihi",
                               @"dua:translation" : @"Exalted is He Whom thunder glorifies with praises and so do the angels out of awe for Him (Malik)",
                               @"dua:title" : @"When hearing thunder",
                               @"searchKeys":@"thunder storm clouds nature land sky"},
                           @{
-                              @"dua:arabic" : @"أعوذُ بِٱللهِ مِنَ ٱلشَّيۡطَٰنِ ٱلرَّجِيمِ آمَنْتُ بِاللهِ",
+                              @"dua:arabic" : @"أعوذُ بِٱللهِ مِنَ ٱلشَّيۡطَٰنِ ٱلرَّجِيمِ آمَنْتُ بِاللهِ",
                               @"dua:transliteration" : @"A-'udhu bi 'Llāhi mia 'sh-shaytani 'r-rajim(i) Āmantu bi'Llah(i)",
                               @"dua:translation" : @"I seek refuge in ALlah from Satan the accursed. I believe in Allah (Muslim)",
                               @"dua:title" : @"When Satan places doubts regarding one's faith",
