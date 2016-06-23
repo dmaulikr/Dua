@@ -257,18 +257,8 @@
 - (void) setChecked:(BOOL)state {
     _checkedState = state;
     if (state) {
-        
         FavoriteModel *model = [[FavoriteModel alloc]init];
         model.title = self.dua.title;
-        model.arabic = self.dua.arabic;
-        model.translation = self.dua.translation;
-        model.transliteration = self.dua.transliteration;
-        if (self.dua.arabic != nil) {
-            model.arabic2 = self.dua.arabic2;
-            model.translation2 = self.dua.translation2;
-            model.transliteration2 = self.dua.transliteration2;
-        }
-        
         NSArray *array = [self readArrayWithCustomObjFromUserDefaults:@"favorites"];
         NSMutableArray *mutArray = [[NSMutableArray alloc]init];
         if (array != nil) {
@@ -277,8 +267,9 @@
         
         [mutArray addObject:model];
         [self writeArrayWithCustomObjToUserDefaults:@"favorites" withArray:mutArray];
-
         [self.favoriteButton setImage:[UIImage imageNamed:@"icon_favoritesFilled"] forState:UIControlStateNormal];
+       
+        
         [Answers logCustomEventWithName:[NSString stringWithFormat:@"Fav:%@", self.dua.title]
                        customAttributes:@{}];
         id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];

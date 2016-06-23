@@ -26,12 +26,11 @@ static NSString *kCellId = @"cellId";
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *categoriesArray;
 
-
-
 @end
 
 @implementation DashboardViewController
 
+#pragma mark - Lifecycle
 + (DashboardViewController *)create {
     DashboardViewController *vc = [[UIStoryboard storyboardWithName:@"Dashboard" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([DashboardViewController class])];
     return vc;
@@ -40,21 +39,36 @@ static NSString *kCellId = @"cellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     [self setupCollectionView];
-    self.navigationController.view.backgroundColor = [UIColor blackColor];
+    [self setupView];
+}
 
-    
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationController setDelegate:self];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [(MPSkewedParallaxLayout *)self.collectionView.collectionViewLayout setItemSize:CGSizeMake(CGRectGetWidth(self.view.bounds), 150)];
+}
+
+- (void)dealloc {
+    [self.navigationController setDelegate:nil];
+}
+
+#pragma mark - utils
+
+- (void)setupView {
+    self.navigationController.view.backgroundColor = [UIColor blackColor];
     //reveal view controller
     SWRevealViewController *revealController = [self revealViewController];
     [revealController panGestureRecognizer];
     [revealController tapGestureRecognizer];
     self.revealViewController.delegate = self;
     self.revealViewController.rearViewRevealDisplacement = 0;
-
     
     [self navBarWithTitle:@"Daily Duas" andLeftButtonImage:[UIImage imageNamed:@"icon_sideMenu"]  leftButtonSelector:@selector(revealToggle:) leftTarget:revealController andRightButtonImage:[UIImage imageNamed:@"icon_favorites"] rightButtonSelector:@selector(favPressed)];
-    
     
     NSArray *array = [DuaData duas];
     NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
@@ -68,19 +82,25 @@ static NSString *kCellId = @"cellId";
     addStatusBar.backgroundColor = [UIColor blackColor];
     [self.view addSubview:addStatusBar];
     [self.navigationController.navigationBar addSubview:addStatusBar];
+}
 
+- (void)setupCollectionView {
+    MPSkewedParallaxLayout *layout = [[MPSkewedParallaxLayout alloc] init];
+    layout.lineSpacing = 2;
+    layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 150);
+    
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)  ) collectionViewLayout:layout];
+    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    self.collectionView.backgroundColor = [UIColor blackColor];
+    [self.collectionView registerClass:[MPSkewedCell class] forCellWithReuseIdentifier:kCellId];
+    [self.view addSubview:self.collectionView];
+    
+    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongGesture:)];
+    [self.collectionView addGestureRecognizer:longPressGesture];
     
 }
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [self.navigationController setDelegate:self];
-}
-
-- (void)dealloc {
-    [self.navigationController setDelegate:nil];
-}
-
 //Custom transition
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                   animationControllerForOperation:(UINavigationControllerOperation)operation
@@ -93,16 +113,6 @@ static NSString *kCellId = @"cellId";
     return nil;
 }
 
-
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    [(MPSkewedParallaxLayout *)self.collectionView.collectionViewLayout setItemSize:CGSizeMake(CGRectGetWidth(self.view.bounds), 150)];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 //handle collection view editing
 - (void)handleLongGesture:(UILongPressGestureRecognizer*)gesture {
@@ -131,22 +141,9 @@ static NSString *kCellId = @"cellId";
     }
 }
 
-- (void)setupCollectionView {
-    MPSkewedParallaxLayout *layout = [[MPSkewedParallaxLayout alloc] init];
-    layout.lineSpacing = 2;
-    layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 150);
-    
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds)  ) collectionViewLayout:layout];
-    self.collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    self.collectionView.delegate = self;
-    self.collectionView.dataSource = self;
-    self.collectionView.backgroundColor = [UIColor blackColor];
-    [self.collectionView registerClass:[MPSkewedCell class] forCellWithReuseIdentifier:kCellId];
-    [self.view addSubview:self.collectionView];
-    
-    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(handleLongGesture:)];
-    [self.collectionView addGestureRecognizer:longPressGesture];
-
+- (void)favPressed {
+    FavoritesViewController *vc = [FavoritesViewController create];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -176,36 +173,14 @@ static NSString *kCellId = @"cellId";
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSLog(@"%@ %zd", NSStringFromSelector(_cmd), indexPath.item);
     CategoryViewController *vc = [CategoryViewController create];
     NSDictionary *category = self.categoriesArray[indexPath.row];
-
     vc.duasArray = [category objectForKey:@"duas"];
     vc.category = category;
-    
-//    
-//    UIViewController *source = self;
-//    UIViewController *destination = vc;
-//    
-//    CATransition* transition = [CATransition animation];
-//    transition.duration = .25;
-//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-//    transition.type = kCATransitionPush;
-//    transition.subtype = kCATransitionFromRight;
-//    
-//    [source.navigationController.view.layer addAnimation:transition
-//                                                  forKey:kCATransition];
-//    
-//    [source.navigationController pushViewController:destination animated:NO];
-    
-    
     [self.navigationController pushViewController:vc animated:YES];
-
 }
 
 -(void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
-    
     if ([self.categoriesArray isKindOfClass:[NSMutableArray class]]) {
         NSString *dua = [self.categoriesArray objectAtIndex:sourceIndexPath.item];
         [(NSMutableArray *)self.categoriesArray removeObjectAtIndex:sourceIndexPath.item];
@@ -236,15 +211,7 @@ static NSString *kCellId = @"cellId";
     if ( operation != SWRevealControllerOperationReplaceRightController) {
         return nil;
     }
-    
     return nil;
 }
-
-- (void)favPressed {
-    FavoritesViewController *vc = [FavoritesViewController create];
-    [self.navigationController pushViewController:vc animated:YES];
-
-}
-
 
 @end

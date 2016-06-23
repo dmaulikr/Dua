@@ -27,7 +27,7 @@
     [self navBarWithWhiteBackButtonAndTitle:@"About"];
     self.aboutLabel.numberOfLines = 3;
     self.aboutLabel.textAlignment = NSTextAlignmentCenter;
-    self.aboutLabel.attributedText = [[NSAttributedString alloc]initWithString:@"Hand picked Duas from reputable sources to incorporate into one's daily life."
+    self.aboutLabel.attributedText = [[NSAttributedString alloc]initWithString:@"Curated Duas from reputable sources to incorporate into one's daily life."
                                                                   attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:22.0],
                                                                                NSKernAttributeName: @(1.0f)}];
@@ -39,7 +39,7 @@
 
     self.disclosureLabel.numberOfLines = 0;
     self.disclosureLabel.textAlignment = NSTextAlignmentCenter;
-    self.disclosureLabel.attributedText = [[NSAttributedString alloc]initWithString:@"Made with 💓 by Sameer, Saad, Sami, and Nilofer\n🙏 for us\nVersion 1.2"
+    self.disclosureLabel.attributedText = [[NSAttributedString alloc]initWithString:@"Made with 💓\n🙏 for us\nVersion 1.21"
                                                                     attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                                                  NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:10.0],
                                                                                  NSKernAttributeName: @(2.0f)}];

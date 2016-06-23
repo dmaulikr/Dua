@@ -18,11 +18,11 @@
 @interface RearViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UILabel *topLabel;
-
 @end
+
 @implementation RearViewController {
         NSInteger _presentedRow;
-    }
+}
 
 + (RearViewController*)create {
     RearViewController *vc = [[UIStoryboard storyboardWithName:@"Dashboard" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([RearViewController class])];
@@ -42,7 +42,6 @@
                                                                                NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:14.0],
                                                                                NSKernAttributeName: @(2.0f)}];
     
-    
     UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0.0f, 167.0f, self.view.frame.size.width, 1 / UIScreen.mainScreen.scale)];
     line.backgroundColor = [[UIColor whiteColor]colorWithAlphaComponent:0.1f];
     [self.view addSubview:line];
@@ -52,10 +51,6 @@
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
-
-//- (BOOL)prefersStatusBarHidden {
-//    return YES;
-//}
 
 #pragma mark - table view delegate and data source
 

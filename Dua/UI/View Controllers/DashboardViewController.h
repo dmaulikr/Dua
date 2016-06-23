@@ -16,5 +16,4 @@
 
 @property (nonatomic, weak) SWRevealViewController *revealViewController;
 
-
 @end

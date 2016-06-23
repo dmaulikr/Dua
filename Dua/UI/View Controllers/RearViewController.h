@@ -9,8 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RearViewController : UIViewController
-
 + (RearViewController*)create;
-
-
 @end

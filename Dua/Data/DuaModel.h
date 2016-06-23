@@ -12,6 +12,8 @@
 
 - (instancetype)initWithJson:(NSDictionary *)json;
 
+- (instancetype)initWithDua:(DuaModel *)dua;
+
 @property (nonatomic, copy) NSString *name;
 
 @property (nonatomic, copy) NSString *image;

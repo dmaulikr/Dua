@@ -27,7 +27,7 @@
                             @"dua:title" : @"Breaking the fast",
                             @"searchKeys":@"breaking fast eat ramadan"},
                         @{
-                            @"dua:arabic" : @"يَا حَيُّ يَا قَيُّوْمُ بِرَحْمَتِكَ أَسْتَغِيْث",
+                            @"dua:arabic" : @"يَا حَيُّ يَا قَيُّوْمُ بِرَحْمَتِكَ أَسْتَغِيْث",
                             @"dua:transliteration" : @"Ya Hayyu ya Qayyumu, bi raHmatika astagheeth[u]",
                             @"dua:translation" : @" O Living, O Sustainer, in Your mercy I plead for rescue (Tirmidhi).",
                             @"dua:title" : @"First ten days of Ramadan",

@@ -34,16 +34,51 @@ const static CGFloat kTableCutAway = 50.0f;
     CAShapeLayer *headerMarkLayer;
 }
 
+#pragma mark - Life Cycle
 + (CategoryViewController *)create {
     return [[UIStoryboard storyboardWithName:@"Dashboard" bundle:nil] instantiateViewControllerWithIdentifier:NSStringFromClass([CategoryViewController class])];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupView];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.view.backgroundColor = [UIColor blackColor];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    if (self.tableView.tableHeaderView != nil) {
+        self.header = self.tableView.tableHeaderView;
+        self.tableView.tableHeaderView = nil;
+    }
+    [self.tableView addSubview:self.header];
+    self.tableView.contentInset = UIEdgeInsetsMake(kTableViewHeaderHeight, 0, 0, 0);
+    self.tableView.contentOffset = CGPointMake(0, -kTableViewHeaderHeight);
+    
+    headerMarkLayer = [[CAShapeLayer alloc]init];
+    headerMarkLayer.fillColor = [UIColor blackColor].CGColor;
+    self.header.layer.mask = headerMarkLayer;
+    
+    self.topImage.image = [UIImage imageNamed:[self.category objectForKey:@"image"]];
+    self.topLabel.attributedText = [[NSAttributedString alloc]initWithString:[self.title uppercaseString]
+                                                                  attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
+                                                                               NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:30.0],
+                                                                               NSKernAttributeName: @(2.0f)}];
+    [self updateHeaderView];
+}
+
+#pragma mark - utils
+
+- (void)setupView {
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor clearColor];
     self.navigationController.view.backgroundColor = [UIColor blackColor];
-
+    
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
@@ -54,9 +89,7 @@ const static CGFloat kTableCutAway = 50.0f;
         [mutArray addObject:dua];
     }
     _duasArray = mutArray;
-
     [self navBarWithWhiteBackButtonAndTitle:@""];
-    
     
     //title that sets into place
     [self setTitle:[self.category objectForKey:@"category"]];
@@ -73,7 +106,6 @@ const static CGFloat kTableCutAway = 50.0f;
     [titleView addSubview:titleLabel];
     self.navigationItem.titleView = titleView;
     
-    
     //change statusbar to black
     UIView *addStatusBar = [[UIView alloc] init];
     addStatusBar.frame = CGRectMake(0, -20, self.view.bounds.size.width, 20);
@@ -83,83 +115,21 @@ const static CGFloat kTableCutAway = 50.0f;
     
     self.tableView.delegate = (id)self;
     self.tableView.dataSource = (id)self;
-
+    
     [Answers logCustomEventWithName:[NSString stringWithFormat:@"Cat:%@", self.title]
                    customAttributes:@{}];
     
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     [tracker set:@"Category" value:self.title];
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
+
 }
 
 - (NSArray*)visibleCells {
-    
     NSMutableArray *cells = [@[]mutableCopy];
-    if (self.header != nil) {
-        [cells addObject:self.header];
-    }
+    if (self.header != nil) [cells addObject:self.header];
     [cells addObjectsFromArray:[self.tableView visibleCells]];
-    
     return cells;
-}
-
-//- (void)backPressed {
-//    UIViewController *source = self;
-//    
-//    CATransition* transition = [CATransition animation];
-//    transition.duration = .25;
-//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-//    transition.type = kCATransitionPush;
-//    transition.subtype = kCATransitionFromLeft;
-//    
-//    [source.navigationController.view.layer addAnimation:transition
-//                                                  forKey:kCATransition];
-//    [self.navigationController popViewControllerAnimated:NO];
-//
-//}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    
-}
-
--(void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    self.view.backgroundColor = [UIColor blackColor];
-
-}
-
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    
-    if (self.tableView.tableHeaderView != nil) {
-        self.header = self.tableView.tableHeaderView;
-        self.tableView.tableHeaderView = nil;
-    }
-   
-
-    [self.tableView addSubview:self.header];
-    self.tableView.contentInset = UIEdgeInsetsMake(kTableViewHeaderHeight, 0, 0, 0);
-    self.tableView.contentOffset = CGPointMake(0, -kTableViewHeaderHeight);
-    
-    headerMarkLayer = [[CAShapeLayer alloc]init];
-    headerMarkLayer.fillColor = [UIColor blackColor].CGColor;
-    self.header.layer.mask = headerMarkLayer;
-    
-    self.topImage.image = [UIImage imageNamed:[self.category objectForKey:@"image"]];
-    self.topLabel.attributedText = [[NSAttributedString alloc]initWithString:[self.title uppercaseString]
-                                                                  attributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
-                                                                               NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBold" size:30.0],
-                                                                               NSKernAttributeName: @(2.0f)}];
-    
-    [self updateHeaderView];
-
-
-}
-
-- (void)setupHeader {
-    
 }
 
 - (void)updateHeaderView {
@@ -177,12 +147,6 @@ const static CGFloat kTableCutAway = 50.0f;
     [path addLineToPoint:CGPointMake(0, headerRect.size.height - kTableCutAway)];
     headerMarkLayer.path = path.CGPath;
 
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - tableview delegate and data source
@@ -212,21 +176,6 @@ const static CGFloat kTableCutAway = 50.0f;
     DuaModel *dua = self.duasArray[indexPath.row];
     DuaDetailViewController *vc = [DuaDetailViewController create];
     vc.dua = dua;
-    
-//    UIViewController *source = self;
-//    UIViewController *destination = vc;
-//    
-//    CATransition* transition = [CATransition animation];
-//    transition.duration = .25;
-//    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-//    transition.type = kCATransitionPush;
-//    transition.subtype = kCATransitionFromRight;
-//    
-//    [source.navigationController.view.layer addAnimation:transition
-//                                                  forKey:kCATransition];
-//    
-//    [source.navigationController pushViewController:destination animated:NO];
-
     [self.navigationController pushViewController:vc animated:YES];
 }
 

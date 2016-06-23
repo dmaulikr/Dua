@@ -17,7 +17,6 @@
 @property (nonatomic) NSArray *duasArray;
 @property (nonatomic) NSDictionary *category;
 
-
 @end
 
 

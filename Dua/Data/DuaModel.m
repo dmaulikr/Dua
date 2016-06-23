@@ -43,17 +43,17 @@ NSString *const kAttrTranslation2=@"dua:translation2";
 @implementation DuaModel
 
 #pragma mark - Life Cycle
-//- (instancetype)init {
-//    if (self = [super init]) {
-//        [NSException raise:NSInternalInconsistencyException
-//                    format:@"Always use initWithJson: to initialize this class"];
-//    }
-//    return self;
-//}
 
 - (instancetype)initWithJson:(NSDictionary *)json {
     if (self = [super init]) {
         _json = json;
+    }
+    return self;
+}
+
+- (instancetype)initWithDua:(DuaModel *)dua {
+    if (self = [super init]) {
+        self = dua;
     }
     return self;
 }
