@@ -113,7 +113,7 @@
 }
 
 - (IBAction)reviewPressed:(id)sender {
-    NSString *link = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1123475814";
+    NSString *link = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1123475814&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software";
     [[UIApplication sharedApplication] openURL: [NSURL URLWithString:link]];
     [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"Reviewed"];
     [self slideOutPopup];

@@ -414,7 +414,7 @@
                               @"dua:title" : @"Supplication for a deceased male or female adult",
                               @"searchKeys":@"death grave burial dead jazazah "},
                           @{
-                              @"dua:arabic" : @"َالسَّلَامُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ وَالْمُسْلِمِينَ ، وَإِنَّا إِنْ شَاءَ اللهُ بِكُمْ لَلَاحِقُونَ ، نَسْأَلُ اللهَ لَنَا وَلَكُمُ الْعَافِيَةَ",
+                             @"dua:arabic" : @"َالسَّلَامُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ وَالْمُسْلِمِينَ ، وَإِنَّا إِنْ شَاءَ اللهُ بِكُمْ لَلَاحِقُونَ ، نَسْأَلُ اللهَ لَنَا وَلَكُمُ الْعَافِيَةَ",
                               @"dua:transliteration" : @"as-salaamu ‛alaykum ahl-ad-diyaari mi-nal-mu’mineena wal-muslimeena, wa in-naa in shaa’-allaahu la-laaḥiqoona, nas’al-ullaaha lanaa wa-lakumul-‛aafiyah",
                               @"dua:translation" : @"Peace be upon you all, O inhabitants of the dwellings (i.e. the graves), amongst the believers and the Muslims. Indeed we are, Allah willing, soon to follow (to die also), we ask Allah for well-being for us and for you (Muslim).",
                               @"dua:title" : @"When visiting the cemetery",
