@@ -13,10 +13,20 @@
 #import <Crashlytics/Crashlytics.h>
 #import <Google/Analytics.h>
 #import "UIViewController+displayPopup.h"
+#import "DuaData.h"
+#import "DuaModel.h"
+#import "DuaDetailViewController.h"
 
 
 
-@interface AppDelegate () <SWRevealViewControllerDelegate>
+
+@import Firebase;
+@import UserNotifications;
+
+
+@interface AppDelegate () <SWRevealViewControllerDelegate, UNUserNotificationCenterDelegate, FIRMessagingDelegate>
+
+@property (strong, nonatomic) FIRDatabaseReference *ref;
 
 @end
 
@@ -67,7 +77,12 @@
     [[GGLContext sharedInstance] configureWithError:&configureError];
     NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
 
+    [FIRApp configure];
+    //self.ref = [[FIRDatabase database] reference];
+    //[FIRDatabase database].persistenceEnabled = YES;
     
+    [self registerForNotifications];
+
     
     return YES;
 }
@@ -98,6 +113,113 @@
 }
 
 
+#pragma mark - Notifications
+
+- (void)registerForNotifications {
+    if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_9_x_Max) {
+        UIUserNotificationType allNotificationTypes =
+        (UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge);
+        UIUserNotificationSettings *settings =
+        [UIUserNotificationSettings settingsForTypes:allNotificationTypes categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    } else {
+        // iOS 10 or later
+#if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
+        UNAuthorizationOptions authOptions =
+        UNAuthorizationOptionAlert
+        | UNAuthorizationOptionSound
+        | UNAuthorizationOptionBadge;
+        [[UNUserNotificationCenter currentNotificationCenter]
+         requestAuthorizationWithOptions:authOptions
+         completionHandler:^(BOOL granted, NSError * _Nullable error) {
+         }
+         ];
+        
+        // For iOS 10 display notification (sent via APNS)
+        [[UNUserNotificationCenter currentNotificationCenter] setDelegate:self];
+        // For iOS 10 data message (sent via FCM)
+        [[FIRMessaging messaging] setRemoteMessageDelegate:self];
+#endif
+    }
+    
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    // If you are receiving a notification message while your app is in the background,
+    // this callback will not be fired till the user taps on the notification launching the application.
+    // TODO: Handle data of notification
+    
+    if (application.applicationState == UIApplicationStateBackground || application.applicationState == UIApplicationStateInactive) {
+        [self showDuaForDuaString:[userInfo objectForKey:@"dua"]];
+    }
+    
+    // Print message ID.
+    NSLog(@"Message ID: %@", userInfo[@"gcm.message_id"]);
+    
+    // Print full message.
+    NSLog(@"%@", userInfo);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    // If you are receiving a notification message while your app is in the background,
+    // this callback will not be fired till the user taps on the notification launching the application.
+    // TODO: Handle data of notification
+    
+    if (application.applicationState == UIApplicationStateBackground || application.applicationState == UIApplicationStateInactive) {
+        [self showDuaForDuaString:[userInfo objectForKey:@"dua"]];
+    }
+    
+    // Print message ID.
+    NSLog(@"Message ID: %@", userInfo[@"gcm.message_id"]);
+    
+    // Print full message.
+    NSLog(@"%@", userInfo);
+}
+
+- (void)applicationReceivedRemoteMessage:(FIRMessagingRemoteMessage *)remoteMessage {
+    NSLog(@"%@", remoteMessage);
+}
+
+
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler{
+
+    NSLog(@"%@%@", response.notification, response);
+    
+    NSString *duaName = [response.notification.request.content.userInfo objectForKey:@"dua"];
+    [self showDuaForDuaString:duaName];
+    
+   
+    
+    if (completionHandler) {
+        completionHandler();
+    }
+}
+
+- (void)showDuaForDuaString:(NSString *)duastring {
+    NSArray *arraydata = [DuaData duas];
+    
+    for (NSDictionary *categoryDict in arraydata) {
+        NSArray *arr = [categoryDict objectForKey:@"duas"];
+        for (NSDictionary *duas in arr) {
+            if ([[duas objectForKey:@"dua:title"] isEqualToString:duastring]) {
+                DuaModel *d = [[DuaModel alloc]initWithJson:duas];
+                DuaDetailViewController *vc = [DuaDetailViewController create];
+                vc.dua = d;
+                
+                
+                [(UINavigationController *)self.viewController.frontViewController pushViewController:vc animated:YES];
+            }
+        }
+    }
+
+}
+
 #pragma mark - SWRevealViewDelegate
 
 - (id <UIViewControllerAnimatedTransitioning>)revealController:(SWRevealViewController *)revealController animationControllerForOperation:(SWRevealControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
@@ -109,7 +231,7 @@
 }
 
 - (void)countOpen {
-    int _count= 0;
+    int _count = 0;
     _count=  [[[NSUserDefaults standardUserDefaults] objectForKey:@"AppCount"] intValue];
     UIViewController *currentVC = [UIApplication sharedApplication].keyWindow.rootViewController;
 

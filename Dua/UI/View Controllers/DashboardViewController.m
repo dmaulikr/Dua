@@ -20,6 +20,8 @@
 #import "ImageDownloader.h"
 #import "UIViewController+displayPopup.h"
 #import "PopupViewController.h"
+#import "DuaDetailViewController.h"
+
 
 
 static NSString *kCellId = @"cellId";
@@ -45,27 +47,27 @@ static NSString *kCellId = @"cellId";
     [self setupCollectionView];
     [self setupView];
     
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"AppCount"] intValue] == 5) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self displayRatingsPopup];
-        });
-    }
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"AppCount"] intValue] == 25 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Reviewed"] isEqualToString:@"NO"] ) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self displayRatingsPopup];
-        });
-    }
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"AppCount"] intValue] == 50 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Reviewed"] isEqualToString:@"NO"] ) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self displayRatingsPopup];
-        });
-    }
-    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"AppCount"] intValue] == 100 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Reviewed"] isEqualToString:@"NO"] ) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self displayRatingsPopup];
-        });
-    }
-    
+//    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"AppCount"] intValue] == 5) {
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self displayRatingsPopup];
+//        });
+//    }
+//    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"AppCount"] intValue] == 25 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Reviewed"] isEqualToString:@"NO"] ) {
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self displayRatingsPopup];
+//        });
+//    }
+//    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"AppCount"] intValue] == 50 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Reviewed"] isEqualToString:@"NO"] ) {
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self displayRatingsPopup];
+//        });
+//    }
+//    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"AppCount"] intValue] == 100 && [[[NSUserDefaults standardUserDefaults] objectForKey:@"Reviewed"] isEqualToString:@"NO"] ) {
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.7 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [self displayRatingsPopup];
+//        });
+//    }
+//    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
