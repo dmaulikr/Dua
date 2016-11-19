@@ -100,7 +100,10 @@ static NSString *kCellId = @"cellId";
     NSArray *array = [DuaData duas];
     NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
     for (NSDictionary *categoryDict in array) {
+        if (![[categoryDict objectForKey:@"category"]isEqualToString:@"Ramadan 🕋"]) {
+            
         [mutArray addObject:categoryDict];
+        }
     }
     _categoriesArray = mutArray;
     
