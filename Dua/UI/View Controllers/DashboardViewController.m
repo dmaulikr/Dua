@@ -100,9 +100,9 @@ static NSString *kCellId = @"cellId";
     NSArray *array = [DuaData duas];
     NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
     for (NSDictionary *categoryDict in array) {
+        //remove if statement if Ramadan is to be activated
         if (![[categoryDict objectForKey:@"category"]isEqualToString:@"Ramadan 🕋"]) {
-            
-        [mutArray addObject:categoryDict];
+            [mutArray addObject:categoryDict];
         }
     }
     _categoriesArray = mutArray;
