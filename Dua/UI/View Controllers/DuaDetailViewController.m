@@ -69,6 +69,7 @@
     
 }
 
+
 - (void)pinchDetected:(UIPinchGestureRecognizer*) gestureRecognizer {
 //    scale = pinchRecognizer.scale;
     
@@ -128,11 +129,16 @@
             _checkedState = YES;
         }
     }
-   
+
 
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+        self.view.backgroundColor = [UIColor blackColor];
+        self.navigationController.view.backgroundColor = [UIColor blackColor];
+        self.tableView.backgroundColor = [UIColor blackColor];
 
+}
 
 
 -(NSArray *)visibleCells {
@@ -186,7 +192,7 @@
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    DuaDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    DuaDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"duacell"];
     [cell setBackgroundColor:[UIColor clearColor]];
     if (self.dua.arabic2 == nil) {
         [cell initializeCellWithArabic:self.dua.arabic withTranslation:self.dua.translation andTransliteration:self.dua.transliteration withFontSize:scale];

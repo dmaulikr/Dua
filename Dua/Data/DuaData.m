@@ -12,45 +12,45 @@
 
 + (NSArray *)duas{
     return  @[
-              @{@"category":@"Ramadan 🕋",@"image":@"Ramadan",
-                @"duas":@[
-                        @{
-                            @"dua:arabic" : @"وَبِصَوْمِ غَدٍ نَوَيْتُ مِنْ شَهْرِ رَمَضَانَ",
-                            @"dua:transliteration" : @"Wa bi-sawmi ghadin nawaytu min shahri ramadan",
-                            @"dua:translation" : @"I intend to keep the fast for tomorrow in the month of Ramadan (Abu Dawud)",
-                            @"dua:title" : @"Beginning the fast",
-                            @"searchKeys":@"fast fasting ramadan begin"},
-                        @{
-                            @"dua:arabic" : @"اللّٰهُمَّ اِنِّى لَكَ صُمْتُ وَبِكَ آمَنْتُ [وَعَلَيْكَ تَوَكَّلْتُ] وَعَلَى رِزْقِكَ اَفْطَرْتُ",
-                            @"dua:transliteration" : @"Allahumma Inni laka sumtu wa bika amantu [wa alayka tawakkaltu] wa ‘ala rizqika aftartu",
-                            @"dua:translation" : @"O Allah! I fasted for You and I believe in You [and I put my trust in You] and I break my fast with Your sustenance (Abu Dawud).",
-                            @"dua:title" : @"Breaking the fast",
-                            @"searchKeys":@"breaking fast eat ramadan"},
-                        @{
-                            @"dua:arabic" : @"يَا حَيُّ يَا قَيُّوْمُ بِرَحْمَتِكَ أَسْتَغِيْث",
-                            @"dua:transliteration" : @"Ya Hayyu ya Qayyumu, bi raHmatika astagheeth[u]",
-                            @"dua:translation" : @" O Living, O Sustainer, in Your mercy I plead for rescue (Tirmidhi).",
-                            @"dua:title" : @"First ten days of Ramadan",
-                            @"searchKeys":@"Ramadan first ten days"},
-                        @{
-                            @"dua:arabic" : @"أَسْتَغْفِرُ اللهَ رَبِّي مِنْ كُلِّ ذَنْبٍ وَ أَتُوْبُ إِلَيْهِ",
-                            @"dua:transliteration" : @"Astaghfirullah Rabbi Min Kulli Zambiyun Wa Atoobu ilaih",
-                            @"dua:translation" : @"I ask forgiveness of my sins from Allah who is my Lord and I turn towards Him.",
-                            @"dua:title" : @"Second ten days of Ramadan",
-                            @"searchKeys":@"ramadan second ten days"},
-
-                        @{
-                            @"dua:arabic" : @"اَللّٰهُمَّ أَجِرْنِي مِنَ النَّارِ",
-                            @"dua:transliteration" : @"Allahuma Ajirni minan naar",
-                            @"dua:translation" : @"O Allah, save me from the fire (Tirmidhi)",
-                            @"dua:title" : @"Last ten days of Ramadan",
-                            @"searchKeys":@"ramadan last ten days"},
-                        @{
-                            @"dua:arabic" : @"اللّٰهُمَّ إِنَّكَ عفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
-                            @"dua:transliteration" : @"Allaahumma Innaka ‛afu-wun tuḥibul ‛afwa fa‛afu ‛anni",
-                            @"dua:translation" : @"Aisha (may Allah be pleased with her), said: I asked the Messenger of Allah: O Messenger of Allah, if I know what night is the night of Qadr, what should I say during it? He said, Say: O Allah, You are pardoning and You love to pardon, so pardon me.",
-                            @"dua:title" : @"Laylatul Qadr (Night of power)",
-                            @"searchKeys":@"ramadan night of power Laylatul Qadr"}]},
+//              @{@"category":@"Ramadan 🕋",@"image":@"Ramadan",
+//                @"duas":@[
+//                        @{
+//                            @"dua:arabic" : @"وَبِصَوْمِ غَدٍ نَوَيْتُ مِنْ شَهْرِ رَمَضَانَ",
+//                            @"dua:transliteration" : @"Wa bi-sawmi ghadin nawaytu min shahri ramadan",
+//                            @"dua:translation" : @"I intend to keep the fast for tomorrow in the month of Ramadan (Abu Dawud)",
+//                            @"dua:title" : @"Beginning the fast",
+//                            @"searchKeys":@"fast fasting ramadan begin"},
+//                        @{
+//                            @"dua:arabic" : @"اللّٰهُمَّ اِنِّى لَكَ صُمْتُ وَبِكَ آمَنْتُ [وَعَلَيْكَ تَوَكَّلْتُ] وَعَلَى رِزْقِكَ اَفْطَرْتُ",
+//                            @"dua:transliteration" : @"Allahumma Inni laka sumtu wa bika amantu [wa alayka tawakkaltu] wa ‘ala rizqika aftartu",
+//                            @"dua:translation" : @"O Allah! I fasted for You and I believe in You [and I put my trust in You] and I break my fast with Your sustenance (Abu Dawud).",
+//                            @"dua:title" : @"Breaking the fast",
+//                            @"searchKeys":@"breaking fast eat ramadan"},
+//                        @{
+//                            @"dua:arabic" : @"يَا حَيُّ يَا قَيُّوْمُ بِرَحْمَتِكَ أَسْتَغِيْث",
+//                            @"dua:transliteration" : @"Ya Hayyu ya Qayyumu, bi raHmatika astagheeth[u]",
+//                            @"dua:translation" : @" O Living, O Sustainer, in Your mercy I plead for rescue (Tirmidhi).",
+//                            @"dua:title" : @"First ten days of Ramadan",
+//                            @"searchKeys":@"Ramadan first ten days"},
+//                        @{
+//                            @"dua:arabic" : @"أَسْتَغْفِرُ اللهَ رَبِّي مِنْ كُلِّ ذَنْبٍ وَ أَتُوْبُ إِلَيْهِ",
+//                            @"dua:transliteration" : @"Astaghfirullah Rabbi Min Kulli Zambiyun Wa Atoobu ilaih",
+//                            @"dua:translation" : @"I ask forgiveness of my sins from Allah who is my Lord and I turn towards Him.",
+//                            @"dua:title" : @"Second ten days of Ramadan",
+//                            @"searchKeys":@"ramadan second ten days"},
+//
+//                        @{
+//                            @"dua:arabic" : @"اَللّٰهُمَّ أَجِرْنِي مِنَ النَّارِ",
+//                            @"dua:transliteration" : @"Allahuma Ajirni minan naar",
+//                            @"dua:translation" : @"O Allah, save me from the fire (Tirmidhi)",
+//                            @"dua:title" : @"Last ten days of Ramadan",
+//                            @"searchKeys":@"ramadan last ten days"},
+//                        @{
+//                            @"dua:arabic" : @"اللّٰهُمَّ إِنَّكَ عفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
+//                            @"dua:transliteration" : @"Allaahumma Innaka ‛afu-wun tuḥibul ‛afwa fa‛afu ‛anni",
+//                            @"dua:translation" : @"Aisha (may Allah be pleased with her), said: I asked the Messenger of Allah: O Messenger of Allah, if I know what night is the night of Qadr, what should I say during it? He said, Say: O Allah, You are pardoning and You love to pardon, so pardon me.",
+//                            @"dua:title" : @"Laylatul Qadr (Night of power)",
+//                            @"searchKeys":@"ramadan night of power Laylatul Qadr"}]},
               
               @{@"category":@"Bedroom",@"image":@"bedroom",
                 @"duas":@[@{
