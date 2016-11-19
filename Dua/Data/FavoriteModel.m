@@ -13,7 +13,6 @@
 
 NSString *const kAttrArab=@"dua:arabic";
 
-
 NSString *const kAttrTrans=@"dua:transliteration";
 
 NSString *const kAttrTitl=@"dua:title";
