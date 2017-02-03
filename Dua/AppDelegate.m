@@ -267,16 +267,16 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%d",_count+1] forKey:@"AppCount"];
     
-    
-
 }
 
 #pragma mark - database sync 
 
 - (void)syncDatabase {
-     [[self.ref child:@"categories"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        NSDictionary *postDict = snapshot.value;
+     [self.ref observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        NSArray *postDict = snapshot.value;
          NSLog(@"%@",postDict);
+         [[DuaData internalPreferences].duaCache setObject:postDict forKey:@"duas"];
+         [self.delegate dataReceived];
         // ...
      } withCancelBlock:^(NSError * _Nonnull error) {
          NSLog(@"%@", error.localizedDescription);

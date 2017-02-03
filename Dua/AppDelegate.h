@@ -12,12 +12,17 @@
 @class DashboardViewController;
 @class SWRevealViewController;
 
+@protocol Database <NSObject>
 
+- (void)dataReceived;
+
+@end
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) DashboardViewController *dashboardViewController;
 @property (strong, nonatomic) SWRevealViewController *viewController;
+@property (nonatomic, weak) id <Database> delegate;
 
 
 @end

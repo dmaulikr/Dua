@@ -21,12 +21,13 @@
 #import "UIViewController+displayPopup.h"
 #import "PopupViewController.h"
 #import "DuaDetailViewController.h"
+#import "AppDelegate.h"
 
 
 
 static NSString *kCellId = @"cellId";
 
-@interface DashboardViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate, SWRevealViewControllerDelegate, AMWaveTransitioning>
+@interface DashboardViewController () <UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate, SWRevealViewControllerDelegate, AMWaveTransitioning, Database>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray *categoriesArray;
@@ -44,6 +45,9 @@ static NSString *kCellId = @"cellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.delegate = self;
+
     [self setupCollectionView];
     [self setupView];
     
@@ -76,21 +80,38 @@ static NSString *kCellId = @"cellId";
     
     [self navBarWithTitle:@"Daily Duas" andLeftButtonImage:[UIImage imageNamed:@"icon_sideMenu"]  leftButtonSelector:@selector(revealToggle:) leftTarget:revealController andRightButtonImage:[UIImage imageNamed:@"icon_favorites"] rightButtonSelector:@selector(favPressed)];
     
-    NSArray *array = [DuaData duas];
-    NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
-    for (NSDictionary *categoryDict in array) {
-        //remove if statement if Ramadan is to be activated
-        if (![[categoryDict objectForKey:@"category"]isEqualToString:@"Ramadan 🕋"]) {
-            [mutArray addObject:categoryDict];
+    if ([[DuaData internalPreferences].duaCache objectForKey:@"duas"] != nil) {
+        NSArray *array = [[DuaData internalPreferences].duaCache objectForKey:@"duas"];
+        NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
+        for (NSDictionary *categoryDict in array) {
+
+            if (![[categoryDict objectForKey:@"shouldShow"] isEqualToString:@"NO"]) {
+                [mutArray addObject:categoryDict];
+            }
         }
+        _categoriesArray = mutArray;
     }
-    _categoriesArray = mutArray;
-    
+
     UIView *addStatusBar = [[UIView alloc] init];
     addStatusBar.frame = CGRectMake(0, -20, self.view.bounds.size.width, 20);
     addStatusBar.backgroundColor = [UIColor blackColor];
     [self.view addSubview:addStatusBar];
     [self.navigationController.navigationBar addSubview:addStatusBar];
+}
+
+-(void)dataReceived {
+    if ([[DuaData internalPreferences].duaCache objectForKey:@"duas"] != nil) {
+        NSArray *array = [[DuaData internalPreferences].duaCache objectForKey:@"duas"];
+        NSMutableArray *mutArray = [[NSMutableArray alloc] initWithCapacity:array.count];
+        for (NSDictionary *categoryDict in array) {
+            if (![[categoryDict objectForKey:@"shouldShow"] isEqualToString:@"NO"]) {
+                [mutArray addObject:categoryDict];
+            }
+        }
+        _categoriesArray = mutArray;
+    }
+    NSLog(@"Data received");
+    [self.collectionView reloadData];
 }
 
 - (void)setupCollectionView {

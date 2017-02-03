@@ -16,6 +16,8 @@
 @property (nonatomic) DuaModel *dua;
 @property (nonatomic) NSArray *duasArray;
 @property (nonatomic) NSDictionary *category;
+@property (nonatomic) NSString *categoryName;
+
 
 @end
 

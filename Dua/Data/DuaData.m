@@ -10,6 +10,21 @@
 
 @implementation DuaData
 
+
++ (DuaData *)internalPreferences {
+    static dispatch_once_t pred = 0;
+    __strong static DuaData *_manager = nil;
+    dispatch_once(&pred, ^{
+        _manager = [[DuaData alloc] init];
+    });
+    
+    return _manager;
+}
+
+- (NSUserDefaults *)duaCache {
+    return [NSUserDefaults standardUserDefaults];
+}
+
 + (NSArray *)duas{
     return  @[
               @{@"category":@"Ramadan 🕋",@"image":@"Ramadan",

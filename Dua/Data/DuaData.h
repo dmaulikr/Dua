@@ -10,8 +10,9 @@
 
 @interface DuaData : NSObject
 
++ (DuaData *)internalPreferences;
 + (NSArray *)duas;
 
-@property (strong, nonatomic) NSDictionary *dynamicDuas;
+- (NSUserDefaults *)duaCache;
 
 @end

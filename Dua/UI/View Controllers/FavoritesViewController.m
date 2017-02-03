@@ -161,7 +161,6 @@
                 [mut addObject:duas];
             }
         }
-        
         for (int i =0; i<favArray.count; i++) {
             FavoriteModel *favModel = [favArray objectAtIndex:i];
             NSString *title = favModel.title;
