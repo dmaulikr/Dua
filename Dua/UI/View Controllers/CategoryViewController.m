@@ -22,7 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *topLabel;
 @property (weak, nonatomic) UIView *header;
 
-
 @end
 
 const static CGFloat kTableViewHeaderHeight = 250.0f;

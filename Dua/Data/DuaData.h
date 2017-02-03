@@ -12,6 +12,6 @@
 
 + (NSArray *)duas;
 
-
+@property (strong, nonatomic) NSDictionary *dynamicDuas;
 
 @end

@@ -18,8 +18,6 @@
 #import "DuaDetailViewController.h"
 
 
-
-
 @import Firebase;
 @import UserNotifications;
 
@@ -78,9 +76,10 @@
     NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
 
     [FIRApp configure];
-    //self.ref = [[FIRDatabase database] reference];
-    //[FIRDatabase database].persistenceEnabled = YES;
-    
+    [FIRDatabase database].persistenceEnabled = YES;
+
+    self.ref = [[FIRDatabase database] reference];
+    [self syncDatabase];
     [self registerForNotifications];
 
     
@@ -270,6 +269,18 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
     
     
 
+}
+
+#pragma mark - database sync 
+
+- (void)syncDatabase {
+     [[self.ref child:@"categories"] observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        NSDictionary *postDict = snapshot.value;
+         NSLog(@"%@",postDict);
+        // ...
+     } withCancelBlock:^(NSError * _Nonnull error) {
+         NSLog(@"%@", error.localizedDescription);
+     }];
 }
 
 
